@@ -83,7 +83,7 @@
             list-style: decimal-leading-zero;
         }
         #contents .table{
-            width: 700px;
+            width: 100vw;
             border-spacing: 0;
             border-collapse: collapse;
             margin-bottom: 15px;
@@ -106,7 +106,7 @@
         }
 
         /* 모바일용 미디어쿼리 */
-        @media (max-width: 800px){
+        @media (max-width: 700px){
             #header h1 {
             font-size: 40px;
             }
@@ -357,19 +357,19 @@ console.log(comment); // 3의 배수
                     <h3>이상, 초과, 이하, 미만 표현</h3>
                     <table class="table">
                         <tr>
-                            <td>이상</td>
+                            <td class="center">이상</td>
                             <td>num >= 10, 10 이상을 의미 합니다.</td>
                         </tr>
                         <tr>
-                            <td>초과</td>
+                            <td class="center">초과</td>
                             <td>num > 10, 10 이상을 의미 합니다.</td>
                         </tr>
                         <tr>
-                            <td>이하</td>
+                            <td class="center">이하</td>
                             <td>num <= 10, 10 이상을 의미 합니다.</td>
                         </tr>
                         <tr>
-                            <td>미만</td>
+                            <td class="center">미만</td>
                             <td>num < 10, 10 이상을 의미 합니다.</td>
                         </tr>
                     </table>
