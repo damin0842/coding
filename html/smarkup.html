@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HTML 기초</title>
+    <title>시멘틱 마크업</title>
     <link href="https://webfontworld.github.io/gmarket/GmarketSans.css" rel="stylesheet">
 
     <style>
@@ -66,6 +66,10 @@
             line-height: 1.6;
         }
         .article h2{
+            font-weight: normal;
+            margin-bottom: 10px;
+        }
+        .article h3{
             font-weight: normal;
             margin-bottom: 10px;
         }
@@ -140,67 +144,54 @@
             </ul>
         </nav>
         <article class="article">
-            <h2>HTML 기본문서</h2>
-            <p>
-                HTML 기본 문서의 &lt;html&gt; 요소는 head 요소와 body 요소로 구성되어 있으며, head 요소 안에는 meta, title, 
-                link, style, script 등의 요소들이 올 수 있습니다.
-            </p>
-            <table class="table">
-                <thead>
-                    <tr>
-                        <th>요소명</th>
-                        <th>설명</th>
-                    </tr>
-                </thead>
-                <tbody>
-                   <tr>
-                        <td class="center">&lt;meta&gt;</td>
-                        <td>HTML 문서의 설명, 키워드, 문서의 작성자를 지정합니다.</td>
-                   </tr>
-                   <tr>
-                        <td class="center">&lt;title&gt;</td>
-                        <td>HTML 문서의 제목을 지정합니다.</td>
-                   </tr>
+            <h2>시멘틱 마크업</h2>
+            <p>시멘틱(semantic)의 사전덕 뜻은 '의미론적인' 정도로 해석할 수 있는데,
+                이것은 마크업을 할 때 의미에 부합하는 태그를 사용하라는 뜻입니다. <br><br>
+                처음 마크업을 할 때는 "왜 시멘틱하게 마크업을 해야하지?"라는 의문이 들 수도 있습니다. 
+                HTML 문서들은 보통 시각적인 방법으로 사용자들에게 정보를 전달하지만, 모든 사람들이 정보를
+                동일하게 받아들일 수 있는 환경이 아닐 수도 있습니다. 예를 들어 시각장애인의 경우에는 HTML 문서의
+                콘텐츠 정보를 음성으로 전달해 주어야 하는데 이런 경우 전달하려는 태그의 의미가 적절해야 합니다. <br><br>
 
-                   <tr>
-                        <td class="center">&lt;link&gt;</td>
-                        <td>외부의 CSS파일을 HTML 문서에 연결할 때 사용합니다.</td>
-                   </tr>
-                   <tr> 
-                        <td class="center">&lt;style&gt;</td>
-                        <td>HTML 문서 내에서 스타일(CSS)을 정의합니다.</td>
-                    </tr>
-                    <tr> 
-                        <td class="center">&lt;script&gt;</td>
-                        <td>자바스크립트를 HTML 문서 내부에서 정의하거나 외부에서 자바스크립트 파일을 
-                            불러올 때 사용합니다.</td>
-                    </tr>
-                </tbody>
-            </table>
+                다음의 예시를 보면서 설명하겠습니다.
+            </p>
+            <pre class="box">
+&lt;!DOCTYPE html&gt; 
+&lt;html lang="ko"&gt; 
+&lt;head&gt; 
+        &lt;meta charset="UTF-8" &gt; 
+        &lt;title&gt;시멘틱 마크업&lt;/title&gt; 
+&lt;/head&gt; 
+&lt;body&gt; 
+        반응형웹 
+&lt;/body&gt;
+&lt;/html&gt;
+            </pre>
             <p>
-                &lt;meta&gt; 태그의 charset 속성의 값 UTF-8d을 '문자 인코딩(charset)' 방식이라고 하는데
-                UTF-8의 경우 거의 대부분의 문자를 처리할 수 있기 때문에 HTML5의 문자 인코딩 방식으로
-                주로 사용되고 있습니다.
-                <br> <br> 또, &lt;meta&gt; 태그에서 알아 두어야 할 속성 중에는 name 속성과 content 속성이 있는데,
-                나중에 학습하게 될 CSS 파트에서 반응형 웹 기술을 사용하기 위한 속성들입니다.
+                만약'반응형웹'이 HTML 문서에서 제목으로 사용된다고 가정할 경우 [예시1-2]처럼 마크업을 하면,
+                스크린 리더(음성낭동프로그램)에서는 그저 '반응형웹'이라고만 읽어주기 떄문에 그 것이 제목인지를 알 수가 없습니다.
+
+                <br><br>
+                이 부분을 제목을 의미하는 태그로 바꾸어 마크업해 보도록 하겠습니다.
             </p>
-            <p class="box">
-                &lt;meta charset="UTF-8"&gt;
-                &lt;meta name = "viewport" <br>
-                content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"&gt;
-            </p>
+            <pre class="box">
+&lt;!DOCTYPE html&gt; 
+ &lt;html lang="ko"&gt; 
+&lt;head&gt; 
+        &lt;meta charset="UTF-8" &gt; 
+        &lt;title&gt;시멘틱 마크업&lt;/title&gt; 
+&lt;/head&gt; 
+&lt;body&gt; 
+        &lt;h1&gt;반응형웹&lt;/h1&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+            </pre>
             <p>
-                보통 뷰포트라고 하는데 모바일 해상도(가로보기, 세로보기)에 맞게 HTML 문서를 조절해 주는 
-                속성들이라고 생각하면 될 것 같습니다.
-                <br><br> 참고로 HTML5 이전에 많이 사용한 XHTML 1.0 transitional 버전도 있는데, XHTML 1.0 transitional
-                버전의 DOCTYPE은 다음과 같습니다.
+                [예시1-3]에서 &lt;h1&gt;은 문서의 첫 제목을 의미하는 태그입니다.
+                이 부분을 '반응형웹' 헤딩 일이라고 읽어 준다면"아! 이 부분이 제목이구나."를 알 수 있게 됩니다.
+                <br><br>
+                실제 마크업을 할 때는 작업자마다 콘텐츠의 의미를 해석하는 차이가 조금 있을 수도 있지만 가급적 시멘틱하게 마크업을 하려고 노력하는 것이 중요합니다.
             </p>
-            <p class="box">
-                &lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"&gt;
-            </p>
-            <p>
-                XHTML 1.0 버전의 경우 HTML5보다 문법적으로 조금 더 엄격합니다.
-            </p>
+          
         </article>
     </section>
 </body>

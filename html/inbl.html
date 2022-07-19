@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HTML 기초</title>
+    <title>시멘틱 마크업</title>
     <link href="https://webfontworld.github.io/gmarket/GmarketSans.css" rel="stylesheet">
 
     <style>
@@ -65,7 +65,14 @@
             padding: 2vw 0;
             line-height: 1.6;
         }
+        .article h1{
+            font-size: 2em;
+        }
         .article h2{
+            font-weight: normal;
+            margin-bottom: 10px;
+        }
+        .article h3{
             font-weight: normal;
             margin-bottom: 10px;
         }
@@ -140,67 +147,60 @@
             </ul>
         </nav>
         <article class="article">
-            <h2>HTML 기본문서</h2>
+            <h2>01. 블록 레벨 요소(Block-level Elements)</h2>
+            <p>블록 레벨 요소는 마크업을 할 때 줄이 바뀌는 특성을 가지고 있는데, 다음 예제를 보면서 설명하겠습니다
+            </p>
+            <pre class="box">
+&lt;!DOCTYPE html&gt; 
+&lt;html lang="ko"&gt; 
+&lt;head&gt; 
+        &lt;meta charset="UTF-8" &gt; 
+        &lt;title&gt;블록 레벨 요소&lt;/title&gt; 
+&lt;/head&gt; 
+&lt;body&gt; 
+        &lt;h1&gt;블록 레벨 요소&lt;/h1&gt;
+        &lt;h2&gt;블록 레벨 요소 성질&lt;/h2&gt;
+        &lt;p&gt;줄 바꿈이 생깁니다.&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</pre><br>
+            <details>
+                <summary>결과 ex1-1.html</summary>
+                <h1>블록 레벨 요소</h1>
+            <h2>블록 레벨 요소 성질</h2>
+            <p>줄 바꿈이 생깁니다.</p>
+            </details>
+            <br>
             <p>
-                HTML 기본 문서의 &lt;html&gt; 요소는 head 요소와 body 요소로 구성되어 있으며, head 요소 안에는 meta, title, 
-                link, style, script 등의 요소들이 올 수 있습니다.
-            </p>
-            <table class="table">
-                <thead>
-                    <tr>
-                        <th>요소명</th>
-                        <th>설명</th>
-                    </tr>
-                </thead>
-                <tbody>
-                   <tr>
-                        <td class="center">&lt;meta&gt;</td>
-                        <td>HTML 문서의 설명, 키워드, 문서의 작성자를 지정합니다.</td>
-                   </tr>
-                   <tr>
-                        <td class="center">&lt;title&gt;</td>
-                        <td>HTML 문서의 제목을 지정합니다.</td>
-                   </tr>
-
-                   <tr>
-                        <td class="center">&lt;link&gt;</td>
-                        <td>외부의 CSS파일을 HTML 문서에 연결할 때 사용합니다.</td>
-                   </tr>
-                   <tr> 
-                        <td class="center">&lt;style&gt;</td>
-                        <td>HTML 문서 내에서 스타일(CSS)을 정의합니다.</td>
-                    </tr>
-                    <tr> 
-                        <td class="center">&lt;script&gt;</td>
-                        <td>자바스크립트를 HTML 문서 내부에서 정의하거나 외부에서 자바스크립트 파일을 
-                            불러올 때 사용합니다.</td>
-                    </tr>
-                </tbody>
-            </table>
-            <p>
-                &lt;meta&gt; 태그의 charset 속성의 값 UTF-8d을 '문자 인코딩(charset)' 방식이라고 하는데
-                UTF-8의 경우 거의 대부분의 문자를 처리할 수 있기 때문에 HTML5의 문자 인코딩 방식으로
-                주로 사용되고 있습니다.
-                <br> <br> 또, &lt;meta&gt; 태그에서 알아 두어야 할 속성 중에는 name 속성과 content 속성이 있는데,
-                나중에 학습하게 될 CSS 파트에서 반응형 웹 기술을 사용하기 위한 속성들입니다.
-            </p>
-            <p class="box">
-                &lt;meta charset="UTF-8"&gt;
-                &lt;meta name = "viewport" <br>
-                content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"&gt;
-            </p>
-            <p>
-                보통 뷰포트라고 하는데 모바일 해상도(가로보기, 세로보기)에 맞게 HTML 문서를 조절해 주는 
-                속성들이라고 생각하면 될 것 같습니다.
-                <br><br> 참고로 HTML5 이전에 많이 사용한 XHTML 1.0 transitional 버전도 있는데, XHTML 1.0 transitional
-                버전의 DOCTYPE은 다음과 같습니다.
-            </p>
-            <p class="box">
-                &lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"&gt;
-            </p>
-            <p>
-                XHTML 1.0 버전의 경우 HTML5보다 문법적으로 조금 더 엄격합니다.
-            </p>
+                [예제 ex1-1]에서 마크업 했던 &lt;h1&gt;,&lt;h2&gt;,&lt;p&gt; 요소들은 블록의 성질을
+                가지고 있어 화면상 줄 바꿈 현상이 일어나는 것을 볼 수 있습니다.
+            </p> <br> <br>
+            <h2>02. 인라인 요소(inline Element)</h2>
+            <p>인라인 요소는 블록 레벨 요소와 달리 줄 바꿈 특성이 없습니다. 
+                즉, 블록 레벨 요소처럼 행이 바뀌지 않고 한줄로 출력됩니다.</p>
+            <pre class="box">
+&lt;!DOCTYPE html&gt; 
+ &lt;html lang="ko"&gt; 
+&lt;head&gt; 
+        &lt;meta charset="UTF-8" &gt; 
+        &lt;title&gt;인라인 요소&lt;/title&gt; 
+&lt;/head&gt; 
+&lt;body&gt; 
+        &lt;strong&gt;인라인 요소&lt;/strong&gt;
+        &lt;span&gt;인라인 요소는 한 줄로 출력됩니다.&lt;/span&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</pre><br>
+            <details>
+                <summary>결과 ex1-2.html</summary>
+                <strong>인라인 요소</strong>
+                <span>인라인 요소는 한 줄로 출력 됩니다.</span>
+            </details>
+            <br>
+        <p>[예제 ex1-2] 에서 마크업 했던 &lt;strong&gt;,&lt;span&gt;요소들은 인라인 성질을 가지고 있어
+            행이 바뀌지 않고 한 줄로 출력 된 것을 볼 수 있습니다.
+           
+          
         </article>
     </section>
 </body>
