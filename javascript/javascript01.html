@@ -7,7 +7,6 @@
     <title>자바스크립트 : 데이터 저장하기</title>    
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/dracula.css">
-
 </head>
 <body>
     <header id="header">
@@ -77,10 +76,8 @@ document.write(z);
                 <div class="result">
                     <details>
                         <summary>결과 보기</summary>
-                        <div>
-                            100 <br>
-                            200 <br>
-                            "javascript"
+                        <div class="sample01_result">
+                           
                         </div>
                     </details>
                 </div>
@@ -94,9 +91,22 @@ document.write(z);
         <a href="mailto:jdm2@naver.com">jdm2@naver.com</a>
     </footer>
     <!-- //footer -->
+
     <script src="assets/js/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
     <script>
-        hljs.highlightAll();
-     </script>
+        {
+            var x = 100;
+            var y = 200;
+            var z = "javascript";
+
+            document.write(x)
+            document.write(y)
+            document.write(z)
+
+            document.querySelector(".sample01_result").innerHTML = x + "<br>" + y + "<br>" + z;
+        }
+    </script>
+
 </body>
 </html>
