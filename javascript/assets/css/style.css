@@ -19,6 +19,10 @@ a{
 li{
     list-style: none;
 }
+/* 제목 초기화 */
+h1, h2, h3, h4, h5, h6{
+    font-weight: normal;
+}
 /* 모든 페이지 레이아웃 */
 body{
     padding: 40px;
@@ -28,6 +32,7 @@ body{
     padding-bottom: 40px;
 }
 #main{
+    padding: 40px 0;
     border-bottom: 1px dashed #dcdcdc;
 }
 #footer{
@@ -67,6 +72,18 @@ body{
     background-color: #000;
     color: #fff;
 }
+/* 메인 샘플 */
+.main_sample{
+    margin-top: 40px;
+    border-top: 1px dashed #dcdcdc;
+    padding-top: 40px;
+}
+.main_sample h3{}
+.main_sample .script{}
+.main_sample .result{}
+
+
+
 @media (max-width : 800px){
     body{
         padding: 20px;
