@@ -78,7 +78,14 @@ body{
     border-top: 1px dashed #dcdcdc;
     padding-top: 40px;
 }
-.main_sample h3{}
+.main_sample h3{
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+.main_sample p{
+    margin-bottom: 10px;
+    color: #666;
+}
 .main_sample .script{}
 .main_sample .result{}
 
