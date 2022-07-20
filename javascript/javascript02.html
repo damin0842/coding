@@ -92,8 +92,8 @@ document.write(z);
             <div id="sample02" class="sample">
                 <h3>02. 상수 : 데이터 불러오기</h3>
                 <p>
-                    상수는 데이터를 저장하는 저장소 입니다.
-                    이 저장소에는 숫자, 문자, 함수 객체 등을 저장할 수 있습니다.
+                    상수(const)는 이미 선언한 상수에 대해 중복해서 선언할 수 없고,
+                    상수의 값은 재지정할 수도 없습니다.
                 </p>
                 <div class="script">
 <pre><code>const x = 100,
@@ -117,8 +117,8 @@ document.write(z);
             <div id="sample03" class="sample">
                 <h3>03. 배열 : 데이터 불러오기</h3>
                 <p>
-                    상수는 데이터를 저장하는 저장소 입니다.
-                    이 저장소에는 숫자, 문자, 함수 객체 등을 저장할 수 있습니다.
+                    배열은 여러개의 데이터를 저장할 수 있는 저장소 입니다. 
+                    표현 방법도 여러가지가 있습니다.
                 </p>
                 <div class="script">
 <pre><code>const arr = [100, 200, "javascript"];
@@ -140,8 +140,8 @@ document.write(z);
             <div id="sample04" class="sample">
                 <h3>04. 배열 : 데이터 불러오기 : 2차 배열</h3>
                 <p>
-                    변수는 데이터를 저장하는 저장소 입니다.
-                    이 저장소에는 숫자, 문자, 함수 객체 등을 저장할 수 있습니다.
+                    배열은 여러개의 데이터를 저장할 수 있는 저장소 입니다. 
+                    표현 방법도 여러가지가 있습니다.
                 </p>
                 <div class="script">
 <pre><code>const arr = [100, 200, ["javascript", "jquery"]];
@@ -164,8 +164,7 @@ document.write(z);
             <div id="sample05" class="sample">
                 <h3>05. 배열 : 데이터 불러오기 : 갯수 구하기</h3>
                 <p>
-                    변수는 데이터를 저장하는 저장소 입니다.
-                    이 저장소에는 숫자, 문자, 함수 객체 등을 저장할 수 있습니다.
+                    arr 배열이 가진 값이 몇개인지 알아보려면 length를 사용합니다.
                 </p>
                 <div class="script">
 <pre><code>const arr = [100, 200, "javascript"];
@@ -185,17 +184,18 @@ document.write(z);
             <div id="sample06" class="sample">
                 <h3>06. 배열 : 데이터 불러오기 : for()문</h3>
                 <p>
-                    변수는 데이터를 저장하는 저장소 입니다.
-                    이 저장소에는 숫자, 문자, 함수 객체 등을 저장할 수 있습니다.
+                    반복문이란 프로그램 내에서 똑같은 명령을 일정 횟수만큼 반복하여 수행하도록 제어하는 명령문입니다.
+                    프로그램이 처리하는 대부분의 코드는 반복적인 형태가 많으므로, 가장 많이 사용되는 제어문 중 하나입니다.
                 </p>
                 <div class="script">
-<pre><code>var x = 100;            //변수 x에 숫자 100을 저장함
-var y = 200;            //변수 y에 숫자 200을 저장함
-var z = "javascript";  //변수 z에 문자열 "javascript" 를 저장함
-    
-document.write(x);
-document.write(y);
-document.write(z);
+<pre><code>const arr = [100, 200, 300, 400, 500, 600, 700, 800, 900];
+
+    //document.write(arr[0], arr[1], arr[2], arr[3], arr[4], arr[5], arr[6], arr[7], arr[8]);
+
+    for(초기값, 조건식, 증감식)
+    for(let i=0; i&lt;arr.length; i++){
+        document.write(arr[i]);
+    }
 </code></pre>
                 </div>
                 <div class="result">
@@ -210,17 +210,28 @@ document.write(z);
             <div id="sample07" class="sample">
                 <h3>07. 배열 : 데이터 불러오기 : forEach()</h3>
                 <p>
-                    변수는 데이터를 저장하는 저장소 입니다.
-                    이 저장소에는 숫자, 문자, 함수 객체 등을 저장할 수 있습니다.
+                    forEach()는 주어진 callback을 배열에 있는 각 요소에 대해 오름차순으로 한 번씩 실행합니다.
                 </p>
                 <div class="script">
-<pre><code>var x = 100;            //변수 x에 숫자 100을 저장함
-var y = 200;            //변수 y에 숫자 200을 저장함
-var z = "javascript";  //변수 z에 문자열 "javascript" 를 저장함
+<pre><code>const num = [100, 200, 300, 400, 500];
+
+    //for 출력;
+for(let i=0; i&lt;num.length; i++){
+    document.write(num[i])
+};
     
-document.write(x);
-document.write(y);
-document.write(z);
+
+    //forEach()를 이용해서 출력;
+num.forEach(function(el){
+    document.write(el);
+});
+    
+    //forEach() 3가지 인자(parameter)값
+num.forEach(function(element, index, array){
+document.write(element);
+document.write(index);
+document.write(array);
+});
 </code></pre>
                 </div>
                 <div class="result">
@@ -324,16 +335,16 @@ document.write(z);
 
             //document.write(arr[0], arr[1], arr[2], arr[3], arr[4], arr[5], arr[6], arr[7], arr[8]);
 
-            //for(초기값, 조건식, 증감식)
-            // for(let i=0; i<arr.length; i++){
-            //     document.write(arr[i]);
-            // }
+            for(초기값, 조건식, 증감식)
+            for(let i=0; i<arr.length; i++){
+                document.write(arr[i]);
+            }
 
         }
         
         //07 forEach()
         {
-            const num = [100, 200, 300, 400, 500,];
+            const num = [100, 200, 300, 400, 500];
 
             //for문을 이용해서 출력
             for(let i=0; i<num.length; i++){
