@@ -528,7 +528,17 @@ obj.g();
                     <details>
                         <summary>결과 보기</summary>
                         <div class="sample17_result">
-                           
+                            100 <br>
+                            200 <br>
+                            300 <br>
+                            200,300 <br>
+                            400 <br>
+                            500 <br>
+                            [object Object]<br>
+                            javascript<br>
+                            자바스크립트가 실행되었습니다. <br>
+                            javascript가 실행되었습니다. <br>
+                            javascript가 실행되었습니다. <br>
                         </div>
                     </details>
                 </div>
@@ -607,6 +617,7 @@ obj.g();
                 //document.write(y1, "<br>");
                 //document.write(z1, "<br>"); 
 
+
                 
             }
             func();
@@ -645,7 +656,7 @@ obj.g();
             //document.write(arr[1]);
             //document.write(arr[2]);
 
-            document.querySelector(".sample06_result").innerHTML = x + "<br>" + y + "<br>" + z;
+            document.querySelector(".sample06_result").innerHTML = arr[0] + "<br>" + arr[1] + "<br>" + arr[2];
         }
         //07
         {
@@ -655,7 +666,8 @@ obj.g();
             //document.write(arr[1]);
             //document.write(arr[2]);
 
-            document.querySelector(".sample07_result").innerHTML = x + "<br>" + y + "<br>" + z; 
+            document.querySelector(".sample07_result").innerHTML = arr[0] + "<br>" + arr[1] + "<br>" + arr[2]; 
+
         }
         //08
         {
@@ -668,7 +680,8 @@ obj.g();
             //document.write(arr[1]);
             //document.write(arr[2]);
 
-            document.querySelector(".sample08_result").innerHTML = x + "<br>" + y + "<br>" + z;
+            document.querySelector(".sample08_result").innerHTML = arr[0] + "<br>" + arr[1] + "<br>" + arr[2];
+
         }
         //09
         {
@@ -678,7 +691,7 @@ obj.g();
             // document.write(arr[1]);
             // document.write(arr[2]);
 
-            document.querySelector(".sample09_result").innerHTML = x + "<br>" + y + "<br>" + z;
+            document.querySelector(".sample09_result").innerHTML = arr[0] + "<br>" + arr[1] + "<br>" + arr[2];
         }
         //10
         {
@@ -691,7 +704,7 @@ obj.g();
             // document.write(obj[1]);
             // document.write(obj[2]);
 
-            document.querySelector(".sample10_result").innerHTML = x + "<br>" + y + "<br>" + z;
+            document.querySelector(".sample10_result").innerHTML = obj[0] + "<br>" + obj[1] + "<br>" + obj[2];
 
         }
         //11
@@ -705,9 +718,8 @@ obj.g();
             // document.write(obj.b);
             // document.write(obj.c);
 
-            document.querySelector(".sample11_result").innerHTML = x + "<br>" + y + "<br>" + z;
-
-        }
+            document.querySelector(".sample11_result").innerHTML = obj.a + "<br>" + obj.b + "<br>" + obj.c;
+        }   
         //12
         {
             const obj = {}
@@ -719,8 +731,8 @@ obj.g();
             // document.write(obj.b);
             // document.write(obj.c);
 
-            document.querySelector(".sample12_result").innerHTML = x + "<br>" + y + "<br>" + z;
-
+            document.querySelector(".sample12_result").innerHTML = obj.a + "<br>" + obj.b + "<br>" + obj.c;
+                        
         }
         //13
         {
@@ -730,7 +742,7 @@ obj.g();
             // document.write(obj.b);
             // document.write(obj.c);
 
-            document.querySelector(".sample13_result").innerHTML = x + "<br>" + y + "<br>" + z;
+            document.querySelector(".sample13_result").innerHTML = obj.a + "<br>" + obj.b + "<br>" + obj.c;
 
         }
         //14 : 배열 속에 객체
@@ -742,8 +754,9 @@ obj.g();
             // document.write(obj[0].a)
             // document.write(obj[0].b)
             // document.write(obj[1].c)
+            document.querySelector(".sample14_result").innerHTML = 
+            obj[0].a + "<br>" + obj[0].b + "<br>" + obj[1].c;
 
-            document.querySelector(".sample14_result").innerHTML = x + "<br>" + y + "<br>" + z;
         }
         //15 객체 속에 배열
         {
@@ -759,8 +772,8 @@ obj.g();
             // document.write(obj.c.x)
             // document.write(obj.c.y)
             // document.write(obj.d)
-
-            document.querySelector(".sample15_result").innerHTML = x + "<br>" + y + "<br>" + z;
+            document.querySelector(".sample15_result").innerHTML = 
+            obj.a + "<br>" + obj.b[0] + "<br>" + obj.b[1] + "<br>" + obj.c.x + "<br>" + obj.c.y + "<br>" + obj.d;
         }
         //16 객체 속에 변수
         {
@@ -770,12 +783,12 @@ obj.g();
 
             const obj = {a, b, c}
 
-            document.write(obj.a)
-            document.write(obj.b)
-            document.write(obj.c)
-
-            document.querySelector(".sample16_result").innerHTML = x + "<br>" + y + "<br>" + z;
+            //document.write(obj.a)
+            //document.write(obj.b)
+            //document.write(obj.c)
             
+            document.querySelector(".sample16_result").innerHTML = 
+            obj.a + "<br>" + obj.b + "<br>" + obj.c;
         }
         //17 객체 속에 함수
         {
@@ -794,20 +807,19 @@ obj.g();
                     document.write( this.d + "가 실행되었습니다.");
                 }
             }
-            document.write(obj.a);
-            document.write(obj.b[0]);
-            document.write(obj.b[1]);
-            document.write(obj.b);
-            document.write(obj.c.x);
-            document.write(obj.c.y);
-            document.write(obj.c);
-            document.write(obj.d);
-            obj.e();
-            obj.f();
-            obj.g();
-
-            document.querySelector(".sample17_result").innerHTML = 
-            obj.f  ;
+            // document.write(obj.a);
+            // document.write(obj.b[0]);
+            // document.write(obj.b[1]);
+            // document.write(obj.b);
+            // document.write(obj.c.x);
+            // document.write(obj.c.y);
+            //document.write(obj.c);
+            // document.write(obj.d);
+            // obj.e();
+            // obj.f();
+            // obj.g();
+            
+            
         }
     </script>
 

@@ -95,7 +95,9 @@ body{
 }
 
 /* 티스토리용 문서 */
-.document {}
+.document {
+    
+}
 .document i{
     font-size: none;
     position: relative;

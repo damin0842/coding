@@ -89,7 +89,158 @@ document.write(z);
                     </details>
                 </div>
             </div>
+            <div id="sample02" class="sample">
+                <h3>02. 상수 : 데이터 불러오기</h3>
+                <p>
+                    상수는 데이터를 저장하는 저장소 입니다.
+                    이 저장소에는 숫자, 문자, 함수 객체 등을 저장할 수 있습니다.
+                </p>
+                <div class="script">
+<pre><code>const x = 100,
+    y = 200,
+    z = "javascript";
 
+document.write(x);
+document.write(y);
+document.write(z);
+</code></pre>
+                </div>
+                <div class="result">
+                    <details>
+                        <summary>결과 보기</summary>
+                        <div class="sample02_result">
+                           
+                        </div>
+                    </details>
+                </div>
+            </div>
+            <div id="sample03" class="sample">
+                <h3>03. 배열 : 데이터 불러오기</h3>
+                <p>
+                    상수는 데이터를 저장하는 저장소 입니다.
+                    이 저장소에는 숫자, 문자, 함수 객체 등을 저장할 수 있습니다.
+                </p>
+                <div class="script">
+<pre><code>const arr = [100, 200, "javascript"];
+
+    document.write(arr[0]);
+    document.write(arr[1]);
+    document.write(arr[2]);
+</code></pre>
+                </div>
+                <div class="result">
+                    <details>
+                        <summary>결과 보기</summary>
+                        <div class="sample03_result">
+                           
+                        </div>
+                    </details>
+                </div>
+            </div>
+            <div id="sample04" class="sample">
+                <h3>04. 배열 : 데이터 불러오기 : 2차 배열</h3>
+                <p>
+                    변수는 데이터를 저장하는 저장소 입니다.
+                    이 저장소에는 숫자, 문자, 함수 객체 등을 저장할 수 있습니다.
+                </p>
+                <div class="script">
+<pre><code>const arr = [100, 200, ["javascript", "jquery"]];
+
+    document.write(arr[0]);
+    document.write(arr[1]);
+    document.write(arr[2][0]);
+    document.write(arr[2][1]);
+</code></pre>
+                </div>
+                <div class="result">
+                    <details>
+                        <summary>결과 보기</summary>
+                        <div class="sample04_result">
+                           
+                        </div>
+                    </details>
+                </div>
+            </div>
+            <div id="sample05" class="sample">
+                <h3>05. 배열 : 데이터 불러오기 : 갯수 구하기</h3>
+                <p>
+                    변수는 데이터를 저장하는 저장소 입니다.
+                    이 저장소에는 숫자, 문자, 함수 객체 등을 저장할 수 있습니다.
+                </p>
+                <div class="script">
+<pre><code>const arr = [100, 200, "javascript"];
+
+    document.write(arr.length);
+</code></pre>
+                </div>
+                <div class="result">
+                    <details>
+                        <summary>결과 보기</summary>
+                        <div class="sample05_result">
+                           
+                        </div>
+                    </details>
+                </div>
+            </div>
+            <div id="sample06" class="sample">
+                <h3>06. 배열 : 데이터 불러오기 : for()문</h3>
+                <p>
+                    변수는 데이터를 저장하는 저장소 입니다.
+                    이 저장소에는 숫자, 문자, 함수 객체 등을 저장할 수 있습니다.
+                </p>
+                <div class="script">
+<pre><code>var x = 100;            //변수 x에 숫자 100을 저장함
+var y = 200;            //변수 y에 숫자 200을 저장함
+var z = "javascript";  //변수 z에 문자열 "javascript" 를 저장함
+    
+document.write(x);
+document.write(y);
+document.write(z);
+</code></pre>
+                </div>
+                <div class="result">
+                    <details>
+                        <summary>결과 보기</summary>
+                        <div class="sample06_result">
+                            100200300400500600700800900
+                        </div>
+                    </details>
+                </div>
+            </div>
+            <div id="sample07" class="sample">
+                <h3>07. 배열 : 데이터 불러오기 : forEach()</h3>
+                <p>
+                    변수는 데이터를 저장하는 저장소 입니다.
+                    이 저장소에는 숫자, 문자, 함수 객체 등을 저장할 수 있습니다.
+                </p>
+                <div class="script">
+<pre><code>var x = 100;            //변수 x에 숫자 100을 저장함
+var y = 200;            //변수 y에 숫자 200을 저장함
+var z = "javascript";  //변수 z에 문자열 "javascript" 를 저장함
+    
+document.write(x);
+document.write(y);
+document.write(z);
+</code></pre>
+                </div>
+                <div class="result">
+                    <details>
+                        <summary>결과 보기</summary>
+                        <div class="sample07_result">
+                            100200300400500 <br>
+                            100200300400500 <br>
+                            100200300400500 <br>
+                            01234 <br>
+                            100,200,300,400,500 <br>
+                            100,200,300,400,500 <br>
+                            100,200,300,400,500 <br>
+                            100,200,300,400,500 <br>
+                            100,200,300,400,500 <br>
+
+                        </div>
+                    </details>
+                </div>
+            </div>
         </div>
     </main>
     <!-- //main -->
@@ -112,48 +263,61 @@ document.write(z);
                 y = 200, 
                 z = "javascript";
 
-            document.write(x);
-            document.write(y);
-            document.write(z);
+            // document.write(x);
+            // document.write(y);
+            // document.write(z);
+
+            document.querySelector(".sample01_result").innerHTML = x + "<br>" + y + "<br>" + z;
         }
-        document.write("<br><br>");
+        
         //02
         {
             const x = 100,
                   y = 200,
                   z = "javascript";
 
-            document.write(x);
-            document.write(y);
-            document.write(z);
+            // document.write(x);
+            // document.write(y);
+            // document.write(z);
+
+            document.querySelector(".sample02_result").innerHTML = x + "<br>" + y + "<br>" + z;
         }
-        document.write("<br><br>");
+            
         //03
         {
             const arr = [100, 200, "javascript"];
 
-            document.write(arr[0]);
-            document.write(arr[1]);
-            document.write(arr[2]);
+            // document.write(arr[0]);
+            // document.write(arr[1]);
+            // document.write(arr[2]);
+
+            document.querySelector(".sample03_result").innerHTML = arr[0] + "<br>" + arr[1] + "<br>" + arr[2];
         }
-        document.write("<br><br>");
+        
         //04
         {
             const arr = [100, 200, ["javascript", "jquery"]];
 
-            document.write(arr[0]);
-            document.write(arr[1]);
-            document.write(arr[2][0]);
-            document.write(arr[2][1]);
+            // document.write(arr[0]);
+            // document.write(arr[1]);
+            // document.write(arr[2][0]);
+            // document.write(arr[2][1]);
+
+            document.querySelector(".sample04_result").innerHTML = arr[0] + "<br>" + arr[1] 
+            + "<br>" + arr[2][0] + "<br>" + arr[2][1];
+            
         }
-        document.write("<br><br>");
+        
         //05
         {
             const arr = [100, 200, "javascript"];
 
-            document.write(arr.length);
+            //document.write(arr.length);
+
+            document.querySelector(".sample05_result").innerHTML = arr.length;
+
         }
-        document.write("<br><br>");
+        
         //06
         {
             const arr = [100, 200, 300, 400, 500, 600, 700, 800, 900];
@@ -161,26 +325,27 @@ document.write(z);
             //document.write(arr[0], arr[1], arr[2], arr[3], arr[4], arr[5], arr[6], arr[7], arr[8]);
 
             //for(초기값, 조건식, 증감식)
-            for(let i=0; i<arr.length; i++){
-                document.write(arr[i]);
-            }
+            // for(let i=0; i<arr.length; i++){
+            //     document.write(arr[i]);
+            // }
+
         }
-        document.write("<br><br>");
+        
         //07 forEach()
         {
             const num = [100, 200, 300, 400, 500,];
 
             //for문을 이용해서 출력
             for(let i=0; i<num.length; i++){
-                document.write(num[i])
+                //document.write(num[i])
             };
-            document.write("<br><br>");
+            
 
             //forEach()를 이용해서 출력
             num.forEach(function(el){
-                document.write(el);
+                //document.write(el);
             });
-            document.write("<br><br>");
+            
             //forEach() 3가지 인자(parameter)값
             num.forEach(function(element, index, array){
                 //document.write(element, "<br>");
