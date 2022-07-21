@@ -131,7 +131,7 @@ body {
 .main_refer .table table tr th,
 .main_refer .table table tr td {
     border: 1px solid#cdcdcd;
-    padding: 3px;
+    padding: 5px;
 }
 .main_refer .table table tr td:nth-child(3){
     text-align: left;
