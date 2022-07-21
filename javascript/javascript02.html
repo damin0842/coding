@@ -30,7 +30,7 @@
             <ul class="study">
                 <li><a href="study/basic.html">기본 규칙</a></li>
                 <li><a href="study/command.html">기본 명령어</a></li>
-                <li><a href="study/operator.html">연산자</a></li>
+                <li><a href="study/for.html">for문</a></li>
             </ul>
         </nav>
     </header>
@@ -226,7 +226,7 @@ num.forEach(function(el){
     document.write(el);
 });
     
-    //forEach() 3가지 인자(parameter)값
+    //forEach() 3가지 인자(parameter)값을 출력;
 num.forEach(function(element, index, array){
 document.write(element);
 document.write(index);
@@ -252,6 +252,103 @@ document.write(array);
                     </details>
                 </div>
             </div>
+            <div id="sample08" class="sample">
+                <h3>08. 배열 : 데이터 불러오기 : for of</h3>
+                <p>
+                    for of 반복문은 ES6에 추가된 새로운 컬렉션 전용 반복 구문입니다. 
+                    for of 구문을 사용하기 위해선 컬렉션 객체가 [Symbol.iterator] 
+                    속성을 가지고 있어야만 합니다(직접 명시 가능).
+                </p>
+                <div class="script">
+<pre><code>const arr = [100,200,300,400,500];
+        
+for(let i=0; i&lt;5; i++){
+    document.write(arr[i]);
+}
+for(let i of arr){              //of 요소값
+    document.write(i);
+}
+</code></pre>
+                </div>
+                <div class="result">
+                    <details>
+                        <summary>결과 보기</summary>
+                        <div class="sample08_result">
+                            100200300400500 <br>
+                            100200300400500
+                        </div>
+                    </details>
+                </div>
+            </div>
+            <div id="sample09" class="sample">
+                <h3>09. 배열 : 데이터 불러오기 : for in</h3>
+                <p>
+                    for in 반복문은 객체의 속성들을 반복하여 작업을 수행할 수 있습니다. 
+                    모든 객체에서 사용이 가능합니다. for in 구문은 객체의 key 값에 접근할 수 있지만, 
+                    value 값에 접근하는 방법은 제공하지 않습니다. 
+                    자바스크립트에서 객체 속성들은 내부적으로 사용하는 숨겨진 속성들을 가지고 있습니다. 
+                    그 중 하나가 [[Enumerable]]이며, 
+                    for in 구문은 이 값이 true로 셋팅되어 속성들만 반복할 수 있습니다. 
+                    이러한 속성들을 열거형 속성이라고 부르며, 
+                    객체의 모든 내장 메서드를 비롯해 각종 내장 프로퍼티 같은 비열거형 속성은 반복되지 않습니다.
+                </p>
+                <div class="script">
+<pre><code>const arr = [100,200,300,400,500];
+
+for(let i in arr){          //in인덱스값
+document.write(i); 
+document.write(arr[i]);
+}
+</code></pre>
+                </div>
+                <div class="result">
+                    <details>
+                        <summary>결과 보기</summary>
+                        <div class="sample09_result">
+                            01234 <br>
+                            100200300400500
+                        </div>
+                    </details>
+                </div>
+            </div>
+            <div id="sample10" class="sample">
+                <h3>10. 배열 : 데이터 불러오기 : map()</h3>
+                <p>
+                    map은 callback 함수를 각각의 요소에 대해 한번씩 순서대로 불러 그 함수의 반환값으로 새로운 배열을 만듭니다.
+                    callback 함수는 (undefined도 포함해서) 배열 값이 들어있는 인덱스에 대해서만 호출됩니다. 
+                    즉, 값이 삭제되거나 아직 값이 할당/정의되지 않은 인덱스에 대해서는 호출되지 않습니다.
+                </p>
+                <div class="script">
+<pre><code>const arr = [100,200,300,400,500];
+
+    arr.map(function(el){
+        document.write(el);
+        
+    });
+    arr.map(function(element, index, array){
+        document.write(element);
+        document.write(index);
+        document.write(array);
+    });
+</code></pre>
+                </div>
+                <div class="result">
+                    <details>
+                        <summary>결과 보기</summary>
+                        <div class="sample10_result">
+                            100200300400500 <br>
+                            100200300400500 <br>
+                            01234 <br>
+                            100,200,300,400,500 <br>
+                            100,200,300,400,500 <br>
+                            100,200,300,400,500 <br>
+                            100,200,300,400,500 <br>
+                            100,200,300,400,500 <br>
+
+                        </div>
+                    </details>
+                </div>
+            </div>
         </div>
     </main>
     <!-- //main -->
@@ -264,107 +361,128 @@ document.write(array);
     <script src="assets/js/highlight.min.js"></script>
     <script>hljs.highlightAll();</script>
     <script>
-        // 01
+        //01
         {
-            //let x = 100;
-            //let y = 200;
-            //let z = "javascript";
+            var x = 100;            //변수 x에 숫자 100을 저장함
+var y = 200;            //변수 y에 숫자 200을 저장함
+var z = "javascript";  //변수 z에 문자열 "javascript" 를 저장함
+    
+// document.write(x);
+// document.write(y);
+// document.write(z);
+document.querySelector(".sample01_result").innerHTML = x + "<br>" + y + "<br>" + z;
 
-            let x = 100, 
-                y = 200, 
-                z = "javascript";
-
-            // document.write(x);
-            // document.write(y);
-            // document.write(z);
-
-            document.querySelector(".sample01_result").innerHTML = x + "<br>" + y + "<br>" + z;
         }
-        
         //02
         {
             const x = 100,
-                  y = 200,
-                  z = "javascript";
+    y = 200,
+    z = "javascript";
 
-            // document.write(x);
-            // document.write(y);
-            // document.write(z);
+// document.write(x);
+// document.write(y);
+// document.write(z);
+document.querySelector(".sample02_result").innerHTML = x + "<br>" + y + "<br>" + z;
 
-            document.querySelector(".sample02_result").innerHTML = x + "<br>" + y + "<br>" + z;
         }
-            
         //03
         {
             const arr = [100, 200, "javascript"];
 
-            // document.write(arr[0]);
-            // document.write(arr[1]);
-            // document.write(arr[2]);
+// document.write(arr[0]);
+// document.write(arr[1]);
+// document.write(arr[2]);
+document.querySelector(".sample03_result").innerHTML =
+ arr[0] + "<br>" + arr[1] + "<br>" + arr[2];
 
-            document.querySelector(".sample03_result").innerHTML = arr[0] + "<br>" + arr[1] + "<br>" + arr[2];
         }
-        
         //04
         {
             const arr = [100, 200, ["javascript", "jquery"]];
 
-            // document.write(arr[0]);
-            // document.write(arr[1]);
-            // document.write(arr[2][0]);
-            // document.write(arr[2][1]);
+// document.write(arr[0]);
+// document.write(arr[1]);
+// document.write(arr[2][0]);
+// document.write(arr[2][1]);
+document.querySelector(".sample04_result").innerHTML =
+arr[0] + "<br>" + arr[1] + "<br>" + arr[2][0] + "<br>" + arr[2][1];
 
-            document.querySelector(".sample04_result").innerHTML = arr[0] + "<br>" + arr[1] 
-            + "<br>" + arr[2][0] + "<br>" + arr[2][1];
-            
         }
-        
         //05
         {
             const arr = [100, 200, "javascript"];
 
-            //document.write(arr.length);
+//document.write(arr.length);
+document.querySelector(".sample05_result").innerHTML =
+arr.length;
+        }
 
-            document.querySelector(".sample05_result").innerHTML = arr.length;
+
+
+
+       //06. for문
+       {
+        const arr = [100,200,300,400,500];
+
+        // for(let i=0; i<5; i++){
+        //     document.write(arr[i]);
+        // }
+       }
+
+       //07. 배열 데이터 불러오기 : forEach();
+       {
+        const num = [100,200,300,400,500];
+
+        num.forEach(function(el){
+        //    document.write(el);
+        });
+        num.forEach(function(el, i, asdf){      //요소,인덱스,배열
+        //    document.write(asdf);
+        });
+       }
+       //08. 배열에 데이터 불러오기 : for of
+       {
+        const arr = [100,200,300,400,500];
+        
+        
+        // for(let i=0; i<5; i++){
+        //     document.write(arr[i]);
+        // }
+        for(let i of arr){          //of요소값
+            //document.write(i);
+        }
+
+       }
+
+       document.write("<br>");
+
+       //09. 배열에 데이터 불러오기 : for in
+       {
+        const arr = [100,200,300,400,500];
+
+        for(let i in arr){          //in인덱스값
+            //document.write(i); 
+            //document.write(arr[i]);
 
         }
         
-        //06
-        {
-            const arr = [100, 200, 300, 400, 500, 600, 700, 800, 900];
+       }
+       document.write("<br>");
 
-            //document.write(arr[0], arr[1], arr[2], arr[3], arr[4], arr[5], arr[6], arr[7], arr[8]);
+       //10. 배열 데이터 불러오기 : map()
+       {
+        const arr = [100,200,300,400,500];
 
-            for(초기값, 조건식, 증감식)
-            for(let i=0; i<arr.length; i++){
-                document.write(arr[i]);
-            }
-
-        }
-        
-        //07 forEach()
-        {
-            const num = [100, 200, 300, 400, 500];
-
-            //for문을 이용해서 출력
-            for(let i=0; i<num.length; i++){
-                //document.write(num[i])
-            };
+        arr.map(function(el){
+            // document.write(el);
             
-
-            //forEach()를 이용해서 출력
-            num.forEach(function(el){
-                //document.write(el);
-            });
-            
-            //forEach() 3가지 인자(parameter)값
-            num.forEach(function(element, index, array){
-                //document.write(element, "<br>");
-                //document.write(index, "<br>");
-                //document.write(array, "<br>");
-            });
-        }
-        
+        });
+        arr.map(function(element, index, array){
+            // document.write(element);
+            // document.write(index);
+            // document.write(array);
+        });
+       }
     </script>
 
 </body>
