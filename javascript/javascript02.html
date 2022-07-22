@@ -97,8 +97,8 @@ document.write(z);
                 </p>
                 <div class="script">
 <pre><code>const x = 100,
-    y = 200,
-    z = "javascript";
+         y = 200,
+         z = "javascript";
 
 document.write(x);
 document.write(y);
@@ -123,9 +123,9 @@ document.write(z);
                 <div class="script">
 <pre><code>const arr = [100, 200, "javascript"];
 
-    document.write(arr[0]);
-    document.write(arr[1]);
-    document.write(arr[2]);
+document.write(arr[0]);
+document.write(arr[1]);
+document.write(arr[2]);
 </code></pre>
                 </div>
                 <div class="result">
@@ -146,10 +146,10 @@ document.write(z);
                 <div class="script">
 <pre><code>const arr = [100, 200, ["javascript", "jquery"]];
 
-    document.write(arr[0]);
-    document.write(arr[1]);
-    document.write(arr[2][0]);
-    document.write(arr[2][1]);
+document.write(arr[0]);
+document.write(arr[1]);
+document.write(arr[2][0]);
+document.write(arr[2][1]);
 </code></pre>
                 </div>
                 <div class="result">
@@ -169,7 +169,7 @@ document.write(z);
                 <div class="script">
 <pre><code>const arr = [100, 200, "javascript"];
 
-    document.write(arr.length);
+document.write(arr.length);
 </code></pre>
                 </div>
                 <div class="result">
@@ -190,12 +190,12 @@ document.write(z);
                 <div class="script">
 <pre><code>const arr = [100, 200, 300, 400, 500, 600, 700, 800, 900];
 
-    //document.write(arr[0], arr[1], arr[2], arr[3], arr[4], arr[5], arr[6], arr[7], arr[8]);
+//document.write(arr[0], arr[1], arr[2], arr[3], arr[4], arr[5], arr[6], arr[7], arr[8]);
 
-    for(초기값, 조건식, 증감식)
-    for(let i=0; i&lt;arr.length; i++){
-        document.write(arr[i]);
-    }
+for(초기값, 조건식, 증감식)
+for(let i=0; i&lt;arr.length; i++){
+    document.write(arr[i]);
+}
 </code></pre>
                 </div>
                 <div class="result">
@@ -215,22 +215,22 @@ document.write(z);
                 <div class="script">
 <pre><code>const num = [100, 200, 300, 400, 500];
 
-    //for 출력;
+//for 출력;
 for(let i=0; i&lt;num.length; i++){
     document.write(num[i])
 };
     
 
-    //forEach()를 이용해서 출력;
+//forEach()를 이용해서 출력;
 num.forEach(function(el){
     document.write(el);
 });
     
-    //forEach() 3가지 인자(parameter)값을 출력;
+//forEach() 3가지 인자(parameter)값을 출력;
 num.forEach(function(element, index, array){
-document.write(element);
-document.write(index);
-document.write(array);
+    document.write(element);
+    document.write(index);
+    document.write(array);
 });
 </code></pre>
                 </div>
@@ -321,15 +321,14 @@ document.write(arr[i]);
                 <div class="script">
 <pre><code>const arr = [100,200,300,400,500];
 
-    arr.map(function(el){
-        document.write(el);
-        
-    });
-    arr.map(function(element, index, array){
-        document.write(element);
-        document.write(index);
-        document.write(array);
-    });
+arr.map(function(el){
+    document.write(el);
+});
+arr.map(function(element, index, array){
+    document.write(element);
+    document.write(index);
+    document.write(array);
+});
 </code></pre>
                 </div>
                 <div class="result">
