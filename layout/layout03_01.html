@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>레이아웃3</title>
+    <style>
+        *{
+            margin: 0;
+        }
+        #body{
+            background-color: rgb(227, 236, 241);
+        }
+        #warp{
+            margin: 0 auto;
+            width: 1200px;
+        }
+        #header{
+            width: 1200px;
+            height: 100px;
+            background-color: rgba(207, 234, 248, 0.932);
+        }
+        #nav{
+            width: 1200px;
+            height: 100px;
+            background-color: rgba(172, 220, 245, 0.932);
+        }
+        #section{
+            width: 300px;
+            height: 780px;
+            background-color: rgba(129, 204, 241, 0.932);
+            float: left;
+        }
+        #aside{
+            width: 900px;
+            height: 260px;
+            background-color: rgba(93, 193, 243, 0.932);
+            float: left;
+        }
+        #bside{
+            width: 900px;
+            height: 260px;
+            background-color: rgba(59, 181, 241, 0.932);
+            float: left;
+        }
+        #cside{
+            width: 900px;
+            height: 260px;
+            background-color: rgba(32, 169, 238, 0.932);
+            float: left;
+        }
+        #footer{
+            width: 1200px;
+            height: 100px;
+            background-color: rgba(23, 91, 236, 0.932);
+            clear: both;
+        }
+        @media (max-width: 1280){
+            #wrap {
+                width: 96%;
+            }
+            #header{
+                width: 100%;
+            }
+            #nav{
+                width: 100%;
+            }
+            #section {
+                width: 25%;
+            }
+            #aside {
+                width: 75%;
+            }
+            #bside {
+                width: 37.5%;
+                height: 520px;
+            }
+            #cside {
+                width: 37.5%;
+                height: 520px;
+            }
+            #footer{
+                width: 100%;
+            }
+        }
+        @media (max-width: 768px){
+            #wrap {
+                width: 100%;
+            }
+            #header{
+                width: 100%;
+            }
+            #nav{
+                width: 100%;
+            }
+            #section {
+                width: 25%;
+            }
+
+            #aside {
+                width: 75%;
+                height: 390px;
+            }
+            #bside {
+                width: 75%;
+                height: 390px;
+            }
+            #cside {
+                display: none;
+            }
+            #footer{
+                width: 100%;
+            }
+        }
+        @media (max-width: 480px){
+            #wrap {
+                width: 100%;
+            }
+            #header{
+                width: 100%;
+            }
+            #nav{
+                width: 100%;
+            }
+            #section {
+                width: 100%;
+                height: 200px;
+            }
+            #aside {
+                width: 100%;
+                height: 430px;
+            }
+            #bside {
+                width: 100%;
+                height: 150px;
+            }
+            #cside {
+                display: none;
+            }
+            #footer{
+                width: 100%;
+            }
+        }
+        
+
+    </style>
+</head>
+<body>
+    <div id="warp">
+        <div id="header"></div>
+        <div id="nav"></div>
+        <div id="section"></div>
+        <div id="aside"></div>
+        <div id="bside"></div>
+        <div id="cside"></div>
+        <div id="footer"></div>
+    </div>
+</body>
+</html>
