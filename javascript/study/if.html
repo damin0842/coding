@@ -33,6 +33,7 @@
                 <li><a href="for.html">반복문</a></li>
                 <li><a href="if.html">조건문</a></li>
                 <li><a href="type.html">데이터 타입</a></li>
+                <li><a href="function.html">함수</a></li>
             </ul>
         </nav>
     </header>
@@ -44,7 +45,7 @@
                 if (조건식){<br>
                 &nbsp;&nbsp;&nbsp;&nbsp;실행문; <br>}
             </p>
-            <hr>
+            <br>
         <div>
         <div class="document">
             <h3 class="t_tit2">if문은 if문안에 또 다른 if 문을 중첩하여
@@ -55,9 +56,10 @@
                 때문에 '+' 연산자를 사용할 경우 더하기 연산이 아니라 연결 연산이 됩니다.
                 이 문제를 해결하기 위해 숫자 변환 명령어 Number()을 사용 하겠습니다.
             </p>
-            <hr>
+            <br>
         </div>
-<pre><code>&lt;!DOCTYPE html>
+        <div class="t_code">
+<pre><code class="language-js">&lt;!DOCTYPE html>
 &lt;html lang="ko">
 &lt;head>
     &lt;meta charset="UTF-8">
@@ -107,16 +109,17 @@
                 &nbsp;&nbsp;&nbsp;&nbsp;실행문; <br>
             }
         </p>
-        <hr>
+        <br>
         <p class="t_desc">
             switch(값) 의 값과 case의 값들을 하나씩 비교하여 일치하는 case를 실행시켜 줍니다.
             switch 문은 if문과 다르게 특정 조건에 만족 했을 때 블록{}을 스스로 빠져나가지 못합니다.
             이 때문에 break 명령어를 주어 switch case문의 블록{}을 빠져 나가도록 합니다.
             default는 switch의 값이 일치하는 값이 없을 때 실행합니다.
         </p>
-        <hr>
+        <br>
     </div>
-<pre><code>&lt;!DOCTYPE html>
+    <div class="t_code">
+<pre><code class="language-js">&lt;!DOCTYPE html>
 &lt;html lang="ko">
 &lt;head>
     &lt;meta charset="UTF-8">
@@ -145,6 +148,7 @@
 &lt;/body>
 &lt;/html>
 </code></pre>
+    </div>
     <!-- code pen
     <p class="codepen" data-height="500" data-default-tab="js,result" data-slug-hash="xxWLRBV" data-user="damin0842" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
         <span>See the Pen <a href="https://codepen.io/damin0842/pen/xxWLRBV">
@@ -157,15 +161,18 @@
     
     <div id="sample01" class="sample">
         <h3 class="t_tit2">01. if문</h3>
-<pre><code>//(false, 0, undefined, null)
+        <div class="t_code">
+<pre><code class="language-js">//(false, 0, undefined, null)
 //(ture, 1,"0", "1", 0&lt;10, [배열], {객체})
 //조건식이 참인지 거짓인지에 따라 값이 정해진다.
+
 if(0){
     document.write("실행되었습니다(true).");
 } else {
     document.write("실행되었습니다(false).");
 }
 </code></pre>
+        </div>
         <div class="t_result">
             <details>
                 <summary>결과 확인하기</summary>
@@ -184,7 +191,8 @@ if(0){
     </div>
     <div id="sample02" class="sample">
         <h3 class="t_tit2">02. if문 생략</h3>
-<pre><code>const num = 100;
+        <div class="t_code">
+<pre><code class="language-js">const num = 100;
 if(num) document.write("실행되었습니다(ture).");
 else document.write("실행되었습니다(false).");
 </code></pre>
@@ -204,7 +212,8 @@ else document.write("실행되었습니다(false).");
     </div>
     <div id="sample03" class="sample">
         <h3 class="t_tit2">03. 다중 if문</h3>
-<pre><code>const num = 100;
+        <div class="t_code">
+            <pre><code class="language-js">const num = 100;
 if( num == 90) {
     document.write("실행되었습니다(num==90)");
 } else if ( num == 100){
@@ -217,6 +226,7 @@ if( num == 90) {
     document.write("실행되었습니다(num==값이없음)");
 }
 </code></pre>
+        </div>
         <div class="t_result">
             <details>
                 <summary>결과 확인하기</summary>
@@ -242,7 +252,8 @@ if( num == 90) {
     </div>
     <div id="sample04" class="sample">
         <h3 class="t_tit2">04. 중첩 if문</h3>
-<pre><code>const num = 100;
+        <div class="t_code">
+<pre><code class="language-js">const num = 100;
 if( num == 100 ) {
    document.write("실행되었습니다.(1)");
     if (num==100) {
@@ -255,6 +266,7 @@ if( num == 100 ) {
     document.write("실행되었습니다.(4)");
 }
 </code></pre>
+        </div>
         <div class="t_result">
             <details>
                 <summary>결과 확인하기</summary>
@@ -280,7 +292,8 @@ if( num == 100 ) {
     </div>
     <div id="sample05" class="sample">
         <h3 class="t_tit2">05. 조건부 연산자(삼항 연산자)</h3>
-<pre><code>const num = 100;
+        <div class="t_code">
+<pre><code class="language-js">const num = 100;
 //num의 값이 100이면 ture 출력하고 아니면 false 출력하세요.
 
 if(num == 100) {
@@ -292,6 +305,7 @@ if(num == 100) {
 //if문 생략이 메모리적으로 좀 더 효율적이고 자주쓰인다.
 (num == 100) ? document.write("true") : document.write("false");
 </code></pre>
+        </div>
         <div class="t_result">
             <details>
                 <summary>결과 확인하기</summary>
@@ -307,7 +321,8 @@ if(num == 100) {
     </div>
     <div id="sample06" class="sample">
         <h3 class="t_tit2">06. switch문</h3>
-<pre><code>const num = 100;
+        <div class="t_code">
+<pre><code class="language-js">const num = 100;
 switch( num ){
     case 100 :
         document.write("실행되었습니다 (num==100")
@@ -325,6 +340,7 @@ switch( num ){
         document.write("실행되었습니다.(num == 값이 없음)")
 }
 </code></pre>
+        </div>
         <div class="t_result">
             <details>
                 <summary>결과 확인하기</summary>
@@ -355,12 +371,14 @@ switch( num ){
     </div>
     <div id="sample07" class="sample">
         <h3 class="t_tit2">while문</h3>
-<pre><code>let num = 1;
+        <div class="t_code">
+<pre><code class="language-js">let num = 1;
 while( num &lt;= 5 ){
     document.write("실행되었습니다.");
     num++;
 }
 </code></pre>
+        </div>
         <div class="t_result">
             <details>
                 <summary>결과 확인하기</summary>
@@ -379,12 +397,14 @@ while( num &lt;= 5 ){
     </div>
     <div id="sample08" class="sample">
         <h3 class="t_tit2">do while문(반복문)</h3>
-<pre><code>let num = 1;
+        <div class="t_code">
+<pre><code class="language-js">let num = 1;
 do {
     // document.write("실행되었습니다2.");
     num++;
 } while (num &lt;= 5);
 </code></pre>
+        </div>
         <div class="t_result">
             <details>
                 <summary>결과 확인하기</summary>
