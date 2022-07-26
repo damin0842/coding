@@ -113,6 +113,80 @@
             }
             document.write(func());
         }
+        //ECMAscript1
+        //ECMAscript2
+        //ECMAscript3
+        //ECMAscript4
+        //ECMAscript5
+        //ECMAscript6(ES6) 화살표 함수, let, const
+
+        //05. 화살표 함수(선언적 함수)
+        {
+            // function func(){
+            //     document.write("함수가 실행되었습니다.5<br>")
+            // }
+            // func();
+            
+            // func = () => {
+            //     document.write("함수가 실행되었습니다.5<br>");
+            // }
+            // func();
+
+            func = () => document.write("함수가 실행되었습니다.5<br>");
+            func();
+        }
+        //06. 화살표 함수(익명 함수)
+        {
+            // const func = function(){
+            //     document.write("함수가 실행되었습니다.6<br>");
+            // }
+            // func();
+
+            // const func = () => {
+            //     document.write("함수가 실행되었습니다.6<br>");
+            // }
+            // func();
+
+            const func = () => document.write("함수가 실행되었습니다.6<br>");
+            func();
+        }
+        //07. 화살표 함수(매개변수 함수)
+        {
+            // function func(str){
+            //     document.write(str)
+            // }
+            // func("함수가 실행되었습니다.7<br>");
+            
+            // func = (str) => document.write(str);    
+            
+            func = str => document.write(str);
+            func("함수가 실행되었습니다.7<br>");
+        }
+        //08. 화살표 함수(리턴값 함수)
+        {
+            // function func(){
+            //     const str = "함수가 실행되었습니다.8<br>";
+            //     return str
+            // }
+            // document.write(func());
+
+            func = () => {
+                const str = "함수가 실행되었습니다.8<br>";
+                return str
+            }
+            document.write(func());
+         
+
+        }
+
+        //01. 선언적 함수
+        //02. 익명 함수
+        //03. 매개변수 함수
+        //04. 리턴값 함수
+        //05. 화살표함수(선언적 함수)   
+        //06. 화살표함수(익명 함수)
+        //07. 화살표함수(매개변수 함수)
+        //08. 화살표함수(리턴값 함수)
 
     </script>
 </body>
