@@ -32,6 +32,7 @@
                 <li><a href="study/for.html">반복문</a></li>
                 <li><a href="study/if.html">조건문</a></li>
                 <li><a href="study/type.html">데이터 타입</a></li>
+                <li><a href="study/function.html">함수</a></li>
             </ul>
         </nav>
     </header>
@@ -79,6 +80,40 @@
         <a href="mailto:jdm2@naver.com">jdm2@naver.com</a>
     </footer>
     <!-- //footer -->
+    <script>
+        //변수(데이터저장) ,배열(데이터저장), 객체(데이터저장) --> 함수(실행문)(제어문)
+        //01. 선언적 함수 353p
+        {
+            function func(){
+                document.write("함수가 실행되었습니다.1<br>") //브라우저 객체
+            }
+            func();
+        }
+        //02. 익명 함수
+        {
+            const func = function(){
+                document.write("함수가 실행되었습니다.2<br>")
+            }
+            func();
+        }
+        //03. 매개변수 함수
+        // 변수 : 지역변수 + 전역변수 + 매개변수
+        // 함수 : 지역함수 + 전역함수 
+        {
+            function func(str){
+                document.write(str)
+            }
+            func("함수가 실행되었습니다.3<br>");
+        }
+        //04. 리턴값 함수
+        {
+            function func(){
+                const str = "함수가 실행되었습니다.4<br>";
+                return str;
+            }
+            document.write(func());
+        }
 
+    </script>
 </body>
 </html>

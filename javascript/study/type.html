@@ -33,6 +33,7 @@
                 <li><a href="for.html">반복문</a></li>
                 <li><a href="if.html">조건문</a></li>
                 <li><a href="type.html">데이터 타입</a></li>
+                <li><a href="function.html">함수</a></li>
             </ul>
         </nav>
     </header>
@@ -47,18 +48,62 @@
             어떤 값을 가질 수 있는지 자료형을 미리 정해야 합니다. 
             </p>
             <p class="t_desc">
-                자바스크립트 자료형은 기본형과 복합형으로 구별합니다. 
-                - 기본형: 값이 하나인 자료형 (number, string, boolean, undefined, null 등)
+                자바스크립트 자료형은 기본형과 복합형으로 구별합니다. <br>
+                - 기본형: 값이 하나인 자료형 (number, string, boolean, undefined, null 등) <br>
                 - 복합형: 여러 값을 한꺼번에 담고 있는 자료형 (object, array)
+            </p>
+            <table class="t_table">
+                <tr>
+                    <th>구분</th>
+                    <th>데이터 타입</th>
+                    <th>설명</th>
+                </tr>
+                <tr>
+                    <td rowspan="6" class="ce">원시타입</td>
+                    <td class="ce">숫자타입</td>
+                    <td>숫자, 정수, 실수 구분 없이 하나의 숫자 타입만 존재</td>
+                </tr>
+                <tr>
+                    <td class="ce">문자열 타입</td>
+                    <td>문자열</td>
+                </tr>
+                <tr>
+                    <td class="ce">불리언타입</td>
+                    <td>논리적 참과 거짓</td>
+                </tr>
+                <tr>
+                    <td class="ce">undefined 타입</td>
+                    <td>var 키워드로 선언된 변수에 암묵적으로 할당되는 값</td>
+                </tr>
+                <tr>
+                    <td class="ce">null 타입</td>
+                    <td>값이 없다는 것을 의도적으로 명시할 때 사용하는 값</td>
+                </tr>
+                <tr>
+                    <td class="ce">심벌 타입</td>
+                    <td>eES6에서 추가된 7번째 타입</td>
+                </tr>
+                <tr>
+                    <td colspan="2" class="ce">객체타입</td>
+                    <td>객체, 함수, 배열 등</td>
+                </tr>
+            </table>
+            <hr>
+            <p class="t_box">
+                데이터 타입 (자료형) --> 타입 스크립트 <br>
+                let table1 = 1 //숫자 <br>
+                let table2 = "1" //문자 <br>
+                let table3 = true //불린(true,false) <br>
+                let table4 = []; //배열 <br>
+                let table5 = {}; //객체 <br>
+                let table6 = //특수값(null, undefined) <br>
             </p>
         </div>
     </main>
-    
-데이터 타입(자료형) 
- let table1 = 1 //숫자
- let table2 = "1" //문자
- let table3 = true //불린(true,false) 
- let table4 = []; //배열
- let table5 = {}; //객체
- let table6 = //특수값(null, undefined)
+    <footer id="footer">
+        <a href="mailto:jdm2@naver.com">jdm2@naver.com</a>
+    </footer>
+    <!-- //footer -->
+
+
 </body>
