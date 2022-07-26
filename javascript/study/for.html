@@ -57,10 +57,12 @@
             <hr>
             <h3 class="t_tit2">01. 0부터 99까지 출력하기</h3>
             <div id="sample01" class="sample">
-<pre><code>for( let i=0; i&lt;100; i++){
+            <div class="t_code">
+<pre><code class="language-js">for( let i=0; i&lt;100; i++){
     document.write(i)
 }
 </code></pre>
+            </div>
                 <div class="t_result">
                     <details>
                         <summary>결과 확인하기</summary>
@@ -77,10 +79,12 @@
             </div>
             <h3 class="t_tit2">02. 1부터 100까지 출력하기</h3>
             <div id="sample02" class="sample">
-<pre><code>for( let i=1; i&lt;=100; i++){
+            <div class="t_code">
+<pre><code class="language-js">for( let i=1; i&lt;=100; i++){
     document.write(i,"&lt;br>");
 }
 </code></pre>
+            </div>
                 <div class="t_result">
                     <details>
                         <summary>결과 확인하기</summary>
@@ -99,10 +103,12 @@
             <h3 class="t_tit2">03. 1부터 100까지 출력하기(짝수)</h3>
             <p class="t_desc">짝수로 출력할 때는 증가값을 2로 해주면 됩니다.</p>
             <div id="sample03" class="sample">
-<pre><code>for( let i=2; i&lt;=100; i+=2){  // i + 2 --> i = i + 2 
+            <div class="t_code">
+<pre><code class="language-js">for( let i=2; i&lt;=100; i+=2){  // i + 2 --> i = i + 2 
     document.write(i,"&lt;br>");
 }
 </code></pre>
+            </div>
                 <div class="t_result">
                     <details>
                         <summary>결과 확인하기</summary>
@@ -121,11 +127,13 @@
             <h3 class="t_tit2">04. 1부터 100까지 출력하기(5의 배수)</h3>
             <p class="t_desc">짝수로 출력할 때는 증가값을 2로 해주면 됩니다.</p>
             <div id="sample04" class="sample">
-<pre><code>for(let i=1;i&lt;101;i++){
+            <div class="t_code">
+<pre><code class="language-js">for(let i=1;i&lt;101;i++){
     if(i % 5 == 0){
         document.write(i);
 }
 </code></pre>
+            </div>
                 <div class="t_result">
                     <details>
                         <summary>결과 확인하기</summary>
@@ -146,7 +154,8 @@
             <h3 class="t_tit2">05. 1부터 100까지 출력하기(5의 배수는 빨간색 7의 배수는 파란색)</h3>
             <p class="t_desc">짝수로 출력할 때는 증가값을 2로 해주면 됩니다.</p>
             <div id="sample05" class="sample">
-<pre><code>for(let i=1;i<101;i++){
+            <div class="t_code">
+<pre><code class="language-js">for(let i=1;i&lt;101;i++){
     if(i % 5 == 0){
         document.write("&lt;sapn style='color: blue'>"+i+"&lt;/span>");
     }
@@ -155,6 +164,7 @@
     }
 }
 </code></pre>
+            </div>
                 <div class="t_result">
                     <details>
                         <summary>결과 확인하기</summary>
@@ -178,7 +188,8 @@
             <h3 class="t_tit2">06. 구구단 출력하기</h3>
             <p class="t_desc">짝수로 출력할 때는 증가값을 2로 해주면 됩니다.</p>
             <div id="sample06" class="sample">
-<pre><code>for( let i=2; i&lt;=9; i++){
+            <div class="t_code">
+<pre><code class="language-js">for( let i=2; i&lt;=9; i++){
     for ( let j=1; j&lt;=9; j++){
         let sum = i * j;
         document.write(i + "*" + j + "=" + sum);
@@ -186,6 +197,7 @@
     }
 }
 </code></pre>
+            </div>
                 <div class="t_result">
                     <details>
                         <summary>결과 확인하기</summary>
@@ -212,6 +224,7 @@
             <h3 class="t_tit2">07. for문을 이용해서 테이블 출력하기</h>
             <p class="t_desc">중첩 for문을 이용해서 테이블을 만들 수 있습니다.</p>
             <div id="sample07" class="sample">
+            <div class="t_code">
 <pre><code class="language-js">//for문을 이용해서 테이블 만들기
 let table = "&lt;table class='testTable'>";
 
@@ -227,6 +240,7 @@ for(let i=1; i<11; i++){
 table += "&lt;/table>";
 document.write(table);
 </code></pre>
+            </div>
                 <div class="t_result">
                     <details>
                         <summary>결과 확인하기</summary>
