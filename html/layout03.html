@@ -49,6 +49,68 @@
                 <div class="t_iframe">
                     <iframe src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2F2Z6MYAl9zYulOhlw6JTlYW%2F%25EB%25A0%2588%25EC%259D%25B4%25EC%2595%2584%25EC%259B%2583%3Fnode-id%3D32%253A3" allowfullscreen></iframe>
                 </div>
+                <h3 class="t_tit2">float을 이용한 레이아웃</h3>
+                <p class="t_desc2">
+                    float 속성은 특히 국내 실무 내에서 레이아웃 설계하는 과정에서 많이 사용하는 속성입니다. <br>
+                    복잡한 형태의 레이아웃을 구성하는데 필요한 핵심 속성으로 특정 요소를 떠있게, 흐르도록, 부유하게 하도록 하는 속성입니다. <br>
+                    다시 말해, float 속성을 사용해 박스를 왼쪽(left) 또는 오른쪽(right)으로 "부유"시키는 레이아웃 기법입니다. <br>
+                    여기서 '부유하다' 라는 의미는 요소가 기본적인 문서 배치의 흐름에서 벗어나 요소의 모서리가 페이지의 왼쪽이나 오른쪽으로 이동하는 것을 말합니다. <br>
+                    이 플로팅 모델을 이용하면 문서의 흐름과 관계없이 화면 배치를 유연하게 할 수 있습니다.
+                </p>
+                <hr>
+                <div class="t_code">
+<pre><code class="language-js">*{
+        margin: 0;
+        padding: 0;
+}
+#header{
+    height: 100px;
+    background-color: #E0F2F1;
+}
+#nav{
+    height: 300px;
+    background-color: #80CBC4;
+}
+#section{
+    height: 580px;
+    background-color: #26A69A;
+}
+#footer{
+    height: 100px;
+    background-color: #00897B;
+}
+/*  아이디/클래스
+    #/.
+    한번/여러번(중복)
+    전체적인 틀, 스크립트 -->id
+    세부적인 영억, 반복 -->class */
+    
+.container{
+    width: 1200px;
+    height: inherit;
+    margin: 0 auto;
+    background-color: rgba(0, 0, 0, 0.3)
+}
+@media (max-width: 1220px){
+    .container {
+        width: 96%;
+    }
+}
+@media(max-width: 768px){
+    .container{
+        width: 100%;
+    }
+}
+</code></pre>
+                <div class ="t_code">
+            </div>
+            <h4 class="t_tit2">결과</h4>
+            <div class="t_iframe">
+                <iframe src="https://codepen.io/damin0842/embed/yLKoWMq?default-tab=result" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+                    See the Pen <a href="https://codepen.io/damin0842/pen/yLKoWMq">
+                    layout04-float</a> by damin0842 (<a href="https://codepen.io/damin0842">@damin0842</a>)
+                    on <a href="https://codepen.io">CodePen</a>.
+                  </iframe>
             </div>
         </div>
     </main>

@@ -40,6 +40,9 @@
     <main id="main">
         <div class="document">
             <h2 class="t_tit">if 문</h2>
+            <p class="t_desc2">if 문은 지정한 조건이 참인 경우 명령문(statement)을 실행합니다. <br>
+                조건이 거짓인 경우 또 다른 명령문이 실행 될 수 있습니다.
+            </p>
             <h3 class="t_tit2">if 문의 형식</h3>
             <p class="t_box">
                 if (조건식){<br>
@@ -53,7 +56,7 @@
             </h3>
             <p class="t_desc">
                 코딩에 앞서 prompt()는 숫자로 입력한 데이터를 문자 데이터로 처리하기
-                때문에 '+' 연산자를 사용할 경우 더하기 연산이 아니라 연결 연산이 됩니다.
+                때문에 '+' 연산자를 사용할 경우 더하기 연산이 아니라 연결 연산이 됩니다. <br>
                 이 문제를 해결하기 위해 숫자 변환 명령어 Number()을 사용 하겠습니다.
             </p>
             <br>
@@ -96,6 +99,10 @@
     </div>
     <div class="document">
         <h2 class="t_tit">switch 문</h2>
+        <p class="t_desc2">복수의 if 조건문은 switch문으로 바꿀 수 있습니다. <br>
+
+            switch문을 사용한 비교법은 특정 변수를 다양한 상황에서 비교할 수 있게 해줍니다. <br>
+            코드 자체가 비교 상황을 잘 설명한다는 장점도 있습니다.
         <h3 class="t_tit2">switch 문의 형식</h3>
         <p class="t_box">
             switch (값) { <br>
@@ -111,9 +118,9 @@
         </p>
         <br>
         <p class="t_desc">
-            switch(값) 의 값과 case의 값들을 하나씩 비교하여 일치하는 case를 실행시켜 줍니다.
-            switch 문은 if문과 다르게 특정 조건에 만족 했을 때 블록{}을 스스로 빠져나가지 못합니다.
-            이 때문에 break 명령어를 주어 switch case문의 블록{}을 빠져 나가도록 합니다.
+            switch(값) 의 값과 case의 값들을 하나씩 비교하여 일치하는 case를 실행시켜 줍니다. <br>
+            switch 문은 if문과 다르게 특정 조건에 만족 했을 때 블록{}을 스스로 빠져나가지 못합니다. <br>
+            이 때문에 break 명령어를 주어 switch case문의 블록{}을 빠져 나가도록 합니다. <br>
             default는 switch의 값이 일치하는 값이 없을 때 실행합니다.
         </p>
         <br>
@@ -369,58 +376,7 @@ switch( num ){
             </details>
         </div>
     </div>
-    <div id="sample07" class="sample">
-        <h3 class="t_tit2">while문</h3>
-        <div class="t_code">
-<pre><code class="language-js">let num = 1;
-while( num &lt;= 5 ){
-    document.write("실행되었습니다.");
-    num++;
-}
-</code></pre>
-        </div>
-        <div class="t_result">
-            <details>
-                <summary>결과 확인하기</summary>
-                <div class="result07"></div>            
-                <script>
-                    {   
-                        let num = 1;
-                        while( num <= 5 ){
-                            document.write("실행되었습니다.");
-                            num++;
-                        }
-                    }
-                </script>
-            </details>
-        </div>
-    </div>
-    <div id="sample08" class="sample">
-        <h3 class="t_tit2">do while문(반복문)</h3>
-        <div class="t_code">
-<pre><code class="language-js">let num = 1;
-do {
-    // document.write("실행되었습니다2.");
-    num++;
-} while (num &lt;= 5);
-</code></pre>
-        </div>
-        <div class="t_result">
-            <details>
-                <summary>결과 확인하기</summary>
-                <div class="result07"></div>            
-                <script>
-                    {   
-                        let num = 1;
-                        do {
-                            document.write("실행되었습니다2.");
-                            num++;
-                        } while (num <= 5);
-                    }
-                </script>
-            </details>
-        </div>
-    </div>
+
     <footer id="footer">
         <a href="mailto:jdm2@naver.com">jdm2@naver.com</a>
     </footer>

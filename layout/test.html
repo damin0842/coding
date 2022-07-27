@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        #wrap{
+            margin: 0 auto;
+            color: #fff;
+            font-size: 40px;
+            text-align: center;
+        }
+        #header{
+            width: 1200px;
+            height: 100px;
+            overflow: hidden;
+            line-height: 100px;
+        }
+        #header .logo{
+            width: 300px;
+            height: 100px;
+            background-color: #D3A0A0;
+            float: left;
+        }
+        #header .menu{
+            width: 900px;
+            height: 100px;
+            background-color: #9E5858;
+            float: left;
+        }
+        #main{
+            line-height: 400px;
+            width: 1200px;
+            height: 400px;
+            overflow: hidden;
+        }
+        #main .slide{
+            width: 800px;
+            height: 400px;
+            float: left;
+            background-color: #BC5C5C;
+        }
+        #main .gogo{
+            width: 400px;
+            height: 400px;
+            float: left;
+            background-color: #A93434;
+        }
+        #section{
+            line-height: 300px;
+            width: 1200px;
+            height: 300px;
+            overflow: hidden;
+        }
+        #section .aside{
+            width: 400px;
+            height: 300px;
+            background-color: #AF3E3E;
+            float: left;
+        }
+        #section .bside{
+            width: 400px;
+            height: 300px;
+            background-color: #782A2A;
+            float: left;
+        }
+        #section .cside{
+            width: 400px;
+            height: 300px;
+            background-color: #671A1A;
+            float: left;
+        }
+        #footer{
+            width: 1200px;
+            height: 100px;
+            overflow: hidden;
+            line-height: 100px;
+        }
+        #footer .ft1{
+            width: 200px;
+            height: 100px;
+            background-color: #BC2424;
+            float: left;
+        }
+        #footer .ft2{
+            width: 800px;
+            height: 100px;
+            background-color: #811E1E;
+            float: left;
+        }
+        #footer .ft3{
+            width: 200px;
+            height: 100px;
+            background-color: #B71818;   
+            float: left;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <div id="header">
+            <div class="logo">로고</div>
+            <div class="menu">
+                <script>
+                    {
+                        for(let j=1; j<14; j++){
+                          document.write(j);
+                        }
+                    }
+                </script>
+            </div>
+        </div>
+        <div id="main">
+            <div class="slide">
+                <script>
+                    for(let i=0; i<10; i++){
+                        if(i % 2 == 1){
+                            document.write(i);
+                        }
+                        
+                    }
+                </script>
+            </div>
+            <div class="gogo">광고</div>
+        </div>
+        <div id="section">
+            <div class="aside">공지사항</div>
+            <div class="bside">갤러리</div>
+            <div class="cside">팝업</div>
+        </div>
+        <div id="footer">
+            <div class="ft1">푸터</div>
+            <div class="ft2">COPYRIGHT</div>
+            <div class="ft3">SNS</div>
+        </div>
+    </div>
+ 
+</body>
+</html>

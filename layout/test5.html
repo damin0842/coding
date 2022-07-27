@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        #wrap{
+            width: 100%;
+            font-size: 40px;
+            color: #fff;
+            text-align: center;
+        }
+        #header{
+            width: 100%;
+            height: 100px;
+            background-color: #E0F2F1;
+        }
+        #header .header1{
+            line-height: 100px;
+            width: 1200px;
+            height: 100px;
+            background-color: #B2DFDB;
+        }
+        #main{
+            width: 100%;
+            height: 900px;
+            background-color: #26A69A;
+        }
+        #main .main_left{
+            width: 300px;
+            height: 900px;
+            background-color: #4DB6AC;
+            float: left;
+            line-height: 900px;
+        }
+        #main .main_right{
+            line-height: 300px;
+            width: 900px;
+            height: 900px;
+            float: left;
+        }
+        #main .main_right .r1{
+            width: 900px;
+            height: 300px;
+            float: left;
+        }
+        #main .main_right .r1 .rr1{
+            width: 300px;
+            height: 300px;
+            float: left;
+            background-color: #68EEE2;
+        }
+        #main .main_right .r1 .rr2{
+            width: 300px;
+            height: 300px;
+            float: left;
+            background-color: #5CDDD1;
+        }
+        #main .main_right .r1 .rr3{
+            width: 300px;
+            height: 300px;
+            float: left;
+            background-color: #68EEE2;
+        }
+        #main .main_right .r2{
+            width: 900px;
+            height: 300px;
+            float: left;
+            background-color: #009688;
+        }
+        #main .main_right .r3{
+            width: 900px;
+            height: 300px;
+            float: left;
+        }
+        #main .main_right .r3 .r31{
+            width: 450px;
+            height: 300px;
+            float: left;
+            background-color: #39D1C3;
+        }
+        #main .main_right .r3 .r32{
+            width: 450px;
+            height: 300px;
+            float: left;
+            background-color: #68D3C9;
+        }
+        #footer{
+            width: 100%;
+            height: 100px;
+            background-color: #00897B;
+        }
+        #footer .footer1{
+            line-height: 100px;
+            width: 1200px;
+            height: 100px;
+            background-color: #00796B;
+        }
+        .container{
+            width: 1200px;
+            height: 100%;
+            margin: 0 auto;
+            background-color :rgba(255,255 ,255,0.3 )
+        }
+
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <div id="header">
+            <div class="container">
+                <div class="header1"></div>
+            </div>
+        </div>
+        <div id="main">
+            <div class="container">
+                <div class="main_left"></div>
+                <div class="main_right">
+                    <div class="r1">
+                        <div class="rr1"></div>
+                        <div class="rr2"></div>
+                        <div class="rr3"></div>
+                    </div>
+                    <div class="r2"></div>
+                    <div class="r3">
+                        <div class="r31"></div>
+                        <div class="r32"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="footer">
+            <div class="container">
+                <div class="footer1"></div>
+            </div>
+        </div>
+    </div>
+    <script>
+        {
+            const str = ["헤드1","메인1","메인2","메인3","메인4","메인5","메인6","메인7","푸터1"]
+
+            document.querySelector(".header1").innerHTML = str[0];
+            document.querySelector(".main_left").innerHTML = str[1];
+            document.querySelector(".rr1").innerHTML = str[2];
+            document.querySelector(".rr2").innerHTML = str[3];
+            document.querySelector(".rr3").innerHTML = str[4];
+            document.querySelector(".r2").innerHTML = str[5];
+            document.querySelector(".r31").innerHTML = str[6];
+            document.querySelector(".r32").innerHTML = str[7];
+            document.querySelector(".footer1").innerHTML = str[8];
+
+        }
+        
+    </script>
+</body>
+</html>

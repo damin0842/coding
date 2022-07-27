@@ -47,7 +47,7 @@
         <div class="document">
             <h2 class="t_tit">반복문</h2>
             <p class="t_desc">반복문은 프로그램에서 필요한 결과 값을 도출하기
-                위해 실행문의 순서를 반복적으로 실행시키는 문법을 말합니다.
+                위해 실행문의 순서를 반복적으로 실행시키는 문법을 말합니다. <br>
                 반복문에는 while문, do while문,for문이 있으며, for문을 가장 많이 사용합니다.
             </p>
             <p class="t_box">
@@ -168,7 +168,7 @@
                 <div class="t_result">
                     <details>
                         <summary>결과 확인하기</summary>
-                        <div class="result05"></div>            
+                        <div class="result05"></div>   
                         <script>
                         {
                             for(let i=1;i<101;i++){
@@ -265,7 +265,58 @@ document.write(table);
                     </details>
                 </div>
             </div>
-
+            <div id="sample08" class="sample">
+                <h3 class="t_tit2">while문</h3>
+                <div class="t_code">
+        <pre><code class="language-js">let num = 1;
+        while( num &lt;= 5 ){
+            document.write("실행되었습니다.");
+            num++;
+        }
+        </code></pre>
+                </div>
+                <div class="t_result">
+                    <details>
+                        <summary>결과 확인하기</summary>
+                        <div class="result08"></div>            
+                        <script>
+                            {   
+                                let num = 1;
+                                while( num <= 5 ){
+                                    document.write("실행되었습니다.");
+                                    num++;
+                                }
+                            }
+                        </script>
+                    </details>
+                </div>
+            </div>
+            <div id="sample09" class="sample">
+                <h3 class="t_tit2">do while문(반복문)</h3>
+                <div class="t_code">
+        <pre><code class="language-js">let num = 1;
+        do {
+            // document.write("실행되었습니다2.");
+            num++;
+        } while (num &lt;= 5);
+        </code></pre>
+                </div>
+                <div class="t_result">
+                    <details>
+                        <summary>결과 확인하기</summary>
+                        <div class="result09"></div>            
+                        <script>
+                            {   
+                                let num = 1;
+                                do {
+                                    document.write("실행되었습니다2.");
+                                    num++;
+                                } while (num <= 5);
+                            }
+                        </script>
+                    </details>
+                </div>
+            </div>
         </div>
     </main>
     <!-- //main -->
