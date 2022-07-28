@@ -11,33 +11,105 @@
 </body>
 <script>
     {
-        function func(){
-        document.write("함수가 실행되었습니다.1");
+       function func(){
+        document.write("선언적함수");
+       }
+       func();
+    }
+    {
+        const func = function(){
+            document.write("익명함수");
         }
         func();
     }
-    document.write("<br>");
     {
-        func = () => document.write("함수가 실행되었습니다.2");
-        func();
+        function func(str){
+            document.write(str);
+        }
+        func("매개변수함수");
     }
-    document.write("<br>");
-    {
-        func = (str) => document.write(str);
-        func("함수가 실행되었습니다.3");
-    }
-    document.write("<br>");
-    {
-        const func = () => document.write("함수가 실행되었습니다.4");
-        func();
-    }
-    document.write("<br>");
     {
         function func(){
-            const str = document.write();
-            return str ("함수가 실행되었습니다.5");
+            const str = "리턴함수"
+            return str;
         }
+        document.write(func());
+    }
+    {
+        func = () => document.write("화살표선언함수");
         func();
+    }
+    {
+        const func = () => document.write("화살표익명함수");
+        func();
+    }
+    {
+        func = (str) => {
+            document.write(str);
+        }
+        func("화살표매개변수함수");
+    }
+    {
+        func = () => {
+            const str = "화살표리턴함수"
+            return str;
+        }
+        document.write(func());
+    }
+    {
+        func = (str) => {
+            return str;
+        }
+        document.write(func("화살표리턴매개변수"));
+    }
+    {
+        func = str => {
+            return str;
+        }
+        document.write(func("괄호생략"));
+
+    }
+    {
+        func = str => str;
+        document.write(func("괄호리턴생략"));
+    }
+    {
+        if(""){
+            document.write("true");
+        }else{
+            document.write("false");
+        }
+    }
+    {
+        const num = 100;
+
+        if("") document.write("true");
+        else document.write("if문생략")
+    }
+    document.write("<br>")
+    // {
+    //     for(i=2; i<10; i++){
+    //         for(j=1; j<10; j++){
+    //             document.write(i*j + "<br>");
+    //         }
+    //     }
+    // }
+    {
+        const ar = [1,2,3,4,5,6,7,8,9]
+
+        arr.forEach(function(el,e,a){
+            document.write(el)
+        })
+        
+        for(i of ar){
+            document.write(i)
+        }
+
+        for(j in arr){
+            document.write(j)
+        }
+
+        
     }
 
 
