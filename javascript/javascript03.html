@@ -1,13 +1,15 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>자바스크립트 : 데이터 실행하기</title>    
+    <title>자바스크립트 : 데이터 실행하기</title>
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/dracula.css">
 </head>
+
 <body>
     <header id="header">
         <h1><a href="index.html">Javascripts</a></h1>
@@ -34,6 +36,7 @@
                 <li><a href="study/if.html">조건문</a></li>
                 <li><a href="study/type.html">데이터 타입</a></li>
                 <li><a href="study/function.html">함수</a></li>
+                <li><a href="study/var.html">지역변수/전역변수</a></li>
             </ul>
         </nav>
     </header>
@@ -82,7 +85,7 @@
                     즉, 따로 변수에 넣어주지 않고 선언할 대 붙여준 이름으로 호출하면 된다.
                 </p>
                 <div>
-<pre><code>function func(){
+                    <pre><code>function func(){
     document.write("함수가 실행되었습니다.1<br>") //브라우저 객체
 }
 func();
@@ -94,10 +97,10 @@ func();
                         <div class="sample01_result">
                             <script>
                                 {
-                                function func(){
-                                    document.write("함수가 실행되었습니다.1<br>");
-                                }
-                                func();
+                                    function func() {
+                                        document.write("함수가 실행되었습니다.1<br>");
+                                    }
+                                    func();
                                 }
                             </script>
                         </div>
@@ -113,7 +116,7 @@ func();
                     익명함수는 그 뒤에 코드를 차례로 읽을 때 읽는다는 차이점이 있다.
                 </p>
                 <div>
-<pre><code>const func = function(){
+                    <pre><code>const func = function(){
     document.write("함수가 실행되었습니다.2")
 }
 func();
@@ -125,10 +128,10 @@ func();
                         <div>
                             <script>
                                 {
-                                    const func = function(){
-                                    document.write("함수가 실행되었습니다.2")
-                                }
-                                func();
+                                    const func = function () {
+                                        document.write("함수가 실행되었습니다.2")
+                                    }
+                                    func();
                                 }
                             </script>
                         </div>
@@ -141,10 +144,10 @@ func();
                     함수를 호출할 때 (소괄호)안에 값이나 변수등의
                     인자값을 주입하는것을 매개변수라고 한다. <br>
                     함수를 호출하는 쪽과 정의된 함수를 연결하는 매개가 되는 변수이므로
-                    매개변수라는 이름을 사용한 것이다. 
+                    매개변수라는 이름을 사용한 것이다.
                 </p>
                 <div>
-<pre><code>function func(str){
+                    <pre><code>function func(str){
     document.write(str)
 }
 func("함수가 실행되었습니다.3");
@@ -156,7 +159,7 @@ func("함수가 실행되었습니다.3");
                         <div>
                             <script>
                                 {
-                                    function func(str){
+                                    function func(str) {
                                         document.write(str)
                                     }
                                     func("함수가 실행되었습니다.3<br>");
@@ -173,7 +176,7 @@ func("함수가 실행되었습니다.3");
                     따라서 return 키워드를 사용하면 값을 지정하지 않아도 함수를 호출한 곳으로 돌아간다.
                 </p>
                 <div>
-<pre><code>function func(){
+                    <pre><code>function func(){
     const str = "함수가 실행되었습니다.4<br>";
     return str;
 }
@@ -186,7 +189,7 @@ document.write(func());
                         <div>
                             <script>
                                 {
-                                function func(){
+                                    function func() {
                                         const str = "함수가 실행되었습니다.4<br>";
                                         return str;
                                     }
@@ -205,7 +208,7 @@ document.write(func());
                     ECMAscript6(ES6)에서 화살표 함수, let, const 기능이 추가 되었다.
                 </p>
                 <div>
-<pre><code>//function func(){
+                    <pre><code>//function func(){
 //     document.write("함수가 실행되었습니다.5<br>")
 // }
 // func();
@@ -239,7 +242,7 @@ func();
                     익명 함수를 화살표 함수로 표현할 수 있다.
                 </p>
                 <div>
-<pre><code>//const func = function(){
+                    <pre><code>//const func = function(){
 //     document.write("함수가 실행되었습니다.6<br>");
 // }
 // func();
@@ -271,7 +274,7 @@ func();
                     매개변수 함수를 화살표 함수로 표현할 수 있다.
                 </p>
                 <div>
-<pre><code>//function func(str){
+                    <pre><code>//function func(str){
 //     document.write(str)
 // }
 // func("함수가 실행되었습니다.7");
@@ -302,7 +305,7 @@ func("함수가 실행되었습니다.7");
                     리턴값 함수를 화살표 함수로 표현할 수 있다.
                 </p>
                 <div>
-<pre><code>// function func(){
+                    <pre><code>// function func(){
 //     const str = "함수가 실행되었습니다.8";
 //     return str
 // }
@@ -339,34 +342,100 @@ document.write(func());
     </footer>
     <!-- //footer -->
     <script>
-        //변수(데이터저장) ,배열(데이터저장), 객체(데이터저장) --> 함수(실행문)(제어문)
         //01. 선언적 함수 353p
+        //변수(데이터저장) ,배열(데이터저장), 객체(데이터저장) --> 함수(실행문)(제어문)
+        {
+            function func() {
+                document.write("함수가 실행되었습니다.1<br>");
+            }
+            func();
+        }
 
         //02. 익명 함수
-
+        {
+            const func = function () {
+                document.write("함수가 실행되었습니다.2<br>");
+            }
+            func();
+        }
         //03. 매개변수 함수
         // 변수 : 지역변수 + 전역변수 + 매개변수
         // 함수 : 지역함수 + 전역함수 
-
+        {
+            function func(str) {
+                document.write(str);
+            }
+            func("함수가 실행되었습니다.3<br>");
+        }
         //04. 리턴값 함수
 
+        {
+            function func() {
+                const str = "함수가 실행되었습니다.4<br>";
+                return str; //결과값, 종료값
+            }
+            document.write(func());
+        }
+        //05. 화살표 함수(선언적 함수)
         //ECMAscript1
         //ECMAscript2
         //ECMAscript3
         //ECMAscript4
         //ECMAscript5
         //ECMAscript6(ES6) 화살표 함수, let, const
-
-        //05. 화살표 함수(선언적 함수)
-
+        {
+            func = () => document.write("함수가 실행되었습니다.5<br>");
+            func();
+        }
         //06. 화살표 함수(익명 함수)
-
+        {
+            const func = () => document.write("함수가 실행되었습니다.6<br>");
+            func();
+        }
         //07. 화살표 함수(매개변수 함수)
-
+        {
+            func = (str) => {
+                document.write(str);
+            }
+            func("함수가 실행되었습니다.7<br>");
+        }
         //08. 화살표 함수(리턴값 함수)
-
+        {
+            func = () => {
+                const str = "함수가 실행되었습니다.8<br>"
+                return str
+            }
+            document.write(func());
+        }
+        //09. 화살표 함수 : 익명함수 + 매개변수 + 리턴값
+        {
+            const func = (str) => {
+                return str;
+            }
+            document.write(func("함수가 실행되었습니다.9<br>"));
+        }
+        //10. 화살표 함수 : 익명함수 + 매개변수 + 리턴값 + 괄호 생략
+        {
+            const func = str => {
+                return str; //결과
+            }
+            document.write(func("함수가 실행되었습니다.10<br>"));
+        }
+        //11. 화살표 함수 : 익명함수 + 매개변수 + 리턴값 + 괄호 생략 + 리턴 생략
+        {
+            const func = str => str; //결과
+            
+            document.write(func("함수가 실행되었습니다.11<br>"));
+        }
+        //12. 화살표 함수 : 선언적함수 + 매개변수 + 리턴값 + 괄호 생략 + 리턴 생략
+        {
+            func = str => str; //결과
+            
+            document.write(func("함수가 실행되었습니다.12<br>"));
+        }
     </script>
     <script src="assets/js/highlight.min.js"></script>
     <script>hljs.highlightAll();</script>
 </body>
+
 </html>

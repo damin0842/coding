@@ -1,13 +1,15 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>자바스크립트 : 데이터 불러오기</title>    
+    <title>자바스크립트 : 데이터 불러오기</title>
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/dracula.css">
 </head>
+
 <body>
     <header id="header">
         <h1><a href="index.html">Javascripts</a></h1>
@@ -33,6 +35,8 @@
                 <li><a href="study/for.html">반복문</a></li>
                 <li><a href="study/if.html">조건문</a></li>
                 <li><a href="study/type.html">데이터 타입</a></li>
+                <li><a href="study/function.html">함수</a></li>
+                <li><a href="study/var.html">지역변수/전역변수</a></li>
             </ul>
         </nav>
     </header>
@@ -73,7 +77,7 @@
                     이 저장소에는 숫자, 문자, 함수 객체 등을 저장할 수 있습니다.
                 </p>
                 <div class="script">
-<pre><code>var x = 100;            //변수 x에 숫자 100을 저장함
+                    <pre><code>var x = 100;            //변수 x에 숫자 100을 저장함
 var y = 200;            //변수 y에 숫자 200을 저장함
 var z = "javascript";  //변수 z에 문자열 "javascript" 를 저장함
     
@@ -86,7 +90,7 @@ document.write(z);
                     <details>
                         <summary>결과 보기</summary>
                         <div class="sample01_result">
-                           
+
                         </div>
                     </details>
                 </div>
@@ -98,7 +102,7 @@ document.write(z);
                     상수의 값은 재지정할 수도 없습니다.
                 </p>
                 <div class="script">
-<pre><code>const x = 100,
+                    <pre><code>const x = 100,
          y = 200,
          z = "javascript";
 
@@ -111,7 +115,7 @@ document.write(z);
                     <details>
                         <summary>결과 보기</summary>
                         <div class="sample02_result">
-                           
+
                         </div>
                     </details>
                 </div>
@@ -119,11 +123,11 @@ document.write(z);
             <div id="sample03" class="sample">
                 <h3>03. 배열 : 데이터 불러오기</h3>
                 <p>
-                    배열은 여러개의 데이터를 저장할 수 있는 저장소 입니다. 
+                    배열은 여러개의 데이터를 저장할 수 있는 저장소 입니다.
                     표현 방법도 여러가지가 있습니다.
                 </p>
                 <div class="script">
-<pre><code>const arr = [100, 200, "javascript"];
+                    <pre><code>const arr = [100, 200, "javascript"];
 
 document.write(arr[0]);
 document.write(arr[1]);
@@ -134,7 +138,7 @@ document.write(arr[2]);
                     <details>
                         <summary>결과 보기</summary>
                         <div class="sample03_result">
-                           
+
                         </div>
                     </details>
                 </div>
@@ -142,11 +146,11 @@ document.write(arr[2]);
             <div id="sample04" class="sample">
                 <h3>04. 배열 : 데이터 불러오기 : 2차 배열</h3>
                 <p>
-                    배열은 여러개의 데이터를 저장할 수 있는 저장소 입니다. 
+                    배열은 여러개의 데이터를 저장할 수 있는 저장소 입니다.
                     표현 방법도 여러가지가 있습니다.
                 </p>
                 <div class="script">
-<pre><code>const arr = [100, 200, ["javascript", "jquery"]];
+                    <pre><code>const arr = [100, 200, ["javascript", "jquery"]];
 
 document.write(arr[0]);
 document.write(arr[1]);
@@ -158,7 +162,7 @@ document.write(arr[2][1]);
                     <details>
                         <summary>결과 보기</summary>
                         <div class="sample04_result">
-                           
+
                         </div>
                     </details>
                 </div>
@@ -169,7 +173,7 @@ document.write(arr[2][1]);
                     arr 배열이 가진 값이 몇개인지 알아보려면 length를 사용합니다.
                 </p>
                 <div class="script">
-<pre><code>const arr = [100, 200, "javascript"];
+                    <pre><code>const arr = [100, 200, "javascript"];
 
 document.write(arr.length);
 </code></pre>
@@ -178,7 +182,7 @@ document.write(arr.length);
                     <details>
                         <summary>결과 보기</summary>
                         <div class="sample05_result">
-                           
+
                         </div>
                     </details>
                 </div>
@@ -190,7 +194,7 @@ document.write(arr.length);
                     프로그램이 처리하는 대부분의 코드는 반복적인 형태가 많으므로, 가장 많이 사용되는 제어문 중 하나입니다.
                 </p>
                 <div class="script">
-<pre><code>const arr = [100, 200, 300, 400, 500, 600, 700, 800, 900];
+                    <pre><code>const arr = [100, 200, 300, 400, 500, 600, 700, 800, 900];
 
 //document.write(arr[0], arr[1], arr[2], arr[3], arr[4], arr[5], arr[6], arr[7], arr[8]);
 
@@ -215,7 +219,7 @@ for(let i=0; i&lt;arr.length; i++){
                     forEach()는 주어진 callback을 배열에 있는 각 요소에 대해 오름차순으로 한 번씩 실행합니다.
                 </p>
                 <div class="script">
-<pre><code>const num = [100, 200, 300, 400, 500];
+                    <pre><code>const num = [100, 200, 300, 400, 500];
 
 //for 출력;
 for(let i=0; i&lt;num.length; i++){
@@ -257,12 +261,12 @@ num.forEach(function(element, index, array){
             <div id="sample08" class="sample">
                 <h3>08. 배열 : 데이터 불러오기 : for of</h3>
                 <p>
-                    for of 반복문은 ES6에 추가된 새로운 컬렉션 전용 반복 구문입니다. 
-                    for of 구문을 사용하기 위해선 컬렉션 객체가 [Symbol.iterator] 
+                    for of 반복문은 ES6에 추가된 새로운 컬렉션 전용 반복 구문입니다.
+                    for of 구문을 사용하기 위해선 컬렉션 객체가 [Symbol.iterator]
                     속성을 가지고 있어야만 합니다(직접 명시 가능).
                 </p>
                 <div class="script">
-<pre><code>const arr = [100,200,300,400,500];
+                    <pre><code>const arr = [100,200,300,400,500];
         
 for(let i=0; i&lt;5; i++){
     document.write(arr[i]);
@@ -285,17 +289,17 @@ for(let i of arr){              //of 요소값
             <div id="sample09" class="sample">
                 <h3>09. 배열 : 데이터 불러오기 : for in</h3>
                 <p>
-                    for in 반복문은 객체의 속성들을 반복하여 작업을 수행할 수 있습니다. 
-                    모든 객체에서 사용이 가능합니다. for in 구문은 객체의 key 값에 접근할 수 있지만, 
-                    value 값에 접근하는 방법은 제공하지 않습니다. 
-                    자바스크립트에서 객체 속성들은 내부적으로 사용하는 숨겨진 속성들을 가지고 있습니다. 
-                    그 중 하나가 [[Enumerable]]이며, 
-                    for in 구문은 이 값이 true로 셋팅되어 속성들만 반복할 수 있습니다. 
-                    이러한 속성들을 열거형 속성이라고 부르며, 
+                    for in 반복문은 객체의 속성들을 반복하여 작업을 수행할 수 있습니다.
+                    모든 객체에서 사용이 가능합니다. for in 구문은 객체의 key 값에 접근할 수 있지만,
+                    value 값에 접근하는 방법은 제공하지 않습니다.
+                    자바스크립트에서 객체 속성들은 내부적으로 사용하는 숨겨진 속성들을 가지고 있습니다.
+                    그 중 하나가 [[Enumerable]]이며,
+                    for in 구문은 이 값이 true로 셋팅되어 속성들만 반복할 수 있습니다.
+                    이러한 속성들을 열거형 속성이라고 부르며,
                     객체의 모든 내장 메서드를 비롯해 각종 내장 프로퍼티 같은 비열거형 속성은 반복되지 않습니다.
                 </p>
                 <div class="script">
-<pre><code>const arr = [100,200,300,400,500];
+                    <pre><code>const arr = [100,200,300,400,500];
 
 for(let i in arr){          //in인덱스값
 document.write(i); 
@@ -317,11 +321,11 @@ document.write(arr[i]);
                 <h3>10. 배열 : 데이터 불러오기 : map()</h3>
                 <p>
                     map은 callback 함수를 각각의 요소에 대해 한번씩 순서대로 불러 그 함수의 반환값으로 새로운 배열을 만듭니다.
-                    callback 함수는 (undefined도 포함해서) 배열 값이 들어있는 인덱스에 대해서만 호출됩니다. 
+                    callback 함수는 (undefined도 포함해서) 배열 값이 들어있는 인덱스에 대해서만 호출됩니다.
                     즉, 값이 삭제되거나 아직 값이 할당/정의되지 않은 인덱스에 대해서는 호출되지 않습니다.
                 </p>
                 <div class="script">
-<pre><code>const arr = [100,200,300,400,500];
+                    <pre><code>const arr = [100,200,300,400,500];
 
 arr.map(function(el){
     document.write(el);
@@ -365,126 +369,156 @@ arr.map(function(element, index, array){
         //01
         {
             var x = 100;            //변수 x에 숫자 100을 저장함
-var y = 200;            //변수 y에 숫자 200을 저장함
-var z = "javascript";  //변수 z에 문자열 "javascript" 를 저장함
-    
-// document.write(x);
-// document.write(y);
-// document.write(z);
-document.querySelector(".sample01_result").innerHTML = x + "<br>" + y + "<br>" + z;
+            var y = 200;            //변수 y에 숫자 200을 저장함
+            var z = "javascript";  //변수 z에 문자열 "javascript" 를 저장함
+
+            // document.write(x);
+            // document.write(y);
+            // document.write(z);
+            document.querySelector(".sample01_result").innerHTML = x + "<br>" + y + "<br>" + z;
 
         }
         //02
         {
             const x = 100,
-    y = 200,
-    z = "javascript";
+                y = 200,
+                z = "javascript";
 
-// document.write(x);
-// document.write(y);
-// document.write(z);
-document.querySelector(".sample02_result").innerHTML = x + "<br>" + y + "<br>" + z;
+            // document.write(x);
+            // document.write(y);
+            // document.write(z);
+            document.querySelector(".sample02_result").innerHTML = x + "<br>" + y + "<br>" + z;
 
         }
         //03
         {
             const arr = [100, 200, "javascript"];
 
-// document.write(arr[0]);
-// document.write(arr[1]);
-// document.write(arr[2]);
-document.querySelector(".sample03_result").innerHTML =
- arr[0] + "<br>" + arr[1] + "<br>" + arr[2];
+            // document.write(arr[0]);
+            // document.write(arr[1]);
+            // document.write(arr[2]);
+            document.querySelector(".sample03_result").innerHTML =
+                arr[0] + "<br>" + arr[1] + "<br>" + arr[2];
 
         }
         //04
         {
             const arr = [100, 200, ["javascript", "jquery"]];
 
-// document.write(arr[0]);
-// document.write(arr[1]);
-// document.write(arr[2][0]);
-// document.write(arr[2][1]);
-document.querySelector(".sample04_result").innerHTML =
-arr[0] + "<br>" + arr[1] + "<br>" + arr[2][0] + "<br>" + arr[2][1];
+            // document.write(arr[0]);
+            // document.write(arr[1]);
+            // document.write(arr[2][0]);
+            // document.write(arr[2][1]);
+            document.querySelector(".sample04_result").innerHTML =
+                arr[0] + "<br>" + arr[1] + "<br>" + arr[2][0] + "<br>" + arr[2][1];
 
         }
         //05
         {
             const arr = [100, 200, "javascript"];
 
-//document.write(arr.length);
-document.querySelector(".sample05_result").innerHTML =
-arr.length;
+            //document.write(arr.length);
+            document.querySelector(".sample05_result").innerHTML =
+                arr.length;
         }
 
 
 
 
-       //06. for문
-       {
-        const arr = [100,200,300,400,500];
+        //06. for문
+        {
+            const arr = [100, 200, 300, 400, 500];
 
-        // for(let i=0; i<5; i++){
-        //     document.write(arr[i]);
-        // }
-       }
-
-       //07. 배열 데이터 불러오기 : forEach();
-       {
-        const num = [100,200,300,400,500];
-
-        num.forEach(function(el){
-        //    document.write(el);
-        });
-        num.forEach(function(el, i, asdf){      //요소,인덱스,배열
-        //    document.write(asdf);
-        });
-       }
-       //08. 배열에 데이터 불러오기 : for of
-       {
-        const arr = [100,200,300,400,500];
-        
-        
-        // for(let i=0; i<5; i++){
-        //     document.write(arr[i]);
-        // }
-        for(let i of arr){          //of요소값
-            //document.write(i);
+            // for(let i=0; i<5; i++){
+            //     document.write(arr[i]);
+            // }
         }
 
-       }
+        //07. 배열 데이터 불러오기 : forEach();
+        {
+            const num = [100, 200, 300, 400, 500];
 
-       document.write("<br>");
+            num.forEach(function (el) {
+                //    document.write(el);
+            });
+            num.forEach(function (el, i, asdf) {      //요소,인덱스,배열
+                //    document.write(asdf);
+            });
+        }
+        //08. 배열에 데이터 불러오기 : for of
+        {
+            const arr = [100, 200, 300, 400, 500];
 
-       //09. 배열에 데이터 불러오기 : for in
-       {
-        const arr = [100,200,300,400,500];
 
-        for(let i in arr){          //in인덱스값
-            //document.write(i); 
-            //document.write(arr[i]);
+            // for(let i=0; i<5; i++){
+            //     document.write(arr[i]);
+            // }
+            for (let i of arr) {          //of요소값
+                //document.write(i);
+            }
 
         }
-        
-       }
-       document.write("<br>");
 
-       //10. 배열 데이터 불러오기 : map()
-       {
-        const arr = [100,200,300,400,500];
+        document.write("<br>");
 
-        arr.map(function(el){
-            // document.write(el);
+        //09. 배열에 데이터 불러오기 : for in
+        {
+            const arr = [100, 200, 300, 400, 500];
+
+            for (let i in arr) {          //in인덱스값
+                //document.write(i); 
+                //document.write(arr[i]);
+
+            }
+
+        }
+        document.write("<br>");
+
+        //10. 배열 데이터 불러오기 : map()
+        {
+            const arr = [100, 200, 300, 400, 500];
+
+            arr.map(function (el) {
+                // document.write(el);
+
+            });
+            arr.map(function (element, index, array) {
+                // document.write(element);
+                // document.write(index);
+                // document.write(array);
+            });
+        }
+        //
+        {
+            // const arr = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+            // //for문을 이용해 출력
+            // for (let i = 0; i < 9; i++) {
+            //     document.write(arr[i])
+            // }
+            // document.write("<br>");
+            // //forEach 이용해서 출력
+            // arr.forEach(function(el){
+            //     document.write(el);  
+            // })
+            // document.write("<br>");
+            // //map을 이용해서 출력
+            // arr.map(function(el){
+            //     document.write(el);
+            // })
+            // document.write("<br>");
+            // //forof
+            // for(let i of arr){
+            //     document.write(i);
+            // }
+            // document.write("<br>");
+            // //forin
+            // for(let i in arr){
+            //     document.write(arr[i]);
+            // }
             
-        });
-        arr.map(function(element, index, array){
-            // document.write(element);
-            // document.write(index);
-            // document.write(array);
-        });
-       }
+        }
     </script>
 
 </body>
+
 </html>

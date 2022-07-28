@@ -1,13 +1,15 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>자바스크립트 : 데이터 제어하기</title>    
+    <title>자바스크립트 : 데이터 제어하기</title>
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/dracula.css">
 </head>
+
 <body>
     <header id="header">
         <h1><a href="index.html">Javascripts</a></h1>
@@ -33,6 +35,8 @@
                 <li><a href="study/for.html">반복문</a></li>
                 <li><a href="study/if.html">조건문</a></li>
                 <li><a href="study/type.html">데이터 타입</a></li>
+                <li><a href="study/function.html">함수</a></li>
+                <li><a href="study/var.html">지역변수/전역변수</a></li>
             </ul>
         </nav>
     </header>
@@ -62,7 +66,7 @@
                     반복시키는 문장을 말합니다.
                 </p>
                 <div class="script">
-<pre><code>if(0){
+                    <pre><code>if(0){
     document.write("실행되었습니다.(true)");
 }else{
     document.write("실행되었습니다.(false)");
@@ -73,7 +77,7 @@
                     <details>
                         <summary>결과 보기</summary>
                         <div class="sample01_result">
-                           
+
                         </div>
                     </details>
                 </div>
@@ -85,7 +89,7 @@
                     반복시키는 문장을 말합니다.
                 </p>
                 <div class="script">
-<pre><code>const num = 100;
+                    <pre><code>const num = 100;
 
 if(num) document.write("실행되었습니다.(true)");
 else document.write("실행되었습니다.(farse)"); 
@@ -95,7 +99,7 @@ else document.write("실행되었습니다.(farse)");
                     <details>
                         <summary>결과 보기</summary>
                         <div class="sample02_result">
-                           
+
                         </div>
                     </details>
                 </div>
@@ -107,7 +111,7 @@ else document.write("실행되었습니다.(farse)");
                     반복시키는 문장을 말합니다.
                 </p>
                 <div class="script">
-<pre><code>const num = 100;
+                    <pre><code>const num = 100;
 
 if( num == 90 ){
     document.write("실행되었습니다.(num==90");
@@ -126,7 +130,7 @@ if( num == 90 ){
                     <details>
                         <summary>결과 보기</summary>
                         <div class="sample03_result">
-                           
+
                         </div>
                     </details>
                 </div>
@@ -147,11 +151,11 @@ if( num == 90 ){
         //(제어문 : 조건문, 반복문, 중지, 건너뛰기)
         // 01. if문
         {
-            //false, 0, undefined, null
+            //false, 0, undefined, null, ""
             //true, 1, "0", "1", 0<10, [], {}
-            if(0){
+            if ("") {
                 document.write("실행되었습니다.(true)");
-            }else{
+            } else {
                 document.write("실행되었습니다.(false)");
             }
         }
@@ -159,22 +163,22 @@ if( num == 90 ){
         {
             const num = 100;
 
-            if(num) document.write("실행되었습니다.(true)");
-            else document.write("실행되었습니다.(farse)"); 
+            if (num) document.write("실행되었습니다.(true)");
+            else document.write("실행되었습니다.(farse)");
         }
         //03. 다중 if문
         {
             const num = 100;
 
-            if( num == 90 ){
+            if (num == 90) {
                 document.write("실행되었습니다.(num==90");
-            }else if( num == 100){
+            } else if (num == 100) {
                 document.write("실행되었습니다.(num==100");
-            }else if( num == 110){
+            } else if (num == 110) {
                 document.write("실행되었습니다.(num==110");
-            }else if( num == 120){
+            } else if (num == 120) {
                 document.write("실행되었습니다.(num==120");
-            }else {
+            } else {
                 document.write("실행되었습니다.(num==값이없음");
             }
         }
@@ -182,15 +186,15 @@ if( num == 90 ){
         {
             const num = 100;
 
-            if( num == 100){
-               document.write("실행되었습니다.(1)");
-               if( num == 100){
+            if (num == 100) {
+                document.write("실행되었습니다.(1)");
+                if (num == 100) {
                     document.write("실행되었습니다.(2)");
-                    if( num == 100){
+                    if (num == 100) {
                         document.write("실행되었습니다.(3)");
                     }
                 }
-            }else{
+            } else {
                 document.write("실행되었습니다.(4)");
             }
         }
@@ -199,41 +203,42 @@ if( num == 90 ){
             const num = 100;
             //num값이 100이면 true출력하고 아니면 false출력하세요
 
-            if( num == 100 ){
+            if (num == 100) {
                 document.write("true");
-            }else{
+            } else {
                 document.write("false");
             }
-            
+
             //조건부 연산자는 소스가 크게 되면 효율적이다
             (num == 100) ? document.write("true") : document.write("false");
         }
         //06. switch문
+        //switch 문은 답이 정해져있다는 차이점이 있다.
         {
             const num = 100;
 
-            switch( num){
-                case 100 :
-                document.write("실행되었습니다.(num==100)");
-                break;
-                case 110 :
-                document.write("실행되었습니다.(num==110)");
-                break;
-                case 120 :
-                document.write("실행되었습니다.(num==120)");
-                break;
-                case 130 :
-                document.write("실행되었습니다.(num==130)");
-                break;
-                default :
-                document.write("실행되었습니다.(num==값이없음)");
+            switch (num) {
+                case 100:
+                    document.write("실행되었습니다.(num==100)");
+                    break;
+                case 110:
+                    document.write("실행되었습니다.(num==110)");
+                    break;
+                case 120:
+                    document.write("실행되었습니다.(num==120)");
+                    break;
+                case 130:
+                    document.write("실행되었습니다.(num==130)");
+                    break;
+                default:
+                    document.write("실행되었습니다.(num==값이없음)");
             }
         }
         //07. while문(반복문)
         {
             let num = 1;
 
-            while( num <=5 ){
+            while (num <= 5) {
                 document.write("실행되었습니다.");
                 num++;
             }
@@ -242,32 +247,68 @@ if( num == 90 ){
         {
             let num = 1;
             //무조건 한번은 실행한다.
-            do{
+            do {
                 document.write("실행되었습니다2.");
                 num++;
-            } while( num<=5 );
+            } while (num <= 5);
         }
         //09. for문
         {
-            for(let i=1; i<100; i++){
-                document.write(i+". 실행되었습니다.");
+            for (let i = 1; i < 100; i++) {
+                document.write(i + ". 실행되었습니다.");
             }
 
-            let num = [1,2,3,4,5,6,7,8,9];
+            let num = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 
-            for(let i=0; i<num.length; i++){
-                document.write(i+". 실행되었습니다.");
+            for (let i = 0; i < num.length; i++) {
+                document.write(i + ". 실행되었습니다.<br>");
             }
         }
+
         //10. 중첩 for문
         {
-            for(let i=1; i<=2; i++){
-                document.write(i+"실행");
-                for(let j=1; j<=5; j++){
-                    document.write(j+"실행");
+            for (let i = 1; i <= 5; i++) {
+                document.write(i + "바퀴---<br>");
+                for (let j = 1; j <= 5; j++) {
+                    document.write(j + "실행<br>");
                 }
+            }
+        }
+        //11. break문
+
+
+
+        {
+            //while 문을 이용해서 1~20까지 출력
+            let num = 1;
+            while (num < 21) {     //()안에 트루일 때 실행함
+                document.write(num);
+                num++;
+            }
+
+            document.write("<br>")
+            //for 문을 이용해서 1~20까지 출력    
+            for (let i = 1; i < 21; i++) {
+                document.write(i);
+                if (i == 10) {
+                    break;          //10번에서 멈춘다
+                }
+            }
+        }
+        //12. continue문
+
+
+        document.write("<br>")
+        {
+            //for 문을 이용해서 1~20까지 출력    
+            for (let i = 1; i < 21; i++) {
+                if (i == 10) {      
+                    continue;       //10번만 빼고 출력
+                }
+                document.write(i);
             }
         }
     </script>
 </body>
+
 </html>
