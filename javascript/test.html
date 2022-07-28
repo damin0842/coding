@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    {
+        function func(){
+        document.write("함수가 실행되었습니다.1");
+        }
+        func();
+    }
+    document.write("<br>");
+    {
+        func = () => document.write("함수가 실행되었습니다.2");
+        func();
+    }
+    document.write("<br>");
+    {
+        func = (str) => document.write(str);
+        func("함수가 실행되었습니다.3");
+    }
+    document.write("<br>");
+    {
+        const func = () => document.write("함수가 실행되었습니다.4");
+        func();
+    }
+    document.write("<br>");
+    {
+        function func(){
+            const str = document.write();
+            return str ("함수가 실행되었습니다.5");
+        }
+        func();
+    }
+
+
+     
+</script>
+</html>
