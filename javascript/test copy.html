@@ -1,33 +1,34 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>요소를 직접 선택하는 메서드</title>
+    <script>
+        window.onload = function () {
+            var list1 = document.querySelector('#box1 > ul > li');
+            var list2 = document.querySelectorAll('#box2 > ul > li');
+            console.log(list1);
+            console.log(list2);
+            list1.style.background = "#ff6600";
+            list2[0].style.background = "#ccc";
+            list2.item(1).style.background = "#ddd";
+        };
+    </script>
 </head>
 <body>
-    <script>
-        const arr = [1, 2, 3, 4, 5, 6, 7, 8, 9,];
-
-        //for 문을 이용해서 하나씩 출력
-
-    
-
-        arr.forEach(function(el){
-            document.write(el);
-        })
-
-        for(i of arr){
-            document.write(i)
-        }
-
-        arr.map(function(el){
-            document.write();
-        })
-
-        
-        
-    </script>
+    <div id="box1">
+        <ul>
+            <li>내용1</li>
+            <li>내용2</li>
+            <li>내용3</li>
+        </ul>
+    </div>
+    <div id="box2">
+        <ul>
+            <li>내용4</li>
+            <li>내용5</li>
+            <li>내용6</li>
+        </ul>
+    </div>
 </body>
 </html>

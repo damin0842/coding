@@ -98,23 +98,22 @@
         quizNumber.innerHTML = answerNum;
         quizAsk.innerHTML = answerAsk;
         quizResult.innerHTML = answerResult;
-        
-        //정답 숨기기
+
+        //정답 가리기
         quizResult.style.display = "none";
 
-        //정답확인
-        quizConfirm.addEventListener("click", function(){
-            
+        //
+        quizConfirm.addEventListener("click",function(){
             const userWord = quizInput.value.toLowerCase().trim();
             answerResult = answerResult.toLowerCase().trim();
-            
+
             if(userWord == answerResult){
-                quizView.classList.add("like");
+                quizView.classList.add("like")
             }
             else{
-                quizView.classList.add("dislike");
+                quizView.classList.add("dislike")
             }
-        });
+        })
 
     </script>
 </body>
