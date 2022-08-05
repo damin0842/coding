@@ -16,12 +16,12 @@
 
 <body>
     <header id="header">
-        <h1><a href="../javascript01.html">Quiz </a><em>주관식 유형</em></h1>
+        <h1><a href="../javascript01.html">Quiz </a><em>주관식 여러문제 유형</em></h1>
         <nav>
             <ul>
                 <li><a href="quizEffect01.html">1</a></li>
-                <li class="active"><a href="quizEffect02.html">2</a></li>
-                <li><a href="quizEffect03.html">3</a></li>
+                <li><a href="quizEffect02.html">2</a></li>
+                <li class="active"><a href="quizEffect03.html">3</a></li>
                 <li><a href="quizEffect04.html">4</a></li>
                 <li><a href="quizEffect05.html">5</a></li>
                 <li><a href="quizEffect06.html">6</a></li>
@@ -32,6 +32,114 @@
 
     <main id="main">
         <div class="quiz__wrap">
+            <div class="quiz">
+                <span class="quiz__type"></span>
+                <h2 class="quiz__question">
+                    <span class="number"></span>
+                    <div class="ask">
+                    </div>
+
+                </h2>
+                <div class="quiz__view">
+                    <div class="true">정답입니다!</div>
+                    <div class="false">틀렸습니다!</div>
+                    <div class="dog">
+                        <div class="head">
+                            <div class="ears"></div>
+                            <div class="face"></div>
+                            <div class="eyes">
+                                <div class="teardrop"></div>
+                            </div>
+                            <div class="nose"></div>
+                            <div class="mouth">
+                                <div class="tongue"></div>
+                            </div>
+                            <div class="chin"></div>
+                        </div>
+                        <div class="body">
+                            <div class="tail"></div>
+                            <div class="legs"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="quiz__answer">
+                    <input type="text" class="input" placeholder="정답을 적어주세요!">
+                    <button class="confirm">정답확인하기</button>
+                    <div class="result"></div>
+                </div>
+            </div>
+            <div class="quiz">
+                <span class="quiz__type"></span>
+                <h2 class="quiz__question">
+                    <span class="number"></span>
+                    <div class="ask">
+                    </div>
+
+                </h2>
+                <div class="quiz__view">
+                    <div class="true">정답입니다!</div>
+                    <div class="false">틀렸습니다!</div>
+                    <div class="dog">
+                        <div class="head">
+                            <div class="ears"></div>
+                            <div class="face"></div>
+                            <div class="eyes">
+                                <div class="teardrop"></div>
+                            </div>
+                            <div class="nose"></div>
+                            <div class="mouth">
+                                <div class="tongue"></div>
+                            </div>
+                            <div class="chin"></div>
+                        </div>
+                        <div class="body">
+                            <div class="tail"></div>
+                            <div class="legs"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="quiz__answer">
+                    <input type="text" class="input" placeholder="정답을 적어주세요!">
+                    <button class="confirm">정답확인하기</button>
+                    <div class="result"></div>
+                </div>
+            </div>
+            <div class="quiz">
+                <span class="quiz__type"></span>
+                <h2 class="quiz__question">
+                    <span class="number"></span>
+                    <div class="ask">
+                    </div>
+
+                </h2>
+                <div class="quiz__view">
+                    <div class="true">정답입니다!</div>
+                    <div class="false">틀렸습니다!</div>
+                    <div class="dog">
+                        <div class="head">
+                            <div class="ears"></div>
+                            <div class="face"></div>
+                            <div class="eyes">
+                                <div class="teardrop"></div>
+                            </div>
+                            <div class="nose"></div>
+                            <div class="mouth">
+                                <div class="tongue"></div>
+                            </div>
+                            <div class="chin"></div>
+                        </div>
+                        <div class="body">
+                            <div class="tail"></div>
+                            <div class="legs"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="quiz__answer">
+                    <input type="text" class="input" placeholder="정답을 적어주세요!">
+                    <button class="confirm">정답확인하기</button>
+                    <div class="result"></div>
+                </div>
+            </div>
             <div class="quiz">
                 <span class="quiz__type"></span>
                 <h2 class="quiz__question">
@@ -79,41 +187,97 @@
 
     <script>
         //선택자 
-        const quizType = document.querySelector(".quiz__type");                 //퀴즈 종류
-        const quizNumber = document.querySelector(".quiz__question .number");   //퀴즈 번호
-        const quizAsk = document.querySelector(".quiz__question .ask");         //퀴즈 질문
-        const quizConfirm = document.querySelector(".quiz__answer .confirm");   //정답 확인 버튼
-        const quizResult = document.querySelector(".quiz__answer .result");     //정답 결과
-        const quizInput = document.querySelector(".quiz__answer .input");       //사용자 정답
-        const quizView = document.querySelector(".quiz__view");                 //강아지
-        
-        //문제 정보
-        const answerType = "웹디자인기능사";
-        const answerNum = "2. ";
-        const answerAsk = "기업의 새로운 이념 구축에 필요한 이미지와 커뮤니케이션 시스템을 의도적, 계획적으로 만들어내는 기업이미지 통합 전략은 무엇인가요?";
-        let answerResult = "CIP";
-        
-        //문제 출력
-        quizType.innerHTML = answerType;
-        quizNumber.innerHTML = answerNum;
-        quizAsk.innerHTML = answerAsk;
-        quizResult.innerHTML = answerResult;
+        const quizType = document.querySelectorAll(".quiz__type");                 //퀴즈 종류
+        const quizNumber = document.querySelectorAll(".quiz__question .number");   //퀴즈 번호
+        const quizAsk = document.querySelectorAll(".quiz__question .ask");         //퀴즈 질문
+        const quizConfirm = document.querySelectorAll(".quiz__answer .confirm");   //정답 확인 버튼
+        const quizResult = document.querySelectorAll(".quiz__answer .result");     //정답 결과
+        const quizInput = document.querySelectorAll(".quiz__answer .input");       //사용자 정답
+        const quizView = document.querySelectorAll(".quiz__view");                 //강아지
+        //문제정보
+        const quizInfo = [
+            {
+                answerType: "웹디자인기능사 2015년 5회",
+                answerNum: "1. ",
+                answerAsk: "홈페이지의 해당 컨셉(concept)을 이끌어 내기 위해 종이에 최대한 많이 그려 봄으로써 여러 가지 구성을 만들어 보는 디자인 실무의 초기 작업은?",
+                answerResult: "아이디어스케치"
+            },
+            {
+                answerType: "웹디자인기능사 2015년 5회",
+                answerNum: "2. ",
+                answerAsk: "오려낸 그림을 2차원 평면상에서 한 프레임씩 움직이면서 촬영하는 스톱 애니메이션을 말한다. 클레이 애니메이션이나 인형 애니메이션과 비슷하지만 3차원이 아닌 2차원이라는 점에서 구분되는 애니메이션은?",
+                answerResult: "컷아웃애니메이션"
+            },
+            {
+                answerType: "웹디자인기능사 2015년 5회",
+                answerNum: "3. ",
+                answerAsk: "태양광선이 투사되는 위치에 프리즘을 놓아 굴절된 광선을 스크린에 투사하여 나타난 여러 가지 색의 띠를 무엇이라 하는가?",
+                answerResult: "스펙트럼"
+            },
+            {
+                answerType: "웹디자인기능사 2015년 5회",
+                answerNum: "4. ",
+                answerAsk: "망막에 다른 색광이 자극하여 혼합되는 현상으로 색 점이 서로 가깝게 있어 명도와 채도가 떨어지지 않는 혼합 방식은?",
+                answerResult: "병치혼합"
+            }
+        ]
+
+        //문제출력
+
+        quizAsk.forEach( (el, i) => {
+            quizType[i].innerHTML = quizInfo[i].answerType
+            quizNumber[i].innerHTML = quizInfo[i].answerNum
+            quizAsk[i].innerHTML = quizInfo[i].answerAsk
+            quizResult[i].innerHTML = quizInfo[i].answerResult
+        })
+
+        // for(i=0; i<quizInfo.length; i++){
+        //     quizType[i].innerHTML = quizInfo[i].answerType
+        //     quizNumber[i].innerHTML = quizInfo[i].answerNum
+        //     quizAsk[i].innerHTML = quizInfo[i].answerAsk
+        //     quizResult[i].innerHTML = quizInfo[i].answerResult
+        // }
 
         //정답 가리기
-        quizResult.style.display = "none";
-
-        //
-        quizConfirm.addEventListener("click",function(){
-            const userWord = quizInput.value.toLowerCase().trim();
-            answerResult = answerResult.toLowerCase().trim();
-
-            if(userWord == answerResult){
-                quizView.classList.add("like")
-            }
-            else{
-                quizView.classList.add("dislike")
-            }
+        quizAsk.forEach(function(el,i){
+            quizResult[i].style.display = "none";
         })
+
+        for(i=0; i<quizView.length; i++){
+            quizResult[i].style.display = "none";
+        }
+
+        quizConfirm.forEach((el,i)=>{
+            el.addEventListener("click",function(){
+                console.log(el);
+                const userWord = quizInput[i].value.toLowerCase().trim();
+                if(userWord == quizInfo[i].answerResult){
+                    quizView[i].classList.add("like")
+                }
+                else{
+                    quizView[i].classList.add("dislike")
+
+                }
+            })
+        })
+
+        // for(i=0; i<quizInfo.length; i++){
+        //     quizConfirm .button.addEventListener("click",function(){
+        //         const userWord = quizInput[i].value;
+        //         quizInfo[i].answerResult = quizInfo[i].answerResult
+        //         if(userWord == quizInfo[i].answerResult){
+        //             quizView[i].classList.add("like")
+        //         }
+        //         else{
+        //             quizView[i].classList.add("dislike")
+
+        //         }
+        //     })
+        // }
+
+
+        
+
 
     </script>
 </body>
