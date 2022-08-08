@@ -256,7 +256,7 @@
         quizConfirm.forEach((btn, num) => {
             btn.addEventListener("click", () => {
                 //사용자 정답
-                const userWord = quizInput[num].value.toLowerCase().trim();
+                const userWord = quizInput[num].value;
                
                 //사용자 정답 == 문제 정답
                 if(userWord == quizInfo[num].answerResult){
