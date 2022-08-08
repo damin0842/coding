@@ -13,21 +13,21 @@
 <h3 class="t_tit2" data-ke-size="size23">스크립트</h3>
 <div class="t_code">
 <pre class="dart"><code>//선택자 
-const quizType = document.querySelector(".quiz__type");                         //퀴즈 종류
+const quizType = document.querySelector(".quiz__type");                          //퀴즈 종류
 const quizNumber = document.querySelector(".quiz__question .number");   //퀴즈 번호
-const quizAsk = document.querySelector(".quiz__question .ask");         //퀴즈 질문
+const quizAsk = document.querySelector(".quiz__question .ask");             //퀴즈 질문
 const quizConfirm = document.querySelector(".quiz__answer .confirm");   //정답 확인 버튼
-const quizResult = document.querySelector(".quiz__answer .result");     //정답 결과
+const quizResult = document.querySelector(".quiz__answer .result");      //정답 결과
 const quizView = document.querySelector(".quiz__view");                         //강아지
-const quizSelects = document.querySelector(".quiz__selects");               //객관식 보기
-const quizChoice = quizSelects.querySelectorAll(".choice");                 //객관식 보기
-const quizSelect = quizSelects.querySelectorAll(".select")                  //객관식 보기
+const quizSelects = document.querySelector(".quiz__selects");                   //객관식 보기
+const quizChoice = quizSelects.querySelectorAll(".choice");                         //객관식 보기
+const quizSelect = quizSelects.querySelectorAll(".select")                           //객관식 보기
 //문제정보
 const quizInfo = [
     {
         answerType: "웹디자인기능사 2022년 01회",
         answerNum: "01. ",
-        answerAsk: "분신, 화신이라는 의미로 채팅, 온라인 게임 등 네트워크 환경에서 자신을 대신하여 나타내는 아이콘을 아바타라고 합니다.",
+        answerAsk: "분신, 화신이라는 의미로 채팅, 온라인 게임 등 네트워크 환경에서 자신을 대신하여 커뮤니케이션에 참여하는 가상의 그림 또는 아이콘을 뜻하는 인터넷 용어는?",
         answerChoice: ["아바타", "쿠키", "포탈", "허브"],
         answerResult: "1",
         answerEx: "분신, 화신이라는 의미로 채팅, 온라인 게임 등 네트워크 환경에서 자신을 나타내는 아이콘을 아바타라고 합니다."
@@ -69,7 +69,6 @@ function answerQuiz(){
 }
 //정답 클릭
 quizConfirm.addEventListener("click",answerQuiz)
-    
 </code></pre>
 </div>
 </div>
