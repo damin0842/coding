@@ -1,77 +1,131 @@
+<p>[##_Image|kage@Zhg5R/btrI6diCDq5/aUvT1pKhOmAqbIVcvjFUXK/img.jpg|CDM|1.3|{"originWidth":1080,"originHeight":1080,"style":"widthContent","filename":"site001.jpg"}_##]</p>
 <p data-ke-size="size16">&nbsp;</p>
 <p data-ke-size="size16">&nbsp;</p>
 <!-- //header --><main id="main">
 <p data-ke-size="size16">&nbsp;</p>
 <div class="document">
-<h2 class="t_tit" data-ke-size="size26">퀴즈</h2>
-<p class="t_desc2" data-ke-size="size16">웹 디자인 기능사 필기 기출문제 풀이 퀴즈 객관식 문제 유형 입니다. <br />
-    보기에 체크된 상태인지 확인하기 위해 if문을 사용하고,<br>
-    체크된 번호가 정답과 일치하는지 확인하기 위해 다시 if문을 사용했습니다.
-</p>
-<div class="t_iframe" style="min-height: 1000px; padding-top: 0;"><iframe src="https://damin0842.github.io/coding/site/cardType01.html" frameborder="0"></iframe></div>
-<div class="t_link"><a href="https://damin0842.github.io/coding/site/cardType01.html" target="_blank" rel="noopener">원본 사이트 보기</a></div>
-<h3 class="t_tit2" data-ke-size="size23">스크립트</h3>
+<h2 class="t_tit" data-ke-size="size26">사이트 만들기</h2>
+<p class="t_desc2" data-ke-size="size16">카드 유형의 사이트 만들기 입니다. 피그마로 먼저 형태를 만들고 똑같은 모양으로 HTML문서를 만들었습니다.</p>
+<div class="t_iframe"><iframe src="https://www.figma.com/embed?embed_host=share&amp;url=https%3A%2F%2Fwww.figma.com%2Fproto%2FaghippDRVCPx00TI2QMLZZ%2F%25EC%2582%25AC%25EC%259D%25B4%25ED%258A%25B8-%25EB%25A7%258C%25EB%2593%25A4%25EA%25B8%25B0%3Fpage-id%3D7%253A61%26node-id%3D7%253A62%26viewport%3D189%252C289%252C0.38%26scaling%3Dmin-zoom" width="800" height="450" allowfullscreen=""></iframe></div>
+<h3 class="t_tit2" data-ke-size="size23">CSS</h3>
 <div class="t_code">
-<pre class="dart"><code>//선택자 
-const quizType = document.querySelector(".quiz__type");                 //퀴즈 종류
-const quizNumber = document.querySelector(".quiz__question .number");   //퀴즈 번호
-const quizAsk = document.querySelector(".quiz__question .ask");         //퀴즈 질문
-const quizConfirm = document.querySelector(".quiz__answer .confirm");   //정답 확인 버튼
-const quizResult = document.querySelector(".quiz__answer .result");     //정답 결과
-const quizView = document.querySelector(".quiz__view");                 //강아지
-const quizSelects = document.querySelector(".quiz__selects");           //객관식 보기
-const quizChoice = quizSelects.querySelectorAll(".choice");             //객관식 보기
-const quizSelect = quizSelects.querySelectorAll(".select");
-//객관식 보기
-//문제정보
-const quizInfo = [
-    {
-        answerType: "웹디자인기능사(2013. 4. 14.)",
-        answerNum: "01. ",
-        answerAsk: "전통적인 셀 애니메이션의 특수한 기법으로 실제 장면을 촬영한 실사 필름 위에 특정 인물이나 사물을 투명 종이(셀)에 직접 그림을 그리고 채색하는 컴퓨터 애니메이션 기법은?",
-        answerChoice: ["로토스코핑(Rotoscoping)", "컬러 사이클링(Color cycling)", "모핑(Morphing)", "모션 트위닝(Motion Tweening)"],
-        answerResult: "1",
-        answerEx: "실제 장면을 촬영한 실사 필름 위에 특정 인물이나 사물을 투명 종이(셀)에 직접 그림을 그리고 채색하는 컴퓨터 애니메이션 기법을 로토스코핑이라고 합니다."
-    }
-];
-
-//문제출력
-function updateQuiz() {
-    quizType.textContent = quizInfo[0].answerType;
-    quizNumber.textContent = quizInfo[0].answerNum;
-    quizAsk.textContent = quizInfo[0].answerAsk;
-    quizResult.textContent = quizInfo[0].answerEx;
-    //보기출력
-    for (let i = 0; i &lt; 4; i++) {
-        quizChoice[i].textContent = quizInfo[0].answerChoice[i];
-    }
-    quizResult.style.display = "none";
+<pre class="dart"><code>/* fonts */
+@import url('https://webfontworld.github.io/NexonLv1Gothic/NexonLv1Gothic.css');
+.nexon {
+    font-family: 'NexonLv1Gothic';
+    font-weight: 400;
 }
-updateQuiz();
-
-//정답 확인
-function answerQuiz(){
-    //사용자가 선택한 정답 == 문제 정답
-    //사용자가 클릭한 input --> checked
-    for(let i=0; i&lt;quizSelect.length; i++){
-        if(quizSelect[i].checked == true){ //보기에 체크가 된 상태
-            //체크된 번호 == 문제 번호
-            if(quizSelect[i].value == quizInfo[0].answerResult){
-                //alert("정답");
-                quizView.classList.add("like");
-            }else{
-                //alert("오답");
-                quizView.classList.add("dislike");
-                quizResult.style.display = "block";
-                quizConfirm.style.display = "none";
-            }
-        }
-    }
+/* reset */
+* {
+    margin: 0;
+    padding: 0;
 }
-//정답 클릭
-quizConfirm.addEventListener("click",answerQuiz)
+a {
+    text-decoration: none;
+    color: #000;
+}
+img{
+    width: 100%;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: normal;
+}
+/* common */
+.container {
+    width: 1160px;
+    padding: 0 20px;
+    margin: 0 auto;
+}
+.section {
+    padding: 120px 0;
+}
+.section&gt;h2 {
+    font-size: 50px;
+    line-height: 1;
+    text-align: center;
+    margin-bottom: 20px;
+}
+.section&gt;p {
+    font-size: 22px;
+    font-weight: 300;
+    color: #666;
+    text-align: center;
+    margin-bottom: 70px;
+}
+/* cardType */
+.card__inner {
+    display: flex;
+    justify-content: space-between;
+}
+.card {
+    width: 32%;
+    background: #f5f5f5;
+}
+.card__body {
+    padding: 24px;
+}
+.card__body .tit {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+.card__body .desc {
+    font-size: 18px;
+    line-height: 1.4;
+    color: #666;
+    margin-bottom: 20px;
+    font-weight: 300;
+}
 </code></pre>
 </div>
+<h3 class="t_tit2" data-ke-size="size23">HTML</h3>
+<div class="t_code">
+<pre class="dart"><code>&lt;section id="cardType" class="card__wrap nexon section"&gt;
+    &lt;h2&gt;어린이 식물 관찰 교실
+    &lt;p&gt;다육식물정원, 아열대정원, 무늬정원, 사막정원 등 체험하고 관찰&lt;/p&gt;
+    &lt;div class="card__inner container"&gt;
+
+        &lt;article class="card"&gt;
+            &lt;figure class="card__header"&gt;
+                &lt;img src="img/card_bg01.jpg" alt="웹표준 사이트 만들기"&gt;
+            &lt;/figure&gt;
+            &lt;div class="card__body"&gt;
+                &lt;h3 class="tit"&gt;식물클리닉 교실&lt;/h3&gt;
+                &lt;p class="desc"&gt;가정에서 식물 키우기와 분갈이, 병충해 관리 등의 어려움을 해소하고 식물의 건강한 관리를 위한 유익한 전문지식을 배우는 수업입니다.&lt;/p&gt;
+                &lt;a class="btn" href="/"&gt;더 자세히 보기&lt;/a&gt;
+            &lt;/div&gt;
+        &lt;/article&gt;
+        &lt;article class="card"&gt;
+            &lt;figure class="card__header"&gt;
+                &lt;img src="img/card_bg02.jpg" alt="웹표준 사이트 만들기"&gt;
+            &lt;/figure&gt;
+            &lt;div class="card__body"&gt;
+                &lt;h3 class="tit"&gt;자생식물 사진교실&lt;/h3&gt;
+                &lt;p class="desc"&gt;식물과 다양한 생물을 사진으로 표현하는 강좌로 사진에 대한 이해와 촬영 기술을 학습을 바탕으로 전시원 현장을 돌면서 실습하는 수업입니다.&lt;/p&gt;
+                &lt;a class="btn" href="/"&gt;더 자세히 보기&lt;/a&gt;
+            &lt;/div&gt;
+        &lt;/article&gt;
+        &lt;article class="card"&gt;
+            &lt;figure class="card__header"&gt;
+                &lt;img src="img/card_bg03.jpg" alt="웹표준 사이트 만들기"&gt;
+            &lt;/figure&gt;
+            &lt;div class="card__body"&gt;
+                &lt;h3 class="tit"&gt;식물세밀화 교실&lt;/h3&gt;
+                &lt;p class="desc"&gt;식물세밀화란 식물이 가진 특징을 정확히 관찰하고 묘사하여 기록함과 동시에 아름다운 형태로 구성하는 과정에서 창작의 의미가 부여되는 예술 입니다.&lt;/p&gt;
+                &lt;a class="btn" href="/"&gt;더 자세히 보기&lt;/a&gt;
+            &lt;/div&gt;
+        &lt;/article&gt;
+    &lt;/div&gt;
+&lt;/section&gt;
+</code></pre>
+</div>
+<h3 class="t_tit2" data-ke-size="size23">결과</h3>
+<div class="t_iframe" style="min-height: 1000px; padding-top: 0;"><iframe src="https://damin0842.github.io/coding/site/cardType/cardType01.html" frameborder="0"></iframe></div>
+<div class="t_link"><a href="https://damin0842.github.io/coding/site/cardType/cardType01.html" target="_blank" rel="noopener">원본 사이트 보기</a></div>
 </div>
 </main><!-- //main -->
 <script src="../assets/js/highlight.min.js"></script>
