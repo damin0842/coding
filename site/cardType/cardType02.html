@@ -5,15 +5,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>카드 유형 01</title>
+    <title>카드 유형 02</title>
+    <link href="https://webfontworld.github.io/GmarketSans/GmarketSans.css" rel="stylesheet">
+
     <style>
         /* fonts */
-        @import url('https://webfontworld.github.io/NexonLv1Gothic/NexonLv1Gothic.css');
-
-        .nexon {
-            font-family: 'NexonLv1Gothic';
-            font-weight: 400;
-        }
+        @import url('https://webfontworld.github.io/gmarket/GmarketSans.css');
 
         /* reset */
         * {
@@ -25,17 +22,12 @@
             text-decoration: none;
             color: #000;
         }
-        img{
+
+        img {
             width: 100%;
         }
-        h1,
-        h2,
-        h3,
-        h4,
-        h5,
-        h6 {
-            font-weight: normal;
-        }
+
+
 
         /* common */
         .container {
@@ -45,8 +37,13 @@
             min-width: 1160px;
         }
 
+        /* cardType */
+
+        .card__inner {}
+
         .section {
             padding: 120px 0;
+
         }
 
         .section>h2 {
@@ -54,9 +51,13 @@
             line-height: 1;
             text-align: center;
             margin-bottom: 20px;
+            font-weight: 500;
+            font-family: 'GmarketSans';
+
         }
 
         .section>p {
+            font-family: 'GmarketSans';
             font-size: 22px;
             font-weight: 300;
             color: #666;
@@ -64,103 +65,125 @@
             margin-bottom: 70px;
         }
 
-        /* cardType */
-        .card__inner {
+        .card {
+            width: 24%;
+            height: 333px;
+            background: #f5f5f5;
+            margin-bottom: 50px;
+        }
+
+        .card__body {
+            padding: 24px 0px;
+        }
+
+        .card__body .tit {
+            font-family: 'GmarketSans';
+            font-size: 24px;
+            font-weight: 500;
+            font-stretch: normal;
+            font-style: normal;
+            line-height: normal;
+            letter-spacing: normal;
+            text-align: left;
+            color: #000;
+            position: relative;
+        }
+
+        .card__body .tit svg {
+            position: absolute;
+            top: 4px;
+            right: 5px;
+        }
+
+        .card__body .desc {
+            margin: 10px 0 0;
+            font-size: 18px;
+            font-family: 'GmarketSans';
+            font-size: 18px;
+            font-weight: 300;
+            font-stretch: normal;
+            font-style: normal;
+            line-height: 1.4;
+            letter-spacing: normal;
+            text-align: left;
+            color: #666;
+        }
+
+        .cardTop {
             display: flex;
             justify-content: space-between;
         }
 
-        .card {
-            width: 32%;
-            background: #f5f5f5;
+        .cardBot {
+            display: flex;
+            justify-content: space-between;
         }
-
-        .card__body {
-            padding: 24px;
-        }
-
-        .card__body .tit {
-            font-size: 24px;
-            margin-bottom: 10px;
-        }
-
-        .card__body .desc {
-            font-size: 18px;
-            line-height: 1.4;
-            color: #666;
-            margin-bottom: 20px;
-            font-weight: 300;
-        }
-
-        .card__body .btn {}
     </style>
 </head>
 
 <body>
-    <section id="cardType" class="card__wrap nexon section">
-        <h2>어린이 식물 관찰 교실</h2>
-        <p>다육식물정원, 아열대정원, 무늬정원, 사막정원 등 체험하고 관찰</p>
+    <section id="cardType" class="card__wrap section">
+        <h2>나라별 음식 구경하기</h2>
+        <p>국가 별 음식 국경하기 <br>
+            각 나라를 대표하는 음식들</p>
         <div class="card__inner container">
 
             <div class="cardTop">
                 <article class="card">
                     <figure class="card__header">
-                        <img src="img/card_bg01.jpg" alt="웹표준 사이트 만들기">
+                        <img src="img/card02_bg01.jpg" alt="웹표준 사이트 만들기">
                     </figure>
                     <div class="card__body">
-                        <h3 class="tit">식물클리닉 교실</h3>
-                        <p class="desc">가정에서 식물 키우기와 분갈이, 병충해 관리 등의 어려움을 해소하고 식물의 건강한 관리를 위한 유익한 전문지식을 배우는 수업입니다.</p>
-                        <a class="btn" href="/">더 자세히 보기</a>
-                        <span aria-hidden="true">
-                            <svg width="61" height="8" viewBox="0 0 61 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M60.3536 4.35355C60.5488 4.15829 60.5488 3.84171 60.3536 3.64645L57.1716 0.464466C56.9763 0.269204 56.6597 0.269204 56.4645 0.464466C56.2692 0.659728 56.2692 0.976311 56.4645 1.17157L59.2929 4L56.4645 6.82843C56.2692 7.02369 56.2692 7.34027 56.4645 7.53553C56.6597 7.7308 56.9763 7.7308 57.1716 7.53553L60.3536 4.35355ZM0 4.5H60V3.5H0V4.5Z" fill="#666666"/>
-                                </svg>
+                        <h3 class="tit">푸틴 – 캐나다
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <rect width="24" height="24" rx="5" fill="#CB3A3A" />
+                                <path
+                                    d="M1 7C0.447715 7 0 7.44772 0 8C0 8.55228 0.447715 9 1 9L1 7ZM13.7071 8.70711C14.0976 8.31658 14.0976 7.68342 13.7071 7.29289L7.34315 0.928932C6.95262 0.538408 6.31946 0.538408 5.92893 0.928932C5.53841 1.31946 5.53841 1.95262 5.92893 2.34315L11.5858 8L5.92893 13.6569C5.53841 14.0474 5.53841 14.6805 5.92893 15.0711C6.31946 15.4616 6.95262 15.4616 7.34315 15.0711L13.7071 8.70711ZM1 9L13 9V7L1 7L1 9Z"
+                                    fill="white" />
+                            </svg>
+                        </h3>
+                        <span>
+
                         </span>
+                        <p class="desc">캐나다 퀘벡 주 음식으로 감자튀김에 그레이비 소스와 치즈를 넣어 만듭니다.</p>
+
+
+
+
                     </div>
                 </article>
                 <article class="card">
                     <figure class="card__header">
-                        <img src="img/card_bg02.jpg" alt="웹표준 사이트 만들기">
+                        <img src="img/card02_bg02.jpg" alt="웹표준 사이트 만들기">
                     </figure>
                     <div class="card__body">
-                        <h3 class="tit">자생식물 사진교실</h3>
-                        <p class="desc">식물과 다양한 생물을 사진으로 표현하는 강좌로 사진에 대한 이해와 촬영 기술을 학습을 바탕으로 전시원 현장을 돌면서 실습하는 수업입니다.</p>
-                        <a class="btn" href="/">더 자세히 보기</a>
-                        <span aria-hidden="true">
-                            <svg width="61" height="8" viewBox="0 0 61 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M60.3536 4.35355C60.5488 4.15829 60.5488 3.84171 60.3536 3.64645L57.1716 0.464466C56.9763 0.269204 56.6597 0.269204 56.4645 0.464466C56.2692 0.659728 56.2692 0.976311 56.4645 1.17157L59.2929 4L56.4645 6.82843C56.2692 7.02369 56.2692 7.34027 56.4645 7.53553C56.6597 7.7308 56.9763 7.7308 57.1716 7.53553L60.3536 4.35355ZM0 4.5H60V3.5H0V4.5Z" fill="#666666"/>
-                                </svg>
-                        </span>
+                        <h3 class="tit">몰레 포블라노 – 멕시코</h3>
+                        <p class="desc">아보카드 소스를 얹어 삶은 닭고기에 각종 야채와 초콜릿 등 수십가지의 재료를 넣어 만듭니다. </p>
+
+
                     </div>
                 </article>
                 <article class="card">
                     <figure class="card__header">
-                        <img src="img/card_bg03.jpg" alt="웹표준 사이트 만들기">
+                        <img src="img/card02_bg03.jpg" alt="웹표준 사이트 만들기">
                     </figure>
                     <div class="card__body">
-                        <h3 class="tit">식물세밀화 교실</h3>
-                        <p class="desc">식물세밀화란 식물이 가진 특징을 정확히 관찰하고 묘사하여 기록함과 동시에 아름다운 형태로 구성하는 과정에서 창작의 의미가 부여되는 예술 입니다.</p>
-                        <a class="btn" href="/">더 자세히 보기</a>
-                        <span aria-hidden="true">
-                            <svg width="61" height="8" viewBox="0 0 61 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M60.3536 4.35355C60.5488 4.15829 60.5488 3.84171 60.3536 3.64645L57.1716 0.464466C56.9763 0.269204 56.6597 0.269204 56.4645 0.464466C56.2692 0.659728 56.2692 0.976311 56.4645 1.17157L59.2929 4L56.4645 6.82843C56.2692 7.02369 56.2692 7.34027 56.4645 7.53553C56.6597 7.7308 56.9763 7.7308 57.1716 7.53553L60.3536 4.35355ZM0 4.5H60V3.5H0V4.5Z" fill="#666666"/>
-                                </svg>
-                        </span>
+                        <h3 class="tit">세비체 – 페루</h3>
+                        <p class="desc">해산물을 얇게 잘라서 레몬즙에 재운 후 채소와 소스를 뿌려 먹는 음식입니다. </p>
+
+
                     </div>
                 </article>
                 <article class="card">
                     <figure class="card__header">
-                        <img src="img/card_bg03.jpg" alt="웹표준 사이트 만들기">
+                        <img src="img/card02_bg04.jpg" alt="웹표준 사이트 만들기">
                     </figure>
                     <div class="card__body">
-                        <h3 class="tit">식물세밀화 교실</h3>
-                        <p class="desc">식물세밀화란 식물이 가진 특징을 정확히 관찰하고 묘사하여 기록함과 동시에 아름다운 형태로 구성하는 과정에서 창작의 의미가 부여되는 예술 입니다.</p>
-                        <a class="btn" href="/">더 자세히 보기</a>
-                        <span aria-hidden="true">
-                            <svg width="61" height="8" viewBox="0 0 61 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M60.3536 4.35355C60.5488 4.15829 60.5488 3.84171 60.3536 3.64645L57.1716 0.464466C56.9763 0.269204 56.6597 0.269204 56.4645 0.464466C56.2692 0.659728 56.2692 0.976311 56.4645 1.17157L59.2929 4L56.4645 6.82843C56.2692 7.02369 56.2692 7.34027 56.4645 7.53553C56.6597 7.7308 56.9763 7.7308 57.1716 7.53553L60.3536 4.35355ZM0 4.5H60V3.5H0V4.5Z" fill="#666666"/>
-                                </svg>
-                        </span>
+                        <h3 class="tit">페이조아다 – 브라질</h3>
+                        <p class="desc">고기와 페이조라고 불리는 콩을 넣어서 삶아 먹는 음식입니다. 우리나라의 부대찌개와 비슷합니다.</p>
+
+
                     </div>
                 </article>
 
@@ -169,66 +192,50 @@
             <div class="cardBot">
                 <article class="card">
                     <figure class="card__header">
-                        <img src="img/card_bg01.jpg" alt="웹표준 사이트 만들기">
+                        <img src="img/card02_bg05.jpg" alt="웹표준 사이트 만들기">
                     </figure>
                     <div class="card__body">
-                        <h3 class="tit">식물클리닉 교실</h3>
-                        <p class="desc">가정에서 식물 키우기와 분갈이, 병충해 관리 등의 어려움을 해소하고 식물의 건강한 관리를 위한 유익한 전문지식을 배우는 수업입니다.</p>
-                        <a class="btn" href="/">더 자세히 보기</a>
-                        <span aria-hidden="true">
-                            <svg width="61" height="8" viewBox="0 0 61 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M60.3536 4.35355C60.5488 4.15829 60.5488 3.84171 60.3536 3.64645L57.1716 0.464466C56.9763 0.269204 56.6597 0.269204 56.4645 0.464466C56.2692 0.659728 56.2692 0.976311 56.4645 1.17157L59.2929 4L56.4645 6.82843C56.2692 7.02369 56.2692 7.34027 56.4645 7.53553C56.6597 7.7308 56.9763 7.7308 57.1716 7.53553L60.3536 4.35355ZM0 4.5H60V3.5H0V4.5Z" fill="#666666"/>
-                                </svg>
-                        </span>
+                        <h3 class="tit">빠이사 – 콜롬비아</h3>
+                        <p class="desc">간 쇠고기 볶음과 프리홀레스 쁠라따노 튀김, 달걀후라이 등을 함께 곁들여 먹는 음식입니다. </p>
+
+
                     </div>
                 </article>
                 <article class="card">
                     <figure class="card__header">
-                        <img src="img/card_bg02.jpg" alt="웹표준 사이트 만들기">
+                        <img src="img/card02_bg06.jpg" alt="웹표준 사이트 만들기">
                     </figure>
                     <div class="card__body">
-                        <h3 class="tit">자생식물 사진교실</h3>
-                        <p class="desc">식물과 다양한 생물을 사진으로 표현하는 강좌로 사진에 대한 이해와 촬영 기술을 학습을 바탕으로 전시원 현장을 돌면서 실습하는 수업입니다.</p>
-                        <a class="btn" href="/">더 자세히 보기</a>
-                        <span aria-hidden="true">
-                            <svg width="61" height="8" viewBox="0 0 61 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M60.3536 4.35355C60.5488 4.15829 60.5488 3.84171 60.3536 3.64645L57.1716 0.464466C56.9763 0.269204 56.6597 0.269204 56.4645 0.464466C56.2692 0.659728 56.2692 0.976311 56.4645 1.17157L59.2929 4L56.4645 6.82843C56.2692 7.02369 56.2692 7.34027 56.4645 7.53553C56.6597 7.7308 56.9763 7.7308 57.1716 7.53553L60.3536 4.35355ZM0 4.5H60V3.5H0V4.5Z" fill="#666666"/>
-                                </svg>
-                        </span>
+                        <h3 class="tit">아사도 – 아르헨티나</h3>
+                        <p class="desc">그릴에 쇠고기 갈비부위를 구워 소금간을 한 후 치미추리 소스와 함께 먹는 음식입니다.</p>
+
+
                     </div>
                 </article>
                 <article class="card">
                     <figure class="card__header">
-                        <img src="img/card_bg03.jpg" alt="웹표준 사이트 만들기">
+                        <img src="img/card02_bg07.jpg" alt="웹표준 사이트 만들기">
                     </figure>
                     <div class="card__body">
-                        <h3 class="tit">식물세밀화 교실</h3>
-                        <p class="desc">식물세밀화란 식물이 가진 특징을 정확히 관찰하고 묘사하여 기록함과 동시에 아름다운 형태로 구성하는 과정에서 창작의 의미가 부여되는 예술 입니다.</p>
-                        <a class="btn" href="/">더 자세히 보기</a>
-                        <span aria-hidden="true">
-                            <svg width="61" height="8" viewBox="0 0 61 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M60.3536 4.35355C60.5488 4.15829 60.5488 3.84171 60.3536 3.64645L57.1716 0.464466C56.9763 0.269204 56.6597 0.269204 56.4645 0.464466C56.2692 0.659728 56.2692 0.976311 56.4645 1.17157L59.2929 4L56.4645 6.82843C56.2692 7.02369 56.2692 7.34027 56.4645 7.53553C56.6597 7.7308 56.9763 7.7308 57.1716 7.53553L60.3536 4.35355ZM0 4.5H60V3.5H0V4.5Z" fill="#666666"/>
-                                </svg>
-                        </span>
+                        <h3 class="tit">산꼬초 – 도미니카</h3>
+                        <p class="desc">도미니카식 전골 요리로, 고기와 유카, 옥수수 등을 넣고 끟인 음식입니다. </p>
+
+
                     </div>
                 </article>
                 <article class="card">
                     <figure class="card__header">
-                        <img src="img/card_bg03.jpg" alt="웹표준 사이트 만들기">
+                        <img src="img/card02_bg08.jpg" alt="웹표준 사이트 만들기">
                     </figure>
                     <div class="card__body">
-                        <h3 class="tit">식물세밀화 교실</h3>
-                        <p class="desc">식물세밀화란 식물이 가진 특징을 정확히 관찰하고 묘사하여 기록함과 동시에 아름다운 형태로 구성하는 과정에서 창작의 의미가 부여되는 예술 입니다.</p>
-                        <a class="btn" href="/">더 자세히 보기</a>
-                        <span aria-hidden="true">
-                            <svg width="61" height="8" viewBox="0 0 61 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M60.3536 4.35355C60.5488 4.15829 60.5488 3.84171 60.3536 3.64645L57.1716 0.464466C56.9763 0.269204 56.6597 0.269204 56.4645 0.464466C56.2692 0.659728 56.2692 0.976311 56.4645 1.17157L59.2929 4L56.4645 6.82843C56.2692 7.02369 56.2692 7.34027 56.4645 7.53553C56.6597 7.7308 56.9763 7.7308 57.1716 7.53553L60.3536 4.35355ZM0 4.5H60V3.5H0V4.5Z" fill="#666666"/>
-                                </svg>
-                        </span>
+                        <h3 class="tit">햄버거와 감자칩 – 미국</h3>
+                        <p class="desc">너무나 유명한 햄버거와 감자칩입니다. 여기에 성냥처럼 썬 감자 튀김을 곁들여 먹습니다.</p>
+
+
                     </div>
                 </article>
             </div>
-            
+
         </div>
     </section>
 </body>
