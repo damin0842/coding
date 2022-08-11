@@ -6,8 +6,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>join() / push() / pop()</title>
-    <link rel="stylesheet" href="../assets/css/style.css">
-    <link rel="stylesheet" href="../assets/css/dracula.css">
 </head>
 
 <body>
@@ -15,7 +13,7 @@
         <div class="document">
             <h2 class="t_desc">자바스크립트에서는 데이터를 처리할 때 손쉽게 배열을 조작할 수 있도록 다양한 메서드를 제공하고 있습니다.
                 <br>
-                오늘은 join() / push() / pop() 을 알아 보겠습니다.
+                join() / push() / pop() 메서드를 알아 보겠습니다.
                 <br><br>
             </h2>
             <div>
@@ -30,10 +28,10 @@
                 <h3 class="t_tit2">네 가지 다른 방법으로 배열 연결하기</h3>
                 <div class="t_code">
 <pre><code class="language-js">var a = ['바람', '비', '불'];
-var myVar1 = a.join(); // myVar1에 '바람,비,불'을 대입
-var myVar2 = a.join(', '); // myVar2에 '바람, 비, 불'을 대입
-var myVar3 = a.join(' + '); // myVar3에 '바람 + 비 + 불'을 대입
-var myVar4 = a.join(''); // myVar4에 '바람비불'을 대입
+var myVar1 = a.join(); 
+var myVar2 = a.join(', '); 
+var myVar3 = a.join(' + '); 
+var myVar4 = a.join('');
 </code></pre>
                 </div>
                 <details>
@@ -41,10 +39,10 @@ var myVar4 = a.join(''); // myVar4에 '바람비불'을 대입
                     <script>
                         {
                             var a = ['바람', '비', '불'];
-                            var myVar1 = a.join();      // myVar1에 '바람,비,불'을 대입
-                            var myVar2 = a.join(', ');  // myVar2에 '바람, 비, 불'을 대입
-                            var myVar3 = a.join(' + '); // myVar3에 '바람 + 비 + 불'을 대입
-                            var myVar4 = a.join('');    // myVar4에 '바람비불'을 대입
+                            var myVar1 = a.join();     
+                            var myVar2 = a.join(', '); 
+                            var myVar3 = a.join(' + '); 
+                            var myVar4 = a.join('');   
 
                             document.write(myVar1 + "<br>")
                             document.write(myVar2 + "<br>")
@@ -136,9 +134,7 @@ console.log(popped); // 'sturgeon'
         </div>
     </main>
 
-    </script>
-    <script src="../assets/js/highlight.min.js"></script>
-    <script>hljs.highlightAll();</script>
+  
 
 </body>
 
