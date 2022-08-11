@@ -13,14 +13,19 @@
                 allowfullscreen></iframe>
         </div>
         <h3 class="t_tit2" data-ke-size="size23">HTML</h3>
+        <div class="t_desc2">
+            레이아웃을 3개의 박스로 나누어 배치 하였고, header 더보기 요소에 figure와 figcaption 태그를 사용했습니다.<br> 
+            footer의 글자 효과를 다르게 주기 위해 h4 태그 안에 em 태그를 사용했습니다. <br>
+            웹접근성을 위하여 이미지의 alt에 설명을 추가 했습니다.
+        </div>
         <div class="t_code">
 <pre class="dart"><code>&lt;section id="cardType03" class="card__wrap score section">
-    &lt;!-- 시멘틱 태그는 반드시 제목이 있어야함 blind로 안보이게 접근성 -->
-    &lt;h2 class="blind">건축의 세계&lt;/h2>
+    &lt;!-- 시멘틱 태그는 반드시 제목이 있어야함 blind 안보이게 -->
+    &lt;h2 class="blind">동물원의 세계&lt;/h2>
     &lt;div class="card__inner container">
         &lt;article class="card">
             &lt;figure class="card__header">
-                &lt;img src="img/card03_bg01.jpg" alt="">
+                &lt;img src="img/card03_bg01.jpg" alt="표범">
                 &lt;figcaption>Animals&lt;/figcaption>
             &lt;/figure>
             &lt;div class="card__contents">
@@ -35,7 +40,7 @@
         &lt;/article>
         &lt;article class="card">
             &lt;figure class="card__header">
-                &lt;img src="img/card03_bg02.jpg" alt="">
+                &lt;img src="img/card03_bg02.jpg" alt="코뿔소">
                 &lt;figcaption>Animals&lt;/figcaption>
             &lt;/figure>
             &lt;div class="card__contents">
@@ -44,13 +49,13 @@
                     위하여 체계적이고 과학적인 연구를 하고 있으며&lt;/p>
                 &lt;div class="card__footer">
                     &lt;h4>동물학 박사&lt;em>Ioideahesper&lt;/em>&lt;/h4>
-                    &lt;span>&lt;img src="img/card03_bg05.jpg" alt="Hesperioidea">&lt;/span>
+                    &lt;span>&lt;img src="img/card03_bg05.jpg" alt="Ioideahesper">&lt;/span>
                 &lt;/div>
             &lt;/div>
         &lt;/article>
         &lt;article class="card">
             &lt;figure class="card__header">
-                &lt;img src="img/card03_bg03.jpg" alt="">
+                &lt;img src="img/card03_bg03.jpg" alt="청설모">
                 &lt;figcaption>Animals&lt;/figcaption>
             &lt;/figure>
             &lt;div class="card__contents">
@@ -59,7 +64,7 @@
                 &lt;p>서울동물원은 서울시 서울대공원 직속 기관으로 1984년 5월 1일 개장 이래 동·식물원 2,420천m² 내 동물원의 기능인 전시, 보전, 교육, 연구에 힘쓰고 있습니다. 한해 약 350만 명의 시민이 찾아주시는 서울동물원은&lt;/p>
                 &lt;div class="card__footer">
                     &lt;h4>동물학 박사&lt;em>Perioideahes&lt;/em>&lt;/h4>
-                    &lt;span>&lt;img src="img/card03_bg06.jpg" alt="Hesperioidea">&lt;/span>
+                    &lt;span>&lt;img src="img/card03_bg06.jpg" alt="Perioideahes">&lt;/span>
                 &lt;/div>
             &lt;/div>
         &lt;/article>
@@ -67,6 +72,11 @@
 &lt;/section>
 </code></pre>
             <h3 class="t_tit2" data-ke-size="size23">CSS</h3>
+            <p class="t_desc2">
+                3개의 박스를 flex 로 정렬하였고 더보기 요소 배치를 위해 position을 사용 했습니다. <br>
+                본문의 내용이 길어 .card__contents 내 2줄효과와 3줄효과를 사용 하였습니다. <br>
+                웹 접근성을 위해 .blind에 ir효과를 사용하였습니다.
+            </p>
             <div class="t_code">
 <pre class="dart"><code>&lt;style>
     /* fonts */
