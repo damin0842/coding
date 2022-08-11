@@ -289,6 +289,25 @@ body {
 .quiz__selects label input:checked+span::before{
     box-shadow: inset 0px 0px 0px 10px #17c5b7;
 }
+.quiz__confirm{
+    width: 100%;
+    text-align: center;
+}
+.quiz__confirm .check{
+    font-size: 22px;
+    line-height: 1.3;
+    padding: 13px 60px;
+    border: 6px ridge #cacaca;
+    box-sizing: border-box;
+    text-align: center;
+    font-family: "Cafe24Dangdanghae";
+    cursor: pointer;
+    margin: 40px 0;
+    transition: background 0.3s;
+}
+.quiz__confirm .check:hover{
+    background-color: #17c5b74f;
+}
 
 @keyframes wobble {
     0% {
