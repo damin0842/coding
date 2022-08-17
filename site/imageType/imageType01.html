@@ -95,6 +95,44 @@
             bottom: 30px;
             left: 30px;
         }
+        .image__inner{
+            display: flex;
+            justify-content: space-between;
+
+        }
+        .image{
+            width: 49%;
+            height: 370px;
+            color: #fff;
+            padding: 200px 30px 30px 30px;
+            box-sizing: border-box;
+        }
+        .image.img1{
+            background: url(image01_bg01.jpg) no-repeat center;
+        }
+        .image.img2{
+            background: url(image01_bg02.jpg) no-repeat center;
+        }
+        .image__title{
+            font-size: 32px;
+            margin-bottom: 10px;
+        }
+        .image__desc{
+            font-size: 16%;
+            font-weight: 300;
+            margin-bottom: 10px;
+            line-height: 1.5;
+        }
+        .image__btn{
+            font-size: 16px;
+            color: #fff;
+            background-color: #b45a30;
+            padding: 10px 20px;
+            display: inline-block;
+        }
+        .image__btn.yellow{
+            background-color: #b59140;
+        }
     </style>
 </head>
 
@@ -110,7 +148,7 @@
             <div class="article">
                 <div class="box">
                     <h2>기능성과 심미성을 갖춘 디자인</h2>
-                    <p>리빙 분야의 트렌드를 제시하고 소비자의 니즈를 반영한 기획과 풍성한 제품으로 페스티벌형 전시의 역할도 수행합니다.</p>
+                    <p class="image__desc">리빙 분야의 트렌드를 제시하고 소비자의 니즈를 반영한 기획과 풍성한 제품으로 페스티벌형 전시의 역할도 수행합니다.</p>
                     <div class="more">자세히 보기</div>
                 </div>
             </div>
