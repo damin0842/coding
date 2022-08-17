@@ -15,14 +15,157 @@
             레이아웃을 3개의 이미지 박스로 나누어 배치 하였습니다.
         </div>
         <div class="t_code">
-<pre class="dart"><code class="lenguage-js">
+<pre class="dart"><code class="lenguage-js">&lt;body>
+    &lt;section id="imageType01" class="image__wrap nexon section">
+        &lt;h2>마하반야 바라밀다&lt;/h2>
+        &lt;p>심경관자재보살 도일채고액 사리자 색불이공 공불이색 색즉시공 공즉시색&lt;/p>
+        &lt;div class="image__inner container">
+            &lt;article class="image img1">
+                &lt;div class="box">
+                    &lt;h3 class="image__title1">무안이비설신의&lt;/h3>
+                    &lt;a class="image__btn" href="/" title="자세히 보기">자세히 보기&lt;/a>
+                &lt;/div>
+            &lt;/article>
+            &lt;article class="image img2">
+                &lt;div class="box">
+                    &lt;h3 class="image__title2">무색성향미촉법&lt;/h3>
+                    &lt;a class="image__btn" href="/" title="자세히 보기">자세히 보기&lt;/a>
+                &lt;/div>
+            &lt;/article>
+            &lt;article class="image img3">
+                &lt;div class="box">
+                    &lt;h3 class="image__title3">모지사바하&lt;/h3>
+                    &lt;a class="image__btn" href="/" title="자세히 보기">자세히 보기&lt;/a>
+                &lt;/div>
+            &lt;/article>
+        &lt;/div>
+    &lt;/section>
+&lt;/body>
 </code></pre>
             <h3 class="t_tit2" data-ke-size="size23">CSS</h3>
             <p class="t_desc2">
-                3개의 이미지 박스를 flex로 정렬하였습니다.
+                3개의 이미지 박스를 flex로 정렬하였고
+                자세히 보기 박스에 블러 효과를 주었고 <br>
+                이미지에 마우스를 올리면 사진이 커지면서
+                밑에서 자세히 보기 박스가 올라오는 효과를 주었습니다.
             </p>
             <div class="t_code">
-<pre class="dart"><code class="lenguage-js">
+<pre class="dart"><code class="lenguage-js">&lt;style>
+    @import url('https://webfontworld.github.io/gmarket/GmarketSans.css');
+    /* reset */
+    * {
+        margin: 0;
+        padding: 0;
+        font-family: 'GmarketSans';
+    }
+    a {
+        text-decoration: none;
+        color: #000;
+    }
+    img {
+        width: 100%;
+    }
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        font-weight: normal;
+    }
+    /* common */
+    .container {
+        width: 1160px;
+        padding: 0 20px;
+        margin: 0 auto;
+        min-width: 1160px;
+    }
+    .section {
+        padding: 120px 0;
+    }
+    .section>h2 {
+        font-size: 50px;
+        line-height: 1;
+        text-align: center;
+        margin-bottom: 20px;
+        font-weight: 600;
+    }
+    .section>p {
+        font-size: 22px;
+        font-weight: 300;
+        color: #666;
+        text-align: center;
+        margin-bottom: 70px;
+    }
+    /* imageType */
+    .image__inner {
+        display: flex;
+        justify-content: space-between;
+    }
+    .image {
+        width: 373px;
+        height: 520px;
+        color: #fff;
+        padding: 200px 30px 30px 30px;
+        box-sizing: border-box;
+        overflow: hidden;
+    }
+    .image.img1 {
+        background: url(img/image02_bg01.jpg) no-repeat center;
+        position: relative;
+    }
+    .image.img2 {
+        background: url(img/image02_bg02.jpg) no-repeat center;
+        position: relative;
+    }
+    .image.img3 {
+        background: url(img/image02_bg03.jpg) no-repeat center;
+        position: relative;
+    }
+    .image .box {
+        width: 373px;
+        height: 100px;
+        position: absolute;
+        bottom: -100px;
+        left: 0;
+        backdrop-filter: blur(10px);
+        transition: all 0.5s ease-in-out;
+    }
+    .image:hover .box {
+        bottom: 0;
+    }
+    .image:hover.image {
+        transform: scale(1.2);
+    }
+    .image__title1 {
+        text-align: center;
+        font-size: 24px;
+        margin-top: 30px;
+        margin-bottom: 5px;
+        color: #FCA22E;
+    }
+    .image__title2 {
+        text-align: center;
+        font-size: 24px;
+        margin-top: 30px;
+        margin-bottom: 5px;
+        color: #F5F5F5;
+    }
+    .image__title3 {
+        text-align: center;
+        font-size: 24px;
+        margin-top: 30px;
+        margin-bottom: 5px;
+        color: #FF6D31;
+    }
+    .image__btn {
+        box-sizing: border-box;
+        font-size: 16px;
+        color: #fff;
+        display: block;
+        text-align: center;
+    }
+&lt;/style>
 </code></pre>
             </div>
             <h3 class="t_tit2" data-ke-size="size23">결과</h3>
