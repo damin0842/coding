@@ -134,8 +134,23 @@ li{
     text-align: left;
     line-height: 1.7;
 } 
+.search__list li.show{
+    display: block;
+}
 .search__list li.hide{
     display: none;
+}
+
+
+.search__info{
+    text-align: right;
+    margin-bottom: 30px;
+    padding-bottom: 10px;
+    border-bottom: 1px dashed var(--htmlColor);
+}
+.search__info .type{
+    text-align: center;
+    margin-bottom: 10px;
 }
 
 @media (max-width: 600px) {

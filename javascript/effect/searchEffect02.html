@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>검색 이펙트</title>
+    <link rel="stylesheet" href="../assets/css/search.css">
+    <link href="https://webfontworld.github.io/tmon/Tmon.css" rel="stylesheet">
+    <link href="https://webfontworld.github.io/NexonLv1Gothic/NexonLv1Gothic.css" rel="stylesheet">
+</head>
+
+<body>
+    <header id="header">
+        <nav>
+            <ul>
+                <li><a href="searchEffect01.html">1</a>
+                </li>
+                <li class="active"><a href="searchEffect02.html">2</a></li>
+                <li><a href="searchEffect03.html">3</a></li>
+                <li><a href="searchEffect04.html">4</a></li>
+                <li><a href="searchEffect05.html">5</a></li>
+                <li><a href="searchEffect06.html">6</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- //header -->
+    <main id="main">
+        <div class="search__wrap">
+            
+            <span>includes()를 이용하여 검색하기</span>
+            <h1>CSS 속성 검색하기</h1>
+            
+            <div class="search__box">
+                <label for="search">검색하기</label>
+                <input type="text" id="search" placeholder="CSS 속성을 입력해주세요!">
+            </div>
+            <div class="search__info">
+                <div class="type">플렉스, 애니메이션, 백그라운드, 기타 등등 유형 별로 검색해보세요!</div>
+               <div> 전체 속성 갯수 : <span class="num">0</span></div>
+            </div>
+            <div class="search__list">
+              
+                <div class="css">
+                    <ul>
+                        <li data-name="align-content" data-type="플렉스"><strong>align-content</strong> : align-content 속성은 콘텐츠 아이템의 상하관계 정렬 상태를 설정합니다.</li>
+                        <li data-name="align-items" data-type="플렉스"><strong>align-items</strong> : align-items 속성은 콘텐츠 아이템의 내부 상하관계 정렬 상태를 설정합니다.</li>
+                        <li data-name="align-self" data-type="플렉스"><strong>align-self</strong> : align-self 속성은 개별적인 콘텐츠 아이템의 정렬 상태를 설정합니다.</li>
+                        <li data-name="all" data-type="기타"><strong>all</strong> : align-content 속성은 콘텐츠 아이템의 상하관계 정렬 상태를 설정합니다.</li>
+                        <li data-name="animation" data-type="애니메이션"><strong>animation</strong> : 애니메이션 관련된 속성을 일괄적으로 설정합니다.</li>
+                        <li data-name="animation-delay" data-type="애니메이션"><strong>animation-delay</strong> : animation-delay 속성은 애니메이션 지연 시간을 설정합니다.</li>
+                        <li data-name="animation-direction" data-type="애니메이션"><strong>animation-direction</strong> : 애니메이션 움직임 방향을 설정합니다.</li>
+                        <li data-name="animation-duration" data-type="애니메이션"><strong>animation-duration</strong> : 애니메이션 움직임 시간을 설정합니다.</li>
+                        <li data-name="animation-fill-mode" data-type="애니메이션"><strong>animation-fill-mode</strong> : 애니메이션이 끝난 후의 상태를 설정합니다.</li>
+                        <li data-name="animation-iteration-count" data-type="애니메이션"><strong>animation-iteration-count</strong> : 애니메이션의 반복 횟수를 설정합니다.</li>
+                        <li data-name="animation-name" data-type="애니메이션"><strong>animation-name</strong> : 애니메이션 keyframe 이름을 설정합니다.</li>
+                        <li data-name="animation-play-state" data-type="애니메이션"><strong>animation-play-state</strong> : 애니메이션 진행상태를 설정합니다.</li>
+                        <li data-name="animation-timing-function" data-type="애니메이션"><strong>animation-timing-function</strong> : 애니메이션 움직임의 속도를 설정합니다.</li>
+                        <li data-name="background" data-type="백그라운드"><strong>background</strong> : 백그라운드 속성을 일괄적으로 설정합니다.</li>
+                        <li data-name="background-attachment" data-type="백그라운드"><strong>background-attachment</strong> : 배경 이미지의 고정 여부를 설정합니다.</li>
+                        <li data-name="background-blend-mode" data-type="백그라운드"><strong>background-blend-mode</strong> : 배경을 혼합했을 때 그래픽 효과를 상태를 설정합니다.</li>
+                        <li data-name="background-clip" data-type="백그라운드"><strong>background-clip</strong> : 백그라운드 이미지의 위치 기준점을 설정 합니다.</li>
+                        <li data-name="background-color" data-type="백그라운드"><strong>background-color</strong> : 백그라운드 색을 설정합니다.</li>
+                        <li data-name="background-image" data-type="백그라운드"><strong>background-image</strong> : 백그라운드 이미지 속성을 설정합니다.</li>
+                        <li data-name="background-origin" data-type="백그라운드"><strong>background-origin</strong> : 백그라운드 이미지의 위치 기준점을 설정하기 위한 속성입니다.</li>
+                        <li data-name="background-position" data-type="백그라운드"><strong>background-position</strong> : 백그라운드 이미지의 위치 영역을 설정합니다.</li>
+                        <li data-name="background-position-x" data-type="백그라운드"><strong>background-position-x</strong> : 백그라운드 이미지의 x축 위치 영역을 설정합니다.</li>
+                        <li data-name="background-position-y" data-type="백그라운드"><strong>background-position-y</strong> : 백그라운드 이미지의 y축 위치 영역을 설정합니다.</li>
+                        <li data-name="background-repeat" data-type="백그라운드"><strong>background-repeat</strong> : 백그라운드 이미지 반복 여부를 설정합니다.</li>
+                        <li data-name="background-size" data-type="백그라운드"><strong>background-size</strong> : 백그라운드 이미지 사이즈를 설정합니다.</li>
+                        <li data-name="border" data-type="보더"><strong>border</strong> : 테두리 속성을 일괄적으로 설정합니다.</li>
+                        <li data-name="border-bottom" data-type="보더"><strong>border-bottom</strong> : 테두리 아래쪽 속성을 일괄적으로 설정합니다.</li>
+                        <li data-name="border-bottom-color" data-type="보더"><strong>border-bottom-color</strong> : 테두리 아래쪽 색 속성을 설정합니다.</li>
+                        <li data-name="border-bottom-left-radius" data-type="보더"><strong>border-bottom-left-radius</strong> : 아래 왼쪽 모서리 굴곡을 설정합니다.</li>
+                        <li data-name="border-bottom-right-radius" data-type="보더"><strong>border-bottom-right-radius</strong> : 아래 오른쪽 모서리 굴곡을 설정합니다.</li>
+                        <li data-name="border-bottom-style" data-type="보더"><strong>border-bottom-style</strong> : 테두리 아래쪽 스타일 속성을 설정합니다.</li>
+                        <li data-name="border-bottom-width" data-type="보더"><strong>border-bottom-width</strong> : 테두리 아래쪽 두께 속성을 설정합니다.</li>
+                    </ul>
+                </div>
+              
+
+            </div>
+        </div>
+    </main>
+    <!-- //main -->
+    <footer id="footer">
+        <a href="mailto:jdm2@naver.com">jdm2@naver.com</a>
+    </footer>
+    <!-- //footer -->
+
+    <script>
+        //선택자
+        const searchBox = document.querySelector(".search__box input");     //검색 영역            //검색 영역
+        const searchList = document.querySelectorAll(".search__list ul li") //목록 리스트     
+        const searchInfo = document.querySelector(".search__info .num")              //전체 갯수
+        //전체 갯수 구하기
+        searchInfo.textContent = searchList.length;
+        
+        //검색 영역
+        searchBox.addEventListener("keyup",() => {
+            const searchWord = searchBox.value;     //사용자가 입력한 키워드
+
+            searchList.forEach(el => {
+                const cssName = el.dataset.name;    //CSS 속성 모든 값
+                
+                if(cssName.includes(searchWord)){
+                    el.classList.remove("hide");
+                }
+                else{
+                    el.classList.add("hide");
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>
