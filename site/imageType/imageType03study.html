@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이미지 유형03</title>
+    <style>
+        @import url('https://webfontworld.github.io/gmarket/GmarketSans.css');
+
+        /* reset */
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: 'GmarketSans';
+        }
+
+        a {
+            text-decoration: none;
+            color: #000;
+        }
+
+        img {
+            width: 100%;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-weight: normal;
+        }
+
+        /* common */
+
+        .section {
+            padding: 120px 0;
+        }
+
+        .section>h2 {
+            font-size: 50px;
+            line-height: 1;
+            text-align: center;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+
+        .section>p {
+            font-size: 22px;
+            font-weight: 300;
+            color: #666;
+            text-align: center;
+            margin-bottom: 70px;
+        }
+
+        .container {
+            width: 1720px;
+            padding: 0 20px;
+            margin: 0 auto;
+            min-width: 1720px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+
+
+        .container .image_left {
+            width: 49%;
+            height: 498px;
+            background: url(img/image03_bg01.jpg);
+            position: relative;
+            box-sizing: border-box;
+            overflow: hidden;
+        }
+
+        .container .image_left .box {}
+
+        .container .image_right {
+            width: 49%;
+            height: 498px;
+            display: flex;
+            position: relative;
+            overflow: hidden;
+            box-sizing: border-box;
+
+        }
+
+        .container .image_right .box1 {
+            background: url(img/image03_bg02.jpg);
+            width: 415px;
+            height: 239px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            overflow: hidden;
+            box-sizing: border-box;
+        }
+
+        .container .image_right .box2 {
+            background: url(img/image03_bg03.jpg);
+            width: 415px;
+            height: 239px;
+            position: absolute;
+            top: 0;
+            right: 0;
+        }
+
+        .container .image_right .box3 {
+            background: url(img/image03_bg04.jpg);
+            width: 415px;
+            height: 239px;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+        }
+
+        .container .image_right .box4 {
+            background: url(img/image03_bg05.jpg);
+            width: 415px;
+            height: 239px;
+            position: absolute;
+            bottom: 0;
+            right: 0;
+        }
+
+        .image_left .bar {
+            height: 100px;
+            width: 100%;
+            position: absolute;
+            bottom: -100px;
+            display: flex;
+            backdrop-filter: blur(10px);
+            transition: all 0.5s ease-in-out;
+
+        }
+
+        .image_left:hover .bar {
+            bottom: 0;
+
+        }
+
+
+        .image_left .tag {
+            height: 100%;
+            width: 50px;
+            position: absolute;
+            right: -100px;
+            display: none;
+            transition: all 0.5s ease-in-out;
+            
+        }
+
+        .image_left:hover .tag {
+            right: 0;
+            display: block;
+
+        }
+
+        .bar__button {
+            width: 53px;
+            height: 53px;
+            margin: 30px;
+        }
+
+        .bar__button1 {
+            background: url(img/image03_btn01.jpg);
+        }
+
+        .bar__button2 {
+            background: url(img/image03_btn02.jpg);
+        }
+
+        .bar__button3 {
+            background: url(img/image03_btn03.jpg;)
+        }
+
+        .bar__button4 {
+            background: url(img/image03_btn04.jpg);
+        }
+
+        .tag__button {
+            margin: 10px auto;
+            width: 40px;
+            height: 40px;
+            box-sizing: border-box;
+
+        }
+
+        .tag__button1 {
+            background: url(img/image02_bg02.jpg);
+        }
+
+        .tag__button2 {
+            background: url(img/image02_bg02.jpg);
+        }
+
+        .tag__button3 {
+            background: url(img/image02_bg02.jpg);
+        }
+
+        .tag__button4 {
+            background: url(img/image02_bg02.jpg);
+        }
+
+        /* imageType */
+    </style>
+</head>
+
+<body>
+    <section id="imageType01" class="image__wrap nexon section">
+        <h2>높은 산 깊은곳</h2>
+        <p>상처입은 노송은 말을 잃었네 눈 내린 언덕을 우리는 간다.</p>
+        <div class="image__inner container">
+            <div class="image_left">
+
+                <div class="bar">
+                    <div class="bar__button1 bar__button"></div>
+                    <div class="bar__button2 bar__button"></div>
+                    <div class="bar__button3 bar__button"></div>
+                    <div class="bar__button4 bar__button"></div>
+                </div>
+                <div class="tag">
+                    <div class="tag__button1 tag__button"></div>
+                    <div class="tag__button2 tag__button"></div>
+                    <div class="tag__button3 tag__button"></div>
+                    <div class="tag__button4 tag__button"></div>
+                </div>
+            </div>
+            <div class="image_right">
+
+                <div class="box1">
+                </div>
+                <div class="box2">
+                </div>
+                <div class="box3">
+                </div>
+                <div class="box4">
+                </div>
+
+
+            </div>
+    </section>
+</body>
+
+</html>
