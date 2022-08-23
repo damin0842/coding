@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>슬라이드 이펙트01</title>
+    <link rel="stylesheet" href="../assets/css/slider.css">
+    <link rel="stylesheet" href="../assets/css/dracula.css">
+    <link href="https://webfontworld.github.io/NexonLv1Gothic/NexonLv1Gothic.css" rel="stylesheet">
+</head>
+<body class="img07">
+    <header id="header">
+        <h1>Javascript Slider Effect01</h1>
+        <p>슬라이드 이펙트 - 트랜지션 효과</p>
+        <ul>
+            <li class="active"><a href="sliderEffect01.html">1</a></li>
+            <li><a href="sliderEffect02.html">2</a></li>
+            <li><a href="sliderEffect03.html">3</a></li>
+            <li><a href="sliderEffect04.html">4</a></li>
+            <li><a href="sliderEffect05.html">5</a></li>
+            <li><a href="sliderEffect06.html">6</a></li>
+            <li><a href="sliderEffect07.html">7</a></li>
+        </ul>
+    </header>
+    <!-- //header -->
+    <main id="main">
+    </main>
+    <!-- //main -->
+    <footer id="footer">
+        <div class="modal__wrap">
+            <div class="modal__btn">
+                <label for="btn">소스 보기</label>
+                <input class="btn" type="checkbox" id="btn" name="btn" />
+            </div>
+            <div class="modal__cont">
+                <div class="modal__box">
+                    <div class="title">
+                        <span class="dot" aria-label="true"></span>
+                        <div class="tabs">
+                            <div class="active">
+                                <span class="favicon" aria-label="true">
+                                    <svg width="16" height="16" viewBox="0 0 18 18" fill="none" aria-hidden="true" focusable="false">
+                                        <circle cx="9" cy="9" r="9" fill="#fff"></circle>
+                                        <path d="M18 9C18 13.9706 15.4688 3.09375 9 10.125C2.53125 17.1562 0 13.9706 0 9C0 4.02944 4.02944 0 9 0C13.9706 0 18 4.02944 18 9Z" fill="orange"></path>
+                                        <path d="M18 9C18 13.9706 14.9062 0.84375 8.29688 6.1875C1.6875 11.5312 0 13.9706 0 9C0 4.02944 4.02944 0 9 0C13.9706 0 18 4.02944 18 9Z" fill="yellow"></path>
+                                    </svg>
+                                </span>
+                                <em>Javascript</em>
+                                <span class="close">
+                                    <svg width="18" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true" focusable="false">
+                                        <path d="M12.5 3.5L3.5 12.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                        <path d="M12.5 12.5L3.5 3.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                    </svg>
+                                </span>
+                            </div>
+                            <div>
+                                <span class="favicon" aria-label="true">
+                                    <svg width="16" height="16" viewBox="0 0 18 18" fill="none" aria-hidden="true" focusable="false">
+                                        <circle cx="9" cy="9" r="9" fill="#fff"></circle>
+                                        <path d="M18 9C18 13.9706 15.4688 3.09375 9 10.125C2.53125 17.1562 0 13.9706 0 9C0 4.02944 4.02944 0 9 0C13.9706 0 18 4.02944 18 9Z" fill="orange"></path>
+                                        <path d="M18 9C18 13.9706 14.9062 0.84375 8.29688 6.1875C1.6875 11.5312 0 13.9706 0 9C0 4.02944 4.02944 0 9 0C13.9706 0 18 4.02944 18 9Z" fill="yellow"></path>
+                                    </svg>
+                                </span>
+                                <em>HTML</em>
+                                <span class="close">
+                                    <svg width="18" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true" focusable="false">
+                                        <path d="M12.5 3.5L3.5 12.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                        <path d="M12.5 12.5L3.5 3.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                    </svg>
+                                </span>
+                            </div>
+                            <div>
+                                <span class="favicon" aria-label="true">
+                                    <svg width="16" height="16" viewBox="0 0 18 18" fill="none" aria-hidden="true" focusable="false">
+                                        <circle cx="9" cy="9" r="9" fill="#fff"></circle>
+                                        <path d="M18 9C18 13.9706 15.4688 3.09375 9 10.125C2.53125 17.1562 0 13.9706 0 9C0 4.02944 4.02944 0 9 0C13.9706 0 18 4.02944 18 9Z" fill="orange"></path>
+                                        <path d="M18 9C18 13.9706 14.9062 0.84375 8.29688 6.1875C1.6875 11.5312 0 13.9706 0 9C0 4.02944 4.02944 0 9 0C13.9706 0 18 4.02944 18 9Z" fill="yellow"></path>
+                                    </svg>
+                                </span>
+                                <em>CSS</em>
+                                <span class="close">
+                                    <svg width="18" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true" focusable="false">
+                                        <path d="M12.5 3.5L3.5 12.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                        <path d="M12.5 12.5L3.5 3.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                    </svg>
+                                </span>
+                            </div>
+                        </div>
+                        <span class="plus" aria-label="true">
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true" focusable="false">
+                                <path d="M2.5 8H13.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                <path d="M8 2.5V13.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                            </svg>
+                        </span>
+                    </div>
+                    <div class="cont">
+                        <div class="active">
+<pre><code class="language-js">&lt;script>
+    hljs.highlightAll();
+
+     //탭 메뉴
+    const tabBtn = document.querySelectorAll(".modal__box .tabs > div");
+    const tabCont = document.querySelectorAll(".modal__box .cont > div");
+
+    tabBtn.forEach((element, index) => {
+        // 버튼을 클릭함
+        element.addEventListener("click", (event) => {
+
+            //이벤트 정지함
+            event.preventDefault();
+            //클래스 active를 모두 제거함
+            tabBtn.forEach(li => {
+                li.classList.remove("active");
+            });
+            //내가 클릭한 버튼에 active를 추가함
+            element.classList.add("active");
+            //버튼을 클릭하면 모든 자식 박스 숨김
+            tabCont.forEach(div => {
+                div.style.display = "none";
+            });
+            //클릭한 버튼과 연결된 박스를 보이게 함
+            tabCont[index].style.display = "block";
+        });
+    });
+&lt;/script>
+</code></pre>
+                        </div>
+                        <div>
+<pre><code class="language-html">&lt;!DOCTYPE html>
+    &lt;html lang="en">
+    &lt;head>
+        &lt;meta charset="UTF-8">
+        &lt;meta http-equiv="X-UA-Compatible" content="IE=edge">
+        &lt;meta name="viewport" content="width=device-width, initial-scale=1.0">
+        &lt;title>슬라이드 이펙트01&lt;/title>
+        &lt;link rel="stylesheet" href="../assets/css/slider.css">
+        &lt;link rel="stylesheet" href="../assets/css/dracula.css">
+        &lt;link href="https://webfontworld.github.io/NexonLv1Gothic/NexonLv1Gothic.css" rel="stylesheet">
+    &lt;/head>
+    &lt;body class="img07">
+        &lt;header id="header">
+            &lt;h1>Javascript Slider Effect01&lt;/h1>
+            &lt;p>슬라이드 이펙트 - 트랜지션 효과&lt;/p>
+            &lt;ul>
+                &lt;li class="active">&lt;a href="sliderEffect01.html">1&lt;/a>&lt;/li>
+                &lt;li>&lt;a href="sliderEffect02.html">2&lt;/a>&lt;/li>
+                &lt;li>&lt;a href="sliderEffect03.html">3&lt;/a>&lt;/li>
+                &lt;li>&lt;a href="sliderEffect04.html">4&lt;/a>&lt;/li>
+                &lt;li>&lt;a href="sliderEffect05.html">5&lt;/a>&lt;/li>
+                &lt;li>&lt;a href="sliderEffect06.html">6&lt;/a>&lt;/li>
+                &lt;li>&lt;a href="sliderEffect07.html">7&lt;/a>&lt;/li>
+            &lt;/ul>
+        &lt;/header>
+        &lt;!-- //header -->
+        &lt;main id="main">
+        &lt;/main>
+        &lt;!-- //main -->
+        &lt;footer id="footer">
+            &lt;div class="modal__wrap">
+                &lt;div class="modal__btn">
+                    &lt;label for="btn">소스 보기&lt;/label>
+                    &lt;input class="btn" type="checkbox" id="btn" name="btn" />
+                &lt;/div>
+                &lt;div class="modal__cont">
+                    &lt;div class="modal__box">
+                        &lt;div class="title">
+                            &lt;span class="dot" aria-label="true">&lt;/span>
+                            &lt;div class="tabs">
+                                &lt;div class="active">
+                                    &lt;span class="favicon" aria-label="true">
+                                        &lt;svg width="16" height="16" viewBox="0 0 18 18" fill="none" aria-hidden="true" focusable="false">
+                                            &lt;circle cx="9" cy="9" r="9" fill="#fff">&lt;/circle>
+                                            &lt;path d="M18 9C18 13.9706 15.4688 3.09375 9 10.125C2.53125 17.1562 0 13.9706 0 9C0 4.02944 4.02944 0 9 0C13.9706 0 18 4.02944 18 9Z" fill="orange">&lt;/path>
+                                            &lt;path d="M18 9C18 13.9706 14.9062 0.84375 8.29688 6.1875C1.6875 11.5312 0 13.9706 0 9C0 4.02944 4.02944 0 9 0C13.9706 0 18 4.02944 18 9Z" fill="yellow">&lt;/path>
+                                        &lt;/svg>
+                                    &lt;/span>
+                                    &lt;em>Javascript&lt;/em>
+                                    &lt;span class="close">
+                                        &lt;svg width="18" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true" focusable="false">
+                                            &lt;path d="M12.5 3.5L3.5 12.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">&lt;/path>
+                                            &lt;path d="M12.5 12.5L3.5 3.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">&lt;/path>
+                                        &lt;/svg>
+                                    &lt;/span>
+                                &lt;/div>
+                                &lt;div>
+                                    &lt;span class="favicon" aria-label="true">
+                                        &lt;svg width="16" height="16" viewBox="0 0 18 18" fill="none" aria-hidden="true" focusable="false">
+                                            &lt;circle cx="9" cy="9" r="9" fill="#fff">&lt;/circle>
+                                            &lt;path d="M18 9C18 13.9706 15.4688 3.09375 9 10.125C2.53125 17.1562 0 13.9706 0 9C0 4.02944 4.02944 0 9 0C13.9706 0 18 4.02944 18 9Z" fill="orange">&lt;/path>
+                                            &lt;path d="M18 9C18 13.9706 14.9062 0.84375 8.29688 6.1875C1.6875 11.5312 0 13.9706 0 9C0 4.02944 4.02944 0 9 0C13.9706 0 18 4.02944 18 9Z" fill="yellow">&lt;/path>
+                                        &lt;/svg>
+                                    &lt;/span>
+                                    &lt;em>HTML&lt;/em>
+                                    &lt;span class="close">
+                                        &lt;svg width="18" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true" focusable="false">
+                                            &lt;path d="M12.5 3.5L3.5 12.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">&lt;/path>
+                                            &lt;path d="M12.5 12.5L3.5 3.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">&lt;/path>
+                                        &lt;/svg>
+                                    &lt;/span>
+                                &lt;/div>
+                                &lt;div>
+                                    &lt;span class="favicon" aria-label="true">
+                                        &lt;svg width="16" height="16" viewBox="0 0 18 18" fill="none" aria-hidden="true" focusable="false">
+                                            &lt;circle cx="9" cy="9" r="9" fill="#fff">&lt;/circle>
+                                            &lt;path d="M18 9C18 13.9706 15.4688 3.09375 9 10.125C2.53125 17.1562 0 13.9706 0 9C0 4.02944 4.02944 0 9 0C13.9706 0 18 4.02944 18 9Z" fill="orange">&lt;/path>
+                                            &lt;path d="M18 9C18 13.9706 14.9062 0.84375 8.29688 6.1875C1.6875 11.5312 0 13.9706 0 9C0 4.02944 4.02944 0 9 0C13.9706 0 18 4.02944 18 9Z" fill="yellow">&lt;/path>
+                                        &lt;/svg>
+                                    &lt;/span>
+                                    &lt;em>CSS&lt;/em>
+                                    &lt;span class="close">
+                                        &lt;svg width="18" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true" focusable="false">
+                                            &lt;path d="M12.5 3.5L3.5 12.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">&lt;/path>
+                                            &lt;path d="M12.5 12.5L3.5 3.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">&lt;/path>
+                                        &lt;/svg>
+                                    &lt;/span>
+                                &lt;/div>
+                            &lt;/div>
+                            &lt;span class="plus" aria-label="true">
+                                &lt;svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true" focusable="false">
+                                    &lt;path d="M2.5 8H13.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">&lt;/path>
+                                    &lt;path d="M8 2.5V13.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">&lt;/path>
+                                &lt;/svg>
+                            &lt;/span>
+                        &lt;/div>
+                        &lt;div class="cont">
+                            &lt;div class="active">
+    &lt;pre>&lt;code class="language-js">function updateQuiz(){
+        quizType.textContent = quizInfo[0].answerType;
+        quizNumber.textContent = quizInfo[0].answerNum + ". ";
+        quizAsk.textContent = quizInfo[0].answerAsk;
+        quizResult.textContent = quizInfo[0].answerEx;
+        for( let i=0; i&lt;4; i++ ){   //보기 출력
+            quizChoice[i].textContent = quizInfo[0].answerChoice[i];
+        }
+        //해설 숨기기
+        quizResult.style.display = "none";
+    }
+    updateQuiz();
+    &lt;/code>&lt;/pre>
+                            &lt;/div>
+                            &lt;div>
+    &lt;pre>&lt;code class="language-js">css function updateQuiz(){
+        quizType.textContent = quizInfo[0].answerType;
+        quizNumber.textContent = quizInfo[0].answerNum + ". ";
+        quizAsk.textContent = quizInfo[0].answerAsk;
+        quizResult.textContent = quizInfo[0].answerEx;
+        for( let i=0; i&lt;4; i++ ){   //보기 출력
+            quizChoice[i].textContent = quizInfo[0].answerChoice[i];
+        }
+        //해설 숨기기
+        quizResult.style.display = "none";
+    }
+    updateQuiz();
+    &lt;/code>&lt;/pre>
+                            &lt;/div>
+                            &lt;div>
+    &lt;pre>&lt;code class="language-js">js function updateQuiz(){
+        quizType.textContent = quizInfo[0].answerType;
+        quizNumber.textContent = quizInfo[0].answerNum + ". ";
+        quizAsk.textContent = quizInfo[0].answerAsk;
+        quizResult.textContent = quizInfo[0].answerEx;
+        for( let i=0; i&lt;4; i++ ){   //보기 출력
+            quizChoice[i].textContent = quizInfo[0].answerChoice[i];
+        }
+        //해설 숨기기
+        quizResult.style.display = "none";
+    }
+    updateQuiz();
+    &lt;/code>&lt;/pre>
+                            &lt;/div>
+                        &lt;/div>
+                    &lt;/div>
+                &lt;/div>
+            &lt;/div>
+        &lt;/footer>
+        &lt;!-- //footer -->
+</code></pre>
+                        </div>
+                        <div>
+<pre><code class="language-css">* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'NexonLv1Gothic';
+}
+body {
+    width: 100%;
+    height: 100vh;
+}
+body.img01 {
+    background: #000 url(../img/effect_bg01@2x-min.jpg) no-repeat center / cover;
+}
+body.img02 {
+    background: #000 url(../img/effect_bg02@2x-min.jpg) no-repeat center / cover;
+}
+body.img03 {
+    background: #000 url(../img/effect_bg03@2x-min.jpg) no-repeat center / cover;
+}
+body.img04 {
+    background: #000 url(../img/effect_bg04@2x-min.jpg) no-repeat center / cover;
+}
+body.img05 {
+    background: #000 url(../img/effect_bg05@2x-min.jpg) no-repeat center / cover;
+}
+body.img06 {
+    background: #000 url(../img/effect_bg06@2x-min.jpg) no-repeat center / cover;
+}
+body.img07 {
+    background: #000 url(../img/effect_bg07@2x-min.jpg) no-repeat center / cover;
+}
+body.img08 {
+    background: #000 url(../img/effect_bg08@2x-min.jpg) no-repeat center / cover;
+}
+body.img09 {
+    background: #000 url(../img/effect_bg09@2x-min.jpg) no-repeat center / cover;
+}
+body.img10 {
+    background: #000 url(../img/effect_bg10@2x-min.jpg) no-repeat center / cover;
+}
+body::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(23, 20, 88, 0.386);
+    z-index: -1;
+}
+img {
+    width: 100%;
+    vertical-align: top;
+}
+a {
+    color: #fff;
+    text-decoration: none;
+}
+/* header */
+#header {
+    color: #fff;
+    padding: 20px;
+}
+#header h1 {
+    display: inline-block;
+    font-weight: 300;
+    margin-bottom: 10px;
+    border-bottom: 1px dashed #fff;
+}
+#header p {
+    margin-bottom: 10px;
+}
+#header li {
+    display: inline-block;
+}
+#header li a {
+    border: 1px solid #fff;
+    border-radius: 50%;
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+    font-size: 14px;
+}
+/* footer */
+#footer .source {
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+    border: 1px solid #fff;
+    border-radius: 40px;
+    padding: 10px 30px;
+    font-size: 14px;
+}
+/* modal__wrap */
+.modal__wrap {}
+.modal__btn {}
+.modal__btn .btn {}
+.modal__cont {
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(255, 255, 255, 0.3);
+    position: fixed;
+    left: 0;
+    top: 0;
+    overflow-x: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.modal__box {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    height: 600px;
+    overflow-y: auto;
+    background-color: #fff;
+    border-radius: 0.5rem;
+    background-color: #fff;
+    box-shadow: 0 10px 20px -5px hsl(180deg 2% 10%);
+    
+}
+.modal__box .title {
+    padding-inline: 1rem;
+    background-color: #1B1C2E;
+    display: flex;
+    align-items: center;
+    color: #fff;
+    height: 50px;
+    border-top-left-radius: 0.5rem;
+    border-top-right-radius: 0.5rem;
+}
+.modal__box .title .dot {
+    width: 15px;
+    height: 15px;
+    background-color: #3B3D63;
+    display: inline-block;
+    border-radius: 50%;
+    position: relative;
+    margin-left: 2rem;
+}
+.modal__box .title .dot::before {
+    content: '';
+    position: absolute;
+    left: 25px;
+    top: 0;
+    width: 15px;
+    height: 15px;
+    background-color: #3B3D63;
+    border-radius: 50%;
+}
+.modal__box .title .dot::after {
+    content: '';
+    position: absolute;
+    right: 25px;
+    top: 0;
+    width: 15px;
+    height: 15px;
+    background-color: #3B3D63;
+    border-radius: 50%;
+}
+.modal__box .title .plus {
+    background: #282936;
+    padding: 0.5rem 0.5rem 0.3rem 0.5rem;
+    border-radius: 0.5rem;
+    color: #7A7D9D;
+}
+.modal__box .title .tabs {
+    display: flex;
+    margin-left: 50px;
+}
+.modal__box .title .tabs > div {
+    color: #7A7D9D;
+    background-color: #282936;
+    padding: 0.35rem 0.8rem 0.25rem 0.8rem;
+    margin-right: 0.5rem;
+    display: flex;
+    align-items: center;
+    border-radius: 0.4rem;
+    text-transform: uppercase;
+    cursor: pointer;
+
+}
+.modal__box .title .tabs > div.active{
+    background-color: #1f224a;
+}
+.modal__box .title .tabs > div em {
+    font-style: normal;
+}
+.modal__box .title .tabs > div .favicon {
+    margin-right: 0.4rem;
+    margin-top: 0.2rem;
+}
+.modal__box .title .tabs > div .close {
+    margin-left: 4rem;
+}
+.modal__box .cont {
+    background-color: #282936;
+    height: 550px;
+    overflow-y: auto;
+    box-sizing: border-box;
+    border-bottom-left-radius: 0.5rem;
+    border-bottom-right-radius: 0.5rem;
+}
+.modal__box .cont > div{
+    display: none;
+}
+
+.modal__box .cont > div.active{
+    display: block;
+}
+</code></pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- //footer -->
+    <script src="../assets/js/highlight.min.js"></script>
+    <script>
+        hljs.highlightAll();
+
+         //탭 메뉴
+        const tabBtn = document.querySelectorAll(".modal__box .tabs > div");
+        const tabCont = document.querySelectorAll(".modal__box .cont > div");
+
+        tabBtn.forEach((element, index) => {
+            // 버튼을 클릭함
+            element.addEventListener("click", (event) => {
+
+                //이벤트 정지함
+                event.preventDefault();
+                //클래스 active를 모두 제거함
+                tabBtn.forEach(li => {
+                    li.classList.remove("active");
+                });
+                //내가 클릭한 버튼에 active를 추가함
+                element.classList.add("active");
+                //버튼을 클릭하면 모든 자식 박스 숨김
+                tabCont.forEach(div => {
+                    div.style.display = "none";
+                });
+                //클릭한 버튼과 연결된 박스를 보이게 함
+                tabCont[index].style.display = "block";
+            });
+        });
+    </script>
+</body>
+</html>
