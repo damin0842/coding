@@ -112,7 +112,7 @@
         const quizInfo = [
             {
                 answerType: "웹디자인기능사 필기 기출문제 (2011.10.9)",
-                answerNum: 1,
+                answerNum: "01. ",
                 answerAsk: "눈이 부시지 않고 조도가 균일하며, 그림자가 없는 부드러운 침실이나 병실 등 휴식공간에 사용되는 조명방법은?",
                 answerChoice:
                     [
@@ -131,7 +131,7 @@
 
             {
                 answerType: "웹디자인기능사 필기 기출문제 (2011.10.9)",
-                answerNum: 2,
+                answerNum: "03. ",
                 answerAsk: "다음 형태(form) 중 반드시 수학적 법칙과 함께 생기며, 가장 뚜렷한 질서를 갖는 것은?",
                 answerChoice:
                     [
@@ -146,7 +146,7 @@
             ,
             {
                 answerType: "웹디자인기능사 필기 기출문제 (2011.10.9)",
-                answerNum: 3,
+                answerNum: "04. ",
                 answerAsk: "부분과 부분 또는 부분과 전체 사이 안정된 관련성을 지니며, 서로 함께 속해있는 것처럼 보이는 디자인의 원리는?",
                 answerChoice:
                     [
@@ -161,14 +161,14 @@
             ,
             {
                 answerType: "웹디자인 기능사 2013년 01회",
-                answerNum: 4,
+                answerNum: 8,
                 answerAsk: "어둠이 시작될 때 물체의 상이 흐리게 나타나는 현상과 가장 관계가 깊은 것은?",
                 answerChoice: [
-                    "색순응",
-                    "푸르킨예 현상",
-                    "박명시",
-                    "조건등색",
-                ],
+                "색순응",
+                "푸르킨예 현상",
+                "박명시",
+                "조건등색",
+            ],
                 answerResult: "박명시",
                 answerEx: "명순응은 어두운 -> 밝은곳 갈 때 눈의 적응 암순응은 밝은 -> 어두운 곳 갈 때 눈의 적응입니다. 박명시란 그 중간에 눈의 적응입니다. 그 상태에선 물체가 흐리게 보여요",
             },
@@ -176,7 +176,7 @@
 
             {
                 answerType: "웹디자인 기능사 2013년 01회",
-                answerNum: 5,
+                answerNum: 24,
                 answerAsk: "컴퓨터 그래픽에서 객체의 위치를 정확히 표현하기 위한 좌표계 중 좌표 위에 있는 점과 원점으로 규정하는 기준점과의 거리와 각도의 크기에 따라 좌표를 정의하는 좌표계는?",
                 answerChoice: [
                     "2차원 그래픽 좌표계",
@@ -187,6 +187,19 @@
                 answerResult: "극 좌표계",
                 answerEx: "?",
             },
+            {
+                answerType: "",
+                answerNum: "끝",
+                answerAsk: "",
+                answerChoice: [
+                    "결과 보기",
+                    "결과 보기",
+                    "결과 보기",
+                    "결과 보기",
+                ],
+                answerResult: "",
+                answerEx: "",
+            }
 
         ];
 
@@ -196,7 +209,7 @@
         const quizResult = document.querySelector(".quiz__answer .result")      //해설
         const quizConfirm = document.querySelector(".quiz__answer .confirm")    //정답확인 버튼
         const quizView = document.querySelector(".quiz__view")                  //강아지
-
+        
         let quizCount = 0;
         let quizScore = 0;
 
@@ -224,7 +237,7 @@
                     <span class="choice">${quizInfo[index].answerChoice[3]}</span>
                 </label>
             `;
-
+         
 
             //문제 출력
             quizQuestion.innerHTML = questionTag;
@@ -234,42 +247,49 @@
 
             const quizChoice = quizSelects.querySelectorAll(".choice");
 
-            for (let i = 0; i < quizChoice.length; i++) {
-                quizChoice[i].setAttribute("onclick", "choiceSelected(this)")
+            for(let i = 0; i<quizChoice.length; i++){
+                quizChoice[i].setAttribute("onclick","choiceSelected(this)")
             }
 
             //문제, 해설 숨기기
-            quizResult.style.display = "none";
-            quizConfirm.style.display = "none";
+            quizResult.style.display ="none";
+            quizConfirm.style.display ="none";
 
         }
         updateQuiz(quizCount);
 
         const choiceSelected = (answer) => {
-            let userAnswer = answer.textContent;     //사용자가 체크한 정답
-            let currentAnswer = quizInfo[quizCount].answerResult // 문제 정답
+           let userAnswer = answer.textContent;     //사용자가 체크한 정답
+           let currentAnswer = quizInfo[quizCount].answerResult // 문제 정답
 
-            if (userAnswer == currentAnswer) {
-                console.log("정답")
-                quizView.classList.add("like");
-                quizScore++;
-            } else {
-                console.log("오답")
-                quizView.classList.add("dislike");
-                quizResult.style.display = "block";
-            }
-            quizConfirm.style.display = "block";
+           if(userAnswer == currentAnswer){
+            console.log("정답")
+            quizView.classList.add("like");
+            quizScore++;
+           }else{
+            console.log("오답")
+            quizView.classList.add("dislike");
+            quizResult.style.display ="block";
+           }
+           quizConfirm.style.display ="block";
         }
         //정답확인버튼
         const answerQuiz = () => {
             quizCount++;
             updateQuiz(quizCount);
-            quizView.classList.remove("like", "dislike");
+            quizView.classList.remove("like","dislike");
 
             //마지막 문제
-            if (quizInfo.length - 1 == quizCount) {
-                quizConfirm.textContent = `총 ${quizInfo.length} 문제 중에${quizScore} 문제를 맞추었습니다.`;
+            if(quizInfo.length -1 == quizCount){
+                quizResult.style.display ="none";
+                quizView.style.display = "none";
+                quizQuestion.style.display = "none";
+                quizType.style.display = "none";
+
+
+                quizConfirm.textContent = `총 ${quizInfo.length-1} 문제 중에${quizScore} 문제를 맞추었습니다.`;
             }
+            
         }
         quizConfirm.addEventListener("click", answerQuiz)
     </script>
