@@ -9,6 +9,26 @@
     <link rel="stylesheet" href="../assets/css/slider.css">
     <link rel="stylesheet" href="../assets/css/dracula.css">
     <link href="https://webfontworld.github.io/NexonLv1Gothic/NexonLv1Gothic.css" rel="stylesheet">
+    <style>
+        /* slider */
+        .slider__wrap{
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .slider__img{
+            position: relative;
+            width: 800px;
+            height: 50vh;
+        }
+        .slider{
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+    </style>
 </head>
 
 <body class="img07">
@@ -27,6 +47,17 @@
     </header>
     <!-- //header -->
     <main id="main">
+        <section id="sliderType01">
+            <div class="slider__wrap">
+                <div class="slider__img">
+                    <div class="slider"><img src="../assets/img/effect_bg11-min.jpg" alt=""></div>
+                    <div class="slider"><img src="../assets/img/effect_bg12-min.jpg" alt=""></div>
+                    <div class="slider"><img src="../assets/img/effect_bg13-min.jpg" alt=""></div>
+                    <div class="slider"><img src="../assets/img/effect_bg14-min.jpg" alt=""></div>
+                    <div class="slider"><img src="../assets/img/effect_bg15-min.jpg" alt=""></div> 
+                </div>
+            </div>
+        </section>
     </main>
     <!-- //main -->
     <footer id="footer">
@@ -542,9 +573,13 @@ a {
        
         modalBtn.addEventListener("click", () => {
             modalCont.classList.add("show");
+            modalCont.classList.remove("hide");
+
         });
         modalClose.addEventListener("click", () => {
+            modalCont.classList.add("hide");
             modalCont.classList.remove("show");
+
         });
 
         //탭 메뉴
