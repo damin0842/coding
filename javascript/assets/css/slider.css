@@ -1,8 +1,11 @@
+@import url('https://webfontworld.github.io/earlyfont/EF_Hyunygothic.css');
+@import url('https://webfontworld.github.io/NexonLv1Gothic/NexonLv1Gothic.css');
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'NexonLv1Gothic';
+    font-family: 'EF_Hyunygothic';
 }
 
 body {
@@ -11,43 +14,43 @@ body {
 }
 
 body.img01 {
-    background: #000 url(../img/effect_bg01@2x-min.jpg) no-repeat center / cover;
+    background: #000 url(../img/effect_bg01@2x.jpg) no-repeat center / cover;
 }
 
 body.img02 {
-    background: #000 url(../img/effect_bg02@2x-min.jpg) no-repeat center / cover;
+    background: #000 url(../img/effect_bg02@2x.jpg) no-repeat center / cover;
 }
 
 body.img03 {
-    background: #000 url(../img/effect_bg03@2x-min.jpg) no-repeat center / cover;
+    background: #000 url(../img/effect_bg03@2x.jpg) no-repeat center / cover;
 }
 
 body.img04 {
-    background: #000 url(../img/effect_bg04@2x-min.jpg) no-repeat center / cover;
+    background: #000 url(../img/effect_bg04@2x.jpg) no-repeat center / cover;
 }
 
 body.img05 {
-    background: #000 url(../img/effect_bg05@2x-min.jpg) no-repeat center / cover;
+    background: #000 url(../img/effect_bg05@2x.jpg) no-repeat center / cover;
 }
 
 body.img06 {
-    background: #000 url(../img/effect_bg06@2x-min.jpg) no-repeat center / cover;
+    background: #000 url(../img/effect_bg06@2x.jpg) no-repeat center / cover;
 }
 
 body.img07 {
-    background: #000 url(../img/effect_bg07@2x-min.jpg) no-repeat center / cover;
+    background: #000 url(../img/effect_bg07@2x.jpg) no-repeat center / cover;
 }
 
 body.img08 {
-    background: #000 url(../img/effect_bg08@2x-min.jpg) no-repeat center / cover;
+    background: #000 url(../img/effect_bg08@2x.jpg) no-repeat center / cover;
 }
 
 body.img09 {
-    background: #000 url(../img/effect_bg09@2x-min.jpg) no-repeat center / cover;
+    background: #000 url(../img/effect_bg09@2x.jpg) no-repeat center / cover;
 }
 
 body.img10 {
-    background: #000 url(../img/effect_bg10@2x-min.jpg) no-repeat center / cover;
+    background: #000 url(../img/effect_bg10@2x.jpg) no-repeat center / cover;
 }
 
 body::after {
@@ -72,32 +75,50 @@ a {
 }
 
 /* scroll */
-
 ::-webkit-scrollbar {
-    width: 10px;
-    height: 10px;
+    width: 15px;
+    background-color: #203e3d;
 }
 
 ::-webkit-scrollbar-track {
-    background: #F1F1F1;
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    border-radius: 5px;
+    background-color: #203e3d;
 }
 
 ::-webkit-scrollbar-thumb {
-    background: #d6d8fe;
-    border-radius: 20px;
+    border-radius: 10px;
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, .3);
+    background-color: #85996c;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background: #d6d8fe;
+    background: #6f8554;
+}
+
+/* layout */
+#header{
+    z-index: 2000;
+}
+#main{
+    /* z-index를 쓸 때는 포지션이 겹칠 때 가능 */
+    /* 서로 형제여야 쓸 수 있음 */
+    /* absolute를 주게 되면 영역이 사라짐 */
+    position: relative;  
+    z-index: 1000;
+}
+#footer{
+    position: relative;
+    z-index: 3000;
 }
 
 /* header */
 #header {
+    color: #fff;
+    padding: 20px;
     position: absolute;
     left: 0;
     top: 0;
-    color: #fff;
-    padding: 20px;
 }
 
 #header h1 {
@@ -114,10 +135,6 @@ a {
 #header li {
     display: inline-block;
 }
-#header li.active a{
-    background-color: #fff;
-    color: #33377d;
-}
 
 #header li a {
     border: 1px solid #fff;
@@ -128,6 +145,11 @@ a {
     text-align: center;
     line-height: 30px;
     font-size: 14px;
+}
+
+#header li.active a {
+    background: #fff;
+    color: #33377d;
 }
 
 /* footer */
@@ -142,8 +164,6 @@ a {
 }
 
 /* modal__wrap */
-.modal__wrap {}
-
 .modal__btn {
     color: #fff;
     border: 1px solid #fff;
@@ -153,15 +173,23 @@ a {
     position: absolute;
     right: 20px;
     bottom: 20px;
-    transition: background-color 0.3s, color 0.3s;
+    cursor: pointer;
+    transition: color 0.3s, background 0.3s;
 }
 
 .modal__btn:hover {
-    background-color: #fff;
-    color: #3b3d63;
+    background: #fff;
+    color: #727eff;
 }
 
-
+/* 
+    요소를 안보이게 하는 방법
+    1. display : none; (애니메이션 불가능, 영역 없음)
+    2. opacity : 0; (애니메이션 가능, 영역 있음)
+    3. visible : hidden; (애니메이션 불가능, 영역 없음)
+    4. width 0; height : 0; (애니메이션 불가능, 영역 없음) (블라인드 효과)
+    5. trasnform : scale(0) (애니메이션 가능, 영역 없음)
+*/
 
 .modal__cont {
     width: 100%;
@@ -177,29 +205,20 @@ a {
     transform: scale(0);
 }
 
-
-
-
-
-/* 요소를 안보이게 하는 방법
-    1. display: none;       (애니메이션x, 영역x)
-    2. opecity: 0;          (애니메이션O, 영역o)
-    3. visibility: hidden;  (애니메이션x, 영역x)
-    4. width:0; height: 0;  (애니메이션x, 영역x) : blind
-    5. transform: scale(0); (애니메이션O, 영역x)
-*/
 .modal__box {
     width: 70%;
     height: 70vh;
-    border-radius: 0.6rem;
+    max-width: 800px;
+    margin: 0 auto;
+    border-radius: 0.5rem;
+    background-color: #203e3d;
     box-shadow: 0 10px 20px -5px hsl(180deg 2% 10%);
     transform: scale(0);
-
 }
 
 .modal__box .title {
     padding-inline: 1rem;
-    background-color: #1B1C2E;
+    background-color: #b9db90;
     display: flex;
     align-items: center;
     color: #fff;
@@ -211,7 +230,7 @@ a {
 .modal__box .title .dot {
     width: 15px;
     height: 15px;
-    background-color: #3B3D63;
+    background-color: #c8f54c;
     display: inline-block;
     border-radius: 50%;
     position: relative;
@@ -225,7 +244,7 @@ a {
     top: 0;
     width: 15px;
     height: 15px;
-    background-color: #3B3D63;
+    background-color: #6970e9;
     border-radius: 50%;
 }
 
@@ -236,7 +255,7 @@ a {
     top: 0;
     width: 15px;
     height: 15px;
-    background-color: #3B3D63;
+    background-color: #f96c42;
     border-radius: 50%;
 }
 
@@ -245,6 +264,7 @@ a {
     padding: 0.5rem 0.5rem 0.3rem 0.5rem;
     border-radius: 0.5rem;
     color: #7A7D9D;
+    margin-left: 20px;
 }
 
 .modal__box .title .tabs {
@@ -253,7 +273,7 @@ a {
 }
 
 .modal__box .title .tabs>div {
-    color: #7A7D9D;
+    color: #fff;
     background-color: #282936;
     padding: 0.35rem 0.8rem 0.25rem 0.8rem;
     margin-right: 0.5rem;
@@ -264,12 +284,13 @@ a {
     cursor: pointer;
 }
 
-.modal__box .title .tabs>div.active {
-    background-color: #1f224a;
-}
-
 .modal__box .title .tabs>div em {
     font-style: normal;
+}
+
+.modal__box .title .tabs>div.active {
+    background-color: #1f224a;
+    color: #727eff;
 }
 
 .modal__box .title .tabs>div .favicon {
@@ -279,91 +300,108 @@ a {
 
 .modal__box .title .tabs>div .close {
     margin-left: 4rem;
+    color: #fff;
 }
 
 .modal__box .cont {
-    background-color: #282936;
+    /* background-color: #282936; */
     height: 100%;
-    overflow-y: auto;
     box-sizing: border-box;
     border-bottom-left-radius: 0.5rem;
     border-bottom-right-radius: 0.5rem;
+    overflow-y: auto;
 }
 
 .modal__box .cont>div {
     display: none;
+    height: inherit;
 }
 
 
-.modal__box .cont>div.active {
+.modal__box .cont div.active {
     display: block;
     height: 100%;
+    font-family: 'NexonLv1Gothic';
 }
 
 .modal__close {
     position: absolute;
     right: 20px;
     top: 20px;
-    background-color: #1f224a;
+    background-color: red;
     padding: 1rem 1rem 0.8rem 1rem;
     border-radius: 5px;
-    box-shadow: 0 5px 7px -5px hsl(180deg 2% 10%);
+    box-shadow: 0 5px 7px -5px hsl(180deg, 2%, 10%);
     cursor: pointer;
     transition: all 0.3s;
     opacity: 0;
-
 }
 
 .modal__close:hover {
-    background-color: #33377d;
+    background-color: #292c61;
 }
 
 .modal__close svg {
     color: #fff;
 }
-/*모달 애니메이션*/
-.modal__cont.show {     /*전체 배경*/
+
+/* modal animation */
+.modal__cont.show {
+    /* 전체 배경 */
     animation: foldOut 1s ease forwards;
 }
-.modal__cont.show.hide{     /*스크립트 배경*/
-    animation: foldIn 0.3s 0.5s ease backwards;
-}
-.modal__cont.show .modal__close{    /*닫기 버튼*/
-    animation: opacity 0.5s 1s ease forwards;
+
+.modal__cont.show.hide {
+    /* 전체 배경 닫기 */
+    animation: foldIn 1.5s 1s ease backwards;
 }
 
-.modal__cont.show .modal__box{
+.modal__cont.show .modal__box {
+    /* 스크립트 박스 */
     transform: scale(0);
     animation: zoomOut 0.5s 1s ease forwards;
 }
-.modal__cont.show.hide .modal__box{
-    animation: zoomIn 0.5s ease forwards;
+
+.modal__cont.show.hide .modal__box {
+    /* 스크립트 박스  닫기*/
+    animation: zoomIn 1s ease forwards;
+}
+
+.modal__cont.show .modal__close {
+    /* 닫기 버튼 */
+    animation: opacityOut 0.5s 1.5s ease forwards;
+}
+
+.modal__cont.show.hide .modal__close {
+    /* 닫기 버튼 닫기*/
+    animation: opacityIn 0.1s ease forwards;
 }
 
 @keyframes foldOut {
     0% {
-        transform: scaleX(0) scaleY(0.001);
+        transform: scaleX(0) scaleY(0.005);
     }
 
     50% {
-        transform: scaleX(1) scaleY(0.001);
+        transform: scaleX(1) scaleY(0.005);
     }
 
     100% {
-        transform: scaleX(1)scaleY(1);
+        transform: scaleX(1) scaleY(1);
     }
 }
+
 @keyframes foldIn {
     0% {
         transform: scaleX(1) scaleY(1);
     }
 
     50% {
-        transform: scaleX(1) scaleY(0.001);
+        transform: scaleX(1) scaleY(0.005);
     }
 
     100% {
-        transform: scaleX(0)scaleY(0.001);
+        transform: scaleX(0) scaleY(0.005);
     }
 }
 
@@ -376,6 +414,7 @@ a {
         transform: scale(1);
     }
 }
+
 @keyframes zoomIn {
     0% {
         transform: scale(1);
@@ -385,41 +424,60 @@ a {
         transform: scale(0);
     }
 }
-@keyframes opacity{
-    0%{
+
+@keyframes opacityOut {
+    0% {
         opacity: 0;
     }
-    50%{
-        opacity: 0.5;
-    }
-    100%{
+
+    100% {
         opacity: 1;
     }
 }
-@media(max-width:1100px){
-    .modal__box .title{
+
+@keyframes opacityIn {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+@media(max-width:1100px) {
+    .modal__box .title {
         overflow: hidden;
     }
-    .modal__box .title .dot{
+
+    .modal__box .title .dot {
         display: none;
     }
-    .modal__box .title .tabs{
+
+    .modal__box .title .tabs {
         margin-left: 0;
     }
-    .modal__box .title .tabs > div .close{
+
+    .modal__box .title .tabs>div .close {
         display: none;
     }
 }
-@media(max-width:600px){
-    #header{
+
+@media(max-width:800px) {
+    #header {
         width: 100%;
-    }
-    #header h1{
-        line-height: 1.4;
-    }
-    .modal__box{
-        width: 96%;
+        text-align: center;
     }
 
-    
+    #header h1 {
+        line-height: 1.4;
+    }
+
+    .modal__box {
+        width: 96%;
+    }
+}
+
+.hljs {
+    background-color: #203e3d;
 }
