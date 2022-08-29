@@ -163,8 +163,8 @@
                     </div>
                     <div class="cont">
                         <div class="active">
-<pre><code class="language-js"><!-- javascript
-<script>
+<pre><code class="language-js">&lt;!-- javascript -->
+&lt;script>
     const sliderInner = document.querySelector(".slider__inner");  
     const slider = document.querySelectorAll(".slider"); 
     let currentIndex = 0;
@@ -174,11 +174,11 @@
         currentIndex = (currentIndex + 1) % slider.length;   
         sliderInner.style.transform = "translateX("+ -800 * currentIndex +"px)";
     }, 2000);
-</script> -->
+&lt;/script> -->
 
-<!-- GSAP -->
-<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.0/gsap.min.js"></script>
-<script>
+&lt;!-- GSAP -->
+&lt;script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.0/gsap.min.js">&lt;/script>
+&lt;script>
     const slider = document.querySelectorAll(".slider");
     let currentIndex = 0;
     setInterval(() => {
@@ -187,18 +187,18 @@
             x : -800 * currentIndex
         });
     }, 2000);
-</script> -->
+&lt;/script>
 
-<!-- jQuery -->
-<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-<script>
+&lt;!-- jQuery -->
+&lt;script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js">&lt;/script>
+&lt;script>
     let currentIndex = 0;
     setInterval(() => {
         currentIndex = (currentIndex + 1) % $(".slider").length; 
         $(".slider__inner").css("position", "relative");
         $(".slider__inner").animate({ left : -800 * currentIndex }, 600);
     }, 2000);
-</script> -->
+&lt;/script>
 </code></pre>
                         </div>
                         <div>
