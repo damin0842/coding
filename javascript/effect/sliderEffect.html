@@ -1,39 +1,49 @@
 <!DOCTYPE html>
-<html lang="ko">
-
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>슬라이더 이펙트</title>
-    <link rel="stylesheet" href="../asset/css/style.css">
-</head>
-<style>
-    body,
-    html,
-    #app{
-        padding: 0;
-        margin: 0;
-        width: 100%;
-        height: 100%;
-        overflow: hidden;
-    }
-</style>
+    <title>Document</title>
 
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <style>
+        body,
+        html,
+        #app {
+            padding: 0;
+            margin: 0;
+            width: 100%;
+            height: 100%;
+        }
+        .intro_menu {
+            z-index: 10000;
+            background: rgba(255,255,255,0.1);
+            color: #fff;
+        }
+        .intro_menu li a {
+            color: #fff;
+        }
+    </style>
+</head>
 <body>
-    <div class="intro_menu">
-        <ul>
-            <li>01. 슬라이더 이펙트 : 트랜지션 효과 <a href="sliderEffect01.html">Go 👍</a></li>
-            <li>02. 슬라이더 이펙트 : 좌로 이동하기 <a href="sliderEffect02.html">Go 👍</a></li>
-            <li>03. 슬라이더 이펙트 : 좌로 움직이기(연속적으로) <a href="sliderEffect03.html">Go 👍</a></li>
-        </ul>
-    </div>
+    <main>
+        <div class="intro_menu">
+            <ul>
+                <li>01. 슬라이드 이펙트 - 트랜지션 효과 <a href="sliderEffect01.html">GO</a></li>
+                <li>02. 슬라이드 이펙트 - 좌로 움직이기 <a href="sliderEffect02.html">GO</a></li>
+                <li>03. 슬라이드 이펙트 - 좌로 움직이기(연속적으로) <a href="sliderEffect03.html">GO</a></li>
+            </ul>
+        </div>
+    </main>
+
     <div id="app"></div>
 
+    
+
     <script type="module">
-        import {
-            neonCursor
-        } from 'https://unpkg.com/threejs-toys@0.0.2/build/threejs-toys.module.cdn.min.js'
+        import {neonCursor} from 'https://unpkg.com/threejs-toys@0.0.2/build/threejs-toys.module.cdn.min.js'
+
         neonCursor({
             el: document.getElementById('app'),
             shaderPoints: 16,
@@ -49,5 +59,4 @@
         })
     </script>
 </body>
-
 </html>
