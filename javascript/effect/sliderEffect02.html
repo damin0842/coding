@@ -163,7 +163,42 @@
                     </div>
                     <div class="cont">
                         <div class="active">
-<pre><code class="language-js">
+<pre><code class="language-js"><!-- javascript
+<script>
+    const sliderInner = document.querySelector(".slider__inner");  
+    const slider = document.querySelectorAll(".slider"); 
+    let currentIndex = 0;
+    
+    sliderInner.style.transition = "all 0.6s";  
+    setInterval(() => {
+        currentIndex = (currentIndex + 1) % slider.length;   
+        sliderInner.style.transform = "translateX("+ -800 * currentIndex +"px)";
+    }, 2000);
+</script> -->
+
+<!-- GSAP -->
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.0/gsap.min.js"></script>
+<script>
+    const slider = document.querySelectorAll(".slider");
+    let currentIndex = 0;
+    setInterval(() => {
+        currentIndex = (currentIndex + 1) % slider.length; 
+        gsap.to(".slider__inner", {
+            x : -800 * currentIndex
+        });
+    }, 2000);
+</script> -->
+
+<!-- jQuery -->
+<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script>
+    let currentIndex = 0;
+    setInterval(() => {
+        currentIndex = (currentIndex + 1) % $(".slider").length; 
+        $(".slider__inner").css("position", "relative");
+        $(".slider__inner").animate({ left : -800 * currentIndex }, 600);
+    }, 2000);
+</script> -->
 </code></pre>
                         </div>
                         <div>
@@ -179,7 +214,55 @@
 </code></pre>
                         </div>
                         <div>
-<pre><code class="language-css">
+<pre><code class="language-css">/* slider */
+.slider__wrap {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.slider__img {      /* 이미지 보이는 영역 */
+    position: relative;
+    width: 800px;
+    height: 450px;
+    overflow: hidden;
+}
+.slider__inner {    /* 이미지를 감싸고 있는 부모 : 움직이는 부분 */
+    display: flex;
+    flex-wrap: wrap;
+    width: 4000px;
+    height: 450px;
+}
+.slider {           /* 개별적인 이미지 */
+    position: relative;
+    width: 800px;
+    height: 450px;
+}
+.slider::before {
+    position: absolute;
+    left: 5px;
+    top: 5px;
+    background: rgba(0,0,0,0.4);
+    color: #fff;
+    padding: 5px 10px;
+}
+.slider:nth-child(1)::before {content: '이미지1';}
+.slider:nth-child(2)::before {content: '이미지2';}
+.slider:nth-child(3)::before {content: '이미지3';}
+.slider:nth-child(4)::before {content: '이미지4';}
+.slider:nth-child(5)::before {content: '이미지5';}
+.slider:nth-child(1) {z-index: 5;}
+.slider:nth-child(2) {z-index: 4;}
+.slider:nth-child(3) {z-index: 3;}
+.slider:nth-child(4) {z-index: 2;}
+.slider:nth-child(5) {z-index: 1;}
+@media (max-width: 800px){
+    .slider__img {
+        width: 400px;
+        height: 225px;
+    }
+}
 </code></pre>
                         </div>
                     </div>
