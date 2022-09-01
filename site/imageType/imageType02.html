@@ -1,36 +1,32 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>이미지 유형02</title>
     <style>
+        /* fonts */
         @import url('https://webfontworld.github.io/gmarket/GmarketSans.css');
 
+        .gmark {
+            font-family: GmarketSans;
+            font-weight: 500;
+        }
+        
         /* reset */
         * {
             margin: 0;
             padding: 0;
-            font-family: 'GmarketSans';
         }
-
         a {
             text-decoration: none;
             color: #000;
         }
-
         img {
             width: 100%;
         }
-
-        h1,
-        h2,
-        h3,
-        h4,
-        h5,
-        h6 {
+        h1, h2, h3, h4, h5, h6 {
             font-weight: normal;
         }
 
@@ -41,20 +37,16 @@
             margin: 0 auto;
             min-width: 1160px;
         }
-
         .section {
             padding: 120px 0;
         }
-
-        .section>h2 {
+        .section > h2 {
             font-size: 50px;
             line-height: 1;
             text-align: center;
             margin-bottom: 20px;
-            font-weight: 600;
         }
-
-        .section>p {
+        .section > p {
             font-size: 22px;
             font-weight: 300;
             color: #666;
@@ -67,113 +59,88 @@
             display: flex;
             justify-content: space-between;
         }
-
         .image {
-            width: 373px;
-            height: 520px;
-            color: #fff;
-            padding: 200px 30px 30px 30px;
-            box-sizing: border-box;
+            width: 32%;
+            position: relative;
             overflow: hidden;
         }
-
-        .image.img1 {
-            background: url(img/image02_bg01.jpg) no-repeat center;
-            position: relative;
-
-
+        .image__box img {
+            vertical-align: top;
+            transition: all 0.6s ease-in-out;
         }
-
-        .image.img2 {
-            background: url(img/image02_bg02.jpg) no-repeat center;
-            position: relative;
-
-        }
-
-        .image.img3 {
-            background: url(img/image02_bg03.jpg) no-repeat center;
-            position: relative;
-
-        }
-
-        .image .box {
-            width: 373px;
-            height: 100px;
+        .image__desc {
             position: absolute;
-            bottom: -100px;
             left: 0;
+            bottom: -100px;
+            width: 100%;
+            text-align: center;
             backdrop-filter: blur(10px);
-            transition: all 0.5s ease-in-out;
+            padding: 23px 20px;
+            box-sizing: border-box;
+            background: rgba(266,65,59,0.1);
+            transition: all 0.3s ease-in-out;
         }
-
-        .image:hover .box {
+        .image:hover .image__desc {
             bottom: 0;
         }
-        .image:hover.image{
-            transform: scale(1.2);
+        .image:hover .image__box img {
+            transform: scale(1.03);
         }
+        .img1 .image__desc {background: rgba(266,65,59,0.4);}
+        .img2 .image__desc {background: rgba(234,207,105,0.4);}
+        .img3 .image__desc {background: rgba(165,175,232,0.4);}
+        .img1 .image__desc h3 {color: rgb(195, 45, 44)}
+        .img2 .image__desc h3 {color: rgb(135, 117, 54)}
+        .img3 .image__desc h3 {color: rgb(62, 73, 138)}
+        .img1 .image__desc .more {color: rgb(195, 45, 44)}
+        .img2 .image__desc .more {color: rgb(135, 117, 54)}
+        .img3 .image__desc .more {color: rgb(62, 73, 138)}
 
-       
-        .image__title1 {
-            text-align: center;
+        .image__desc h3 {
             font-size: 24px;
-            margin-top: 30px;
             margin-bottom: 5px;
-            color: #FCA22E;
         }
-
-        .image__title2 {
-            text-align: center;
-            font-size: 24px;
-            margin-top: 30px;
-            margin-bottom: 5px;
-            color: #F5F5F5;
-        }
-
-        .image__title3 {
-            text-align: center;
-            font-size: 24px;
-            margin-top: 30px;
-            margin-bottom: 5px;
-            color: #FF6D31;
-        }
-
-        .image__btn {
-
-            box-sizing: border-box;
+        .image__desc .more {
             font-size: 16px;
-            color: #fff;
-            display: block;
-            text-align: center;
+        }
+        .image__desc .more:hover {
+            text-decoration: underline;
         }
     </style>
 </head>
-
 <body>
-    <section id="imageType01" class="image__wrap nexon section">
-        <h2>마하반야 바라밀다</h2>
-        <p>심경관자재보살 도일채고액 사리자 색불이공 공불이색 색즉시공 공즉시색</p>
+    <section id="imageType02" class="image__wrap gmark section">
+        <h2>웹쓰 스터디 멤버</h2>
+        <p>웹 디자이너, 웹 퍼블리셔, 프론트앤드를 위한 포트폴리오 입니다. </p>
         <div class="image__inner container">
             <article class="image img1">
-                <div class="box">
-                    <h3 class="image__title1">무안이비설신의</h3>
-                    <a class="image__btn" href="/" title="자세히 보기">자세히 보기</a>
+                <figure class="image__box">
+                    <img src="img/image_bg02_01.jpg" alt="전현정">
+                </figure>
+                <div class="image__desc">
+                    <h3>웹쓰 24기 전현정</h3>
+                    <a href="/" class="more" title="자세히 보기">자세히 보기</a>
                 </div>
             </article>
             <article class="image img2">
-                <div class="box">
-                    <h3 class="image__title2">무색성향미촉법</h3>
-                    <a class="image__btn" href="/" title="자세히 보기">자세히 보기</a>
+                <figure class="image__box">
+                    <img src="img/image_bg02_02.jpg" alt="전현정">
+                </figure>
+                <div class="image__desc">
+                    <h3>웹쓰 24기 전현정</h3>
+                    <a href="/" class="more" title="자세히 보기">자세히 보기</a>
                 </div>
             </article>
             <article class="image img3">
-                <div class="box">
-                    <h3 class="image__title3">모지사바하</h3>
-                    <a class="image__btn" href="/" title="자세히 보기">자세히 보기</a>
+                <figure class="image__box">
+                    <img src="img/image_bg02_03.jpg" alt="전현정">
+                </figure>
+                <div class="image__desc">
+                    <h3>웹쓰 24기 전현정</h3>
+                    <a href="/" class="more" title="자세히 보기">자세히 보기</a>
                 </div>
             </article>
         </div>
     </section>
 </body>
-
 </html>
