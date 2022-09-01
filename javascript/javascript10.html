@@ -74,22 +74,7 @@
                 <li><a href="">08. 요소 속성 : 크기 및 위치 : element.offsetLeft() : 요소의 X축값 (보더/패딩 포함)</a></li>
                 <li><a href="">09. 요소 메서드 : 크기 및 위치 : element.getBoundingClientRect() : 요소의 top,left,right,bottom,x,y,width,height</a></li>
 
-                <br>
-                <li><a href="">01. 요소 속성 : 크기 및 위치 : window.innerWidth : 브라우저의 가로값 (스크롤바 미포함) </a></li>
-                <li><a href="">01. 요소 속성 : 크기 및 위치 : window.innerHeight : 브라우저의 가로값 (스크롤바 미포함) </a></li>
-                <li><a href="">01. 요소 속성 : 크기 및 위치 : window.outerWidth : 브라우저의 가로값 (스크롤바 포함) </a></li>
-                <li><a href="">01. 요소 속성 : 크기 및 위치 : window.outerHeight : 브라우저의 가로값 (스크롤바 포함) </a></li>
-                <li><a href="">01. 요소 속성 : 크기 및 위치 : window.pageXOffset : 가로 스크롤 값 (브라우저 기준) </a></li>
-                <li><a href="">01. 요소 속성 : 크기 및 위치 : window.pageYOffset : 세로 스크롤 값 (브라우저 기준) </a></li>
-                <li><a href="">01. 요소 속성 : 크기 및 위치 : window.scrollX : 가로 스크롤 값 (브라우저 기준) </a></li>
-                <li><a href="">01. 요소 속성 : 크기 및 위치 : window.scrollY : 가로 스크롤 값 (브라우저 기준) </a></li>
-                <li><a href="">01. 요소 메서드 : 크기 및 위치 : window.scroll() : 스크롤 값 설정  </a></li>
-                <li><a href="">01. 요소 메서드 : 크기 및 위치 : window.scrollTo() : 스크롤 값 설정 (절대 기준) </a></li>
-                <li><a href="">01. 요소 메서드 : 크기 및 위치 : window.scrollBy() : 스크롤 값 설정 (상대 기준) </a></li>
-                
-                <li><a href="">01. 요소 속성 : 크기 및 위치 : element.scrollLeft : 가로 스크롤 값 </a></li>
-                <li><a href="">01. 요소 속성 : 크기 및 위치 : element.scrollTop : 세로 스크롤 값 </a></li>
-                <li><a href="">01. 요소 메서드 : 크기 및 위치 : element.scrollINtoView() : 스크롤 이동 및 설정 </a></li>
+
             </ul>
         </div>
         <style>
@@ -147,32 +132,32 @@
 
         document.querySelector("#sample01 .btn3").addEventListener("click", (e) => {
             e.preventDefault;
-            document.querySelector("#sample01 .sResult").innerHTML = "이 박스의 y 값은" + box1.clientTop + "px(마진/보더 미포함) 입니다.";
+            document.querySelector("#sample01 .sResult").innerHTML = "이 박스의 y 값은" + box1.clientTop + "px(부모기준) 입니다.";
         })
 
         document.querySelector("#sample01 .btn4").addEventListener("click", (e) => {
             e.preventDefault;
-            document.querySelector("#sample01 .sResult").innerHTML = "이 박스의 x 값은" + box1.clientLeft + "px(마진/보더 미포함) 입니다.";
+            document.querySelector("#sample01 .sResult").innerHTML = "이 박스의 x 값은" + box1.clientLeft + "px(부모기준) 입니다.";
         })
 
         document.querySelector("#sample01 .btn5").addEventListener("click", (e) => {
             e.preventDefault;
-            document.querySelector("#sample01 .sResult").innerHTML = "이 박스의 가로 값은" + box1.offsetWidth + "px(마진/보더 미포함) 입니다.";
+            document.querySelector("#sample01 .sResult").innerHTML = "이 박스의 가로 값은" + box1.offsetWidth + "px(보더/패딩 포함) 입니다.";
         })
 
         document.querySelector("#sample01 .btn6").addEventListener("click", (e) => {
             e.preventDefault;
-            document.querySelector("#sample01 .sResult").innerHTML = "이 박스의 세로 값은" + box1.offsetHeight + "px(마진/보더 미포함) 입니다.";
+            document.querySelector("#sample01 .sResult").innerHTML = "이 박스의 세로 값은" + box1.offsetHeight + "px(보더/패딩 포함) 입니다.";
         })
 
         document.querySelector("#sample01 .btn7").addEventListener("click", (e) => {
             e.preventDefault;
-            document.querySelector("#sample01 .sResult").innerHTML = "이 박스의 y 값은" + box1.offsetTop + "px(마진/보더 미포함) 입니다.";
+            document.querySelector("#sample01 .sResult").innerHTML = "이 박스의 y 값은" + box1.offsetTop + "px(보더/패딩 포함) 입니다.";
         })
 
         document.querySelector("#sample01 .btn8").addEventListener("click", (e) => {
             e.preventDefault;
-            document.querySelector("#sample01 .sResult").innerHTML = "이 박스의 x 값은" + box1.offsetLeft + "px(마진/보더 미포함) 입니다.";
+            document.querySelector("#sample01 .sResult").innerHTML = "이 박스의 x 값은" + box1.offsetLeft + "px(보더/패딩 포함) 입니다.";
         })
 
         document.querySelector("#sample01 .btn9").addEventListener("click", (e) => {
@@ -191,8 +176,6 @@
                 }
             }
         })
-
-
 
     </script>
 </body>
