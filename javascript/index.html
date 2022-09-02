@@ -29,7 +29,7 @@
       font-family: "GmarketSans";
       text-align: center;
       padding: 2vw;
-      border: 8px solid #0243f1;
+      border: 8px solid #c2ba55;
       box-sizing: border-box;
       border-radius: 20px;
       position: relative;
@@ -37,7 +37,7 @@
 
     main::before {
       content: "";
-      border: 8px solid #50b5f9;
+      border: 8px solid #484308;
       position: absolute;
       left: 0;
       top: 0;
@@ -50,7 +50,7 @@
 
     h1 {
       font-size: 8vw;
-      color: #0243f1;
+      color: #484308;
       margin-bottom: 4vw;
       text-transform: capitalize;
     }
@@ -62,9 +62,9 @@
 
     nav ul li a {
       text-decoration: none;
-      border: 1px dashed #0243f1;
+      border: 1px dashed #c2ba55;
       padding: 10px 24px;
-      color: #0243f1;
+      color: #c2ba55;
       display: inline-block;
       margin: 6px 3px;
       border-radius: 50px;
@@ -73,7 +73,7 @@
     }
 
     nav ul li a:hover {
-      background-color: #0243f1;
+      background-color: #c2ba55;
       color: #ffffff;
     }
 
@@ -81,9 +81,9 @@
     .dog .wrap {
       width: 300px;
       height: 300px;
-      background: #0066ff;
+      background: #484308;
       position: relative;
-      box-shadow: 0 -10px 0 0 #0057d9;
+      box-shadow: 0 -10px 0 0 #c2ba55;
       border-radius: 50%;
     }
 
@@ -449,7 +449,37 @@
       left: 15%;
       border-radius: 50%;
     }
-
+    .link{
+      position: absolute;
+      right: 30px;
+      top: 30px;
+      z-index: 10000;
+    }
+    .link li{
+      display: inline;
+      list-style: none;
+    }
+    .link li a{
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      text-align: center;
+      line-height: 30px;
+      display: inline-block;
+      border: 1px solid #000;
+      color: #000;
+      text-decoration: none;
+      text-transform: uppercase;
+      font-size: 14px;
+      font-weight: 700;
+      transition: all 0.3s;
+      background: #c2ba55;
+      
+    }
+    .link li a:hover{
+      background: #fff;
+      color: #c2ba55;
+    }
     /* dog */
     @media (max-height:700px){
       main::before {
@@ -474,6 +504,13 @@
 </head>
 
 <body>
+  <div class="link">
+    <ul>
+      <li><a href="https://damin0842.tistory.com">t</a></li>
+      <li><a href="https://github.com/damin0842/coding">g</a></li>
+      <li><a href="https://github1s.com/damin0842/coding">v</a></li>
+    </ul>
+  </div>
   <main>
     <div class="dog">
       <div class="wrap">

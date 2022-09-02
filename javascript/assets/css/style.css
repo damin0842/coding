@@ -61,7 +61,7 @@ body {
 #header h1 a {
     font-size: 80px;
     font-weight: 700;
-    color: #0243f1;
+    color: #252510;
     font-family: 'NexonLv1Gothic';
 }
 .header_nav {
@@ -71,20 +71,20 @@ body {
     display: inline;
 }
 .header_nav ul li.active a {
-    background-color: #0243f1;
+    background-color: #252510;
     color: #fff;
 }
 .header_nav ul li a {
-    border: 1px dashed #0243f1;
+    border: 1px dashed #c2ba55;
     padding: 8px 25px;
     display: inline-block;
     margin-bottom: 7px;
-    color: #0243f1;
+    color: #c2ba55;
     font-weight: 500;
     font-family: 'GmarketSans';
 }
 .header_nav ul li a:hover {
-    background-color: #0243f1;
+    background-color: #c2ba55;
     color: #fff;
 }
 .header_nav .study {
@@ -93,7 +93,7 @@ body {
 .header_nav .study li a {
     border-radius: 50px;
     padding: 6px 30px;
-    background-color: #0243f1;
+    background-color: #c2ba55;
     color: #fff;
 }
 .header_nav .effect {
@@ -120,7 +120,7 @@ body {
 .main_sample .result {
     margin-bottom: 80px;
     margin-top: 10px;
-    background: #edf0ff;
+    background: #c2ba55;
     padding: 10px;
     border-radius: 5px;
 }
