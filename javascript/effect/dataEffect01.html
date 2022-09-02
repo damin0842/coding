@@ -32,21 +32,17 @@
             <div class="test_box">
                 <h3 class="title">1.1 while문을 이용해서 1부터 100까지 출력하시오</h3>
                 <div class="code">
-<pre><code class="line-numbers language-js">for( let i=1; i&lt;=100; i++){
-    if ( i % 5 == 0){
-        document.write("&lt;span style='color: blue'&gt;"+i+"&lt;/span&gt;");  //5의 배수 출력
+<pre><code class="line-numbers language-js">let num1 = 1;
+    while(num &lt; = 100){
+        document.write(num);
+        num++;
     }
-    if ( i % 7 == 0 ){
-    document.write("&lt;span style='color: red'&gt;"+i+"&lt;/span&gt;");  //7의 배수 출력
-    }
-}
 </code></pre>
                 </div>
                 <div class="result">
                     <details>
                         <summary>결과보기</summary>
-                        <div class="sample18_result">
-                            truetruetruefalsetruetruetruefalse
+                        <div class="sample01_result">
                         </div>
                     </details>
                 </div>
@@ -54,21 +50,15 @@
             <div class="test_box">
                 <h3 class="title">1.2 for문을 이용해서 1부터 100까지 출력하시오</h3>
                 <div class="code">
-<pre><code class="line-numbers language-js">for( let i=1; i&lt;=100; i++){
-    if ( i % 5 == 0){
-        document.write("&lt;span style='color: blue'&gt;"+i+"&lt;/span&gt;");  //5의 배수 출력
-    }
-    if ( i % 7 == 0 ){
-    document.write("&lt;span style='color: red'&gt;"+i+"&lt;/span&gt;");  //7의 배수 출력
-    }
+<pre><code class="line-numbers language-js">for(let i = 1; i &lt;= 100; i++){
+    document.write(i);
 }
 </code></pre>
                 </div>
                 <div class="result">
                     <details>
                         <summary>결과보기</summary>
-                        <div class="sample18_result">
-                            truetruetruefalsetruetruetruefalse
+                        <div class="sample02_result">
                         </div>
                     </details>
                 </div>
@@ -76,21 +66,15 @@
             <div class="test_box">
                 <h3 class="title">1.3 for문을 이용해서 1부터 100까지 출력하시오(짝수, 홀수)</h3>
                 <div class="code">
-<pre><code class="line-numbers language-js">for( let i=1; i&lt;=100; i++){
-    if ( i % 5 == 0){
-        document.write("&lt;span style='color: blue'&gt;"+i+"&lt;/span&gt;");  //5의 배수 출력
-    }
-    if ( i % 7 == 0 ){
-    document.write("&lt;span style='color: red'&gt;"+i+"&lt;/span&gt;");  //7의 배수 출력
-    }
+<pre><code class="line-numbers language-js">for(let i = 1; i <= 100; i++){
+    if(i % 2) document.write(i); // 홀수만 출력하기
 }
 </code></pre>
                 </div>
                 <div class="result">
                     <details>
                         <summary>결과보기</summary>
-                        <div class="sample18_result">
-                            truetruetruefalsetruetruetruefalse
+                        <div class="sample03_result">
                         </div>
                     </details>
                 </div>
@@ -99,22 +83,16 @@
                 <h3 class="title">1.4 for문을 이용해서 1부터 100까지 합을 출력하시오</h3>
                 <div class="code">
 <pre><code class="line-numbers language-js">let sum = 0;
-
-    for (let i = 1; i &lt;= 100; i++) {
-        //document.write(i);       
-
-        // sum = sum + i;
-        sum += sum;
+    for(let i = 1; i <= 100; i++){
+        sum += i;
     }
-
-    document.write(sum);    //sum이 바뀌고 더해지는 반복
+    document.write(sum);
 </code></pre>
                 </div>
                 <div class="result">
                     <details>
                         <summary>결과보기</summary>
-                        <div class="sample18_result">
-                            truetruetruefalsetruetruetruefalse
+                        <div class="sample04_result">
                         </div>
                     </details>
                 </div>
@@ -124,17 +102,31 @@
     </main>
 
     <script src="../assets/js/prism.min.js"></script>
-    <script>
-        // let sum = 0;
+     <script>
+        // 01
+        let i = 0;
+        while(i !== 101){
+            document.querySelector('.result .sample01_result').innerHTML += i + " "
+            i++;
+        }
+        
+        // 02
+        for (let i = 1; i <= 100; i++) {
+            document.querySelector('.result .sample02_result').innerHTML += i + " ";
+        }
 
-        // for (let i = 1; i <= 100; i++) {
-        //     //document.write(i);       
+        // 03
+        for (let i = 1; i <= 100; i++) {
+            if(i%2) document.querySelector('.result .sample03_result').innerHTML += i + " ";
+        }
 
-        //     // sum = sum + i;
-        //     sum += sum;
-        // }
+        // 04
+        let sum = 0;
+        for (let i = 1; i <= 100; i++) {
+            sum += i;
+        }
+        document.querySelector('.result .sample04_result').innerHTML += sum;
 
-        // document.write(sum);    //sum이 바뀌고 더해지는 반복
     </script>
 </body>
 
