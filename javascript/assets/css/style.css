@@ -134,14 +134,15 @@ body {
     background: #3e0d5929;
     padding: 1vw;
     border-radius: 10px;
-    color: #3e0d59;
+    color: #27cbbd;
 }
 .intro_menu li {
     font-size: 16px;
 }
 .intro_menu li a {
-    color: #3e0d59;
+    color: #27cbbd;
     font-size: 16px;
+    font-weight: 700;
 }
 .intro_menu li a:hover {
     text-decoration: underline;
