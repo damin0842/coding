@@ -1,7 +1,7 @@
 # coding
 
 ### 메인 페이지
-https://damin0842.github.io/coding/index.html   
+https://gdami.netlify.app/
 
 ### 자기소개 페이지
 https://damin0842.github.io/coding/class/index.html
