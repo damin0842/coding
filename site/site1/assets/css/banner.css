@@ -1,0 +1,27 @@
+.banner__inner{
+    background-image: url("../img/card_bg01_01.jpg");
+}
+.banner__inner .title{
+    font-size: 50px;
+    line-height: 1;
+    font-weight: 300;
+    margin-bottom: 40px;
+}
+.banner__inner .desc{
+    font-size: 24px;
+    line-height: 1.5;
+    font-weight: 300;
+    margin-bottom: 70px;
+}
+.banner__inner .desc a {
+    color: #fff;
+    display: block;
+}
+.banner__inner .desc a:hover{
+    text-decoration: underline;
+}
+.banner__inner .small{
+    font-size: 16px;
+    text-decoration: underline;
+
+}

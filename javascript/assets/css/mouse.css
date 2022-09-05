@@ -8,6 +8,7 @@
 body {
   width: 100%;
   height: 100vh;
+  overflow: hidden;
 }
 body.img01 {
   background: #000 url(../img/effect_bg01@2x-min.jpg) no-repeat center / cover;
@@ -39,6 +40,33 @@ body.img09 {
 body.img10 {
   background: #000 url(../img/effect_bg10@2x-min.jpg) no-repeat center / cover;
 }
+body.img11 {
+  background: #000 url(../img/effect_bg11@2x-min.jpg) no-repeat center / cover;
+}
+body.img12 {
+  background: #000 url(../img/effect_bg12@2x-min.jpg) no-repeat center / cover;
+}
+body.img13 {
+  background: #000 url(../img/effect_bg13@2x-min.jpg) no-repeat center / cover;
+}
+body.img14 {
+  background: #000 url(../img/effect_bg14@2x-min.jpg) no-repeat center / cover;
+}
+body.img15 {
+  background: #000 url(../img/effect_bg15@2x-min.jpg) no-repeat center / cover;
+}
+body.img16 {
+  background: #000 url(../img/effect_bg16@2x-min.jpg) no-repeat center / cover;
+}
+body.img17 {
+  background: #000 url(../img/effect_bg17@2x-min.jpg) no-repeat center / cover;
+}
+body.img18 {
+  background: #000 url(../img/effect_bg18@2x-min.jpg) no-repeat center / cover;
+}
+body.img19 {
+  background: #000 url(../img/effect_bg19@2x-min.jpg) no-repeat center / cover;
+}
 body::after {
   content: "";
   position: absolute;
@@ -57,7 +85,9 @@ a {
   color: #fff;
   text-decoration: none;
 }
-
+li {
+  list-style: none;
+}
 /* scroll */
 ::-webkit-scrollbar {
   width: 10px;
