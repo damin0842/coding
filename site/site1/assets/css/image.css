@@ -41,3 +41,32 @@
 .image__btn.yellow {
     background-color: #b59140;
 }
+@media (max-width: 1215px){
+    .container{
+        width: 100%;
+    }
+    .image{
+        width: 100%;
+    }
+    .image:nth-child(1){
+        margin-bottom: 20px;
+    }
+    .image__inner{
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width: 1150px){
+    .slider__inner{
+        margin-top: 0 !important;
+    }
+}
+
+@media (max-width: 750px){
+    .section>h2{
+        font-size: 30px;
+    }
+    .section>p{
+        font-size: 16px;
+    }
+}

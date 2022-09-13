@@ -1,27 +1,51 @@
-.banner__inner{
-    background-image: url("../img/card_bg01_01.jpg");
+.banner__inner {
+    background-image: url(../img/banner_bg01.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+    padding: 120px 0;
+    color: #fff;
 }
-.banner__inner .title{
+.banner__inner .title {
     font-size: 50px;
     line-height: 1;
-    font-weight: 300;
-    margin-bottom: 40px;
+    font-weight: bold;
+    padding-bottom: 20px;
+    /* margin-bottom: 20px; */
 }
-.banner__inner .desc{
+.banner__inner .desc {
     font-size: 24px;
     line-height: 1.5;
     font-weight: 300;
-    margin-bottom: 70px;
+    margin-bottom: 40px;
 }
-.banner__inner .desc a {
+.banner__inner .desc a{
     color: #fff;
-    display: block;
+    display: inline-block;
+    background: #00000021;
+    backdrop-filter: blur(15px);
+    border-radius: 5px;
+    padding: 3px 10px;
+    border: 1px solid #ffffff29;
+    margin-top: 40px;
 }
 .banner__inner .desc a:hover{
     text-decoration: underline;
 }
-.banner__inner .small{
+.banner__inner .small {
     font-size: 16px;
-    text-decoration: underline;
+    /* text-decoration: underline; */
+}
 
+
+@media (max-width: 600px){
+    .banner__inner{
+        padding: 120px 20px;
+        box-sizing: border-box;
+    }
+    .banner__inner .desc a{
+        text-overflow: ellipsis;
+        overflow-y: clip;
+    }
 }
