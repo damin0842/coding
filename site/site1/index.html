@@ -19,13 +19,15 @@
 
     <!-- CSS(섹션별) -->
     <link rel="stylesheet" href="assets/css/header.css" />
+    <link rel="stylesheet" href="assets/css/slider.css" />
     <link rel="stylesheet" href="assets/css/card.css" />
     <link rel="stylesheet" href="assets/css/image.css" />
     <link rel="stylesheet" href="assets/css/text.css" />
-    <link rel="stylesheet" href="assets/css/imgtext.css" />
+    <link rel="stylesheet" href="assets/css/imgText.css" />
     <link rel="stylesheet" href="assets/css/banner.css" />
     <link rel="stylesheet" href="assets/css/footer.css" />
-    <link rel="stylesheet" href="assets/css/slider.css" />
+
+    <link rel="stylesheet" href="assets/css/swiper.css" />
   </head>
 
   <body>
@@ -39,6 +41,11 @@
       <a href="#">텍스트 영역 바로가기</a>
       <a href="#">푸터 영역 바로가기</a>
     </div>
+    <style>
+      #headerType {
+        display: none;
+      }
+    </style>
     <!-- skip -->
     <header id="headerType" class="header__wrap nexon">
       <div class="header__inner">
@@ -64,32 +71,68 @@
       <section id="sliderType" class="slider__wrap">
         <h2 class="blind">슬라이드 영역</h2>
         <div class="slider__inner">
-            <div class="slider">
-                <div class="slider__img">
-                    <div class="desc">
-                        <span>네이버웍스</span>
-                        <h3>워크플레이스</h3>
-                        <p> 20인 이상 기업을 위한 <br>
-                          무료 셋업 지원
-                        </p>
-                        <div class="btn">
-                            <a href="#">자세히 보기</a>
-                            <a href="#" class="black">사이트 보기</a>
-                        </div>
-                    </div>
+          <!-- Swiper -->
+          <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                Slide 1
+                <div class="desc">
+                  <span>NAVER WORKS</span>
+                  <h3>
+                    네이버웍스 <br />
+                    시작을 위한 첫 단계!
+                  </h3>
+                  <p>
+                    상품 신청부터 도메인 소유권 확인/구성원 추가/ <br />
+                    그룹 만들기까지 무료 셋업 지원
+                  </p>
+                  <div class="btn">
+                    <a href="#">자세히 보기</a>
+                    <a href="#" class="black">정보 보기</a>
+                  </div>
                 </div>
-                <div class="slider__arrow">
-                    <a href="#" class="left"><span class="ir">이전 이미지</span></a>
-                    <a href="#" class="right"><span class="ir">다음 이미지</span></a>
+              </div>
+              <div class="swiper-slide">
+                Slide 2
+                <div class="desc">
+                  <span>NAVER WORKS</span>
+                  <h3>
+                    네이버웍스 <br />
+                    시작을 위한 첫 단계!
+                  </h3>
+                  <p>
+                    상품 신청부터 도메인 소유권 확인/구성원 추가/ <br />
+                    그룹 만들기까지 무료 셋업 지원
+                  </p>
+                  <div class="btn">
+                    <a href="#">자세히 보기</a>
+                    <a href="#" class="black">정보 보기</a>
+                  </div>
                 </div>
-                <div class="slider__dot">
-                    <a href="#" class="dot active"><span class="ir">1</span></a>
-                    <a href="#" class="dot"><span class="ir">2</span></a>
-                    <a href="#" class="dot"><span class="ir">3</span></a>
-                    <a href="#" class="play"><span class="ir">플레이</span></a>
-                    <a href="#" class="stop"><span class="ir">정지</span></a>
+              </div>
+              <div class="swiper-slide">
+                Slide 3
+                <div class="desc">
+                  <span>NAVER WORKS</span>
+                  <h3>
+                    네이버웍스 <br />
+                    시작을 위한 첫 단계!
+                  </h3>
+                  <p>
+                    상품 신청부터 도메인 소유권 확인/구성원 추가/ <br />
+                    그룹 만들기까지 무료 셋업 지원
+                  </p>
+                  <div class="btn">
+                    <a href="#">자세히 보기</a>
+                    <a href="#" class="black">정보 보기</a>
+                  </div>
                 </div>
+              </div>
             </div>
+            <div class="swiper-pagination"></div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+          </div>
         </div>
       </section>
       <!-- sliderType -->
@@ -121,7 +164,7 @@
         </div>
       </section>
       <!-- imageType -->
-      <section id="textType" class="imgText__wrap nexon section gray">
+      <section id="imgTextType" class="imgText__wrap nexon section">
         <h2 class="blind">유용한 사이트 살펴보기</h2>
         <div class="imgText__inner container">
           <div class="imgText__txt">
@@ -332,21 +375,21 @@
             </ul>
           </div>
           <div>
-            <h3>사이트</h3>
+            <h3>헤더 영역</h3>
             <ul>
               <li><a href="">메뉴 유형01</a></li>
               <li><a href="">메뉴 유형02</a></li>
             </ul>
           </div>
           <div>
-            <h3>사이트</h3>
+            <h3>슬라이드 영역</h3>
             <ul>
               <li><a href="">슬라이드 유형01</a></li>
               <li><a href="">슬라이드 유형02</a></li>
             </ul>
           </div>
           <div>
-            <h3>사이트</h3>
+            <h3>이미지 영역</h3>
             <ul>
               <li><a href="">이미지 유형01</a></li>
               <li><a href="">이미지 유형02</a></li>
@@ -356,20 +399,45 @@
             </ul>
           </div>
           <div>
-            <h3>사이트</h3>
+            <h3>컨텐츠 영역</h3>
             <ul>
               <li><a href="">카드 유형01</a></li>
               <li><a href="">카드 유형02</a></li>
               <li><a href="">카드 유형03</a></li>
             </ul>
           </div>
+          <div>
+            <h3>푸터 영역</h3>
+            <ul>
+              <li><a href="">푸터 메뉴 유형 01</a></li>
+              <li><a href="">푸터 컨텍트 유형 02</a></li>
+              <li><a href="">푸터 이메일 유형 03</a></li>
+            </ul>
+          </div>
         </div>
         <div class="footer__right">
-          서울 성동구 왕십리로 115, 헤이그라운드 서울숲점 6층 (주)빅워크 <br>
-ⓒ 2020 Bigwalk All Rights Reserved
+          서울 성동구 왕십리로 115, 헤이그라운드 서울숲점 6층 (주)빅워크 <br />
+          ⓒ 2020 Bigwalk All Rights Reserved
         </div>
       </div>
     </footer>
     <!-- footerType -->
+
+    <script src="assets/js/swiper-bundle.min.js"></script>
+    <script>
+      var swiper = new Swiper(".mySwiper", {
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+        autoplay: {
+          delay: 2000,
+        },
+        pagination: {
+          el: ".swiper-pagination",
+          type: "bullets",
+        },
+      });
+    </script>
   </body>
 </html>
