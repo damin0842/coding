@@ -360,21 +360,38 @@ mysql> SELECT * FROM member;
 1 row in set (0.00 sec)
 </code></pre>
                 <h4 class="pt20">email 중에 naver 텍스트를 포함하고 있는 경우</h4>
-<pre><code class="language-js">mysql> SELECT * FROM member WHERE youEmail LIKE '%naver%';
+<pre><code class="language-js">
+<!-- mysql> SELECT * FROM member WHERE youEmail LIKE '%naver%';
 +------------+------------------------+---------+---------+----------+---------+
 | myMemberID | youEmail               | youName | youPass | youBirth | regTime |
 +------------+------------------------+---------+---------+----------+---------+
-|          1 |ooooo_oooooo@naver.com  | 홍길동  | 1234    | 19990303 | 1234567 |
-|          2 |ooooo_oooooo@naver.com  | 홍길동  | 1234    | 19970415 | 1234567 |
-|          3 |ooooo_oooooo@naver.com  | 홍길동  | 1234    | 19970530 | 1234567 |
-|          4 |ooooo_oooooo@naver.com  | 홍길동  | 1234    | 19941009 | 1234567 |
-|          5 |ooooo_oooooo@naver.com  | 홍길동  | 1234    | 19990303 | 1234567 |
-|          6 |ooooo_oooooo@naver.com  | 홍길동  | 1234    | 19970205 | 1234567 |
-|          7 |ooooo_oooooo@naver.com  | 홍길동  | 1234    | 19990303 | 1234567 |
-|          8 |ooooo_oooooo@naver.com  | 홍길동  | 1234    | 19970809 |       4 |
-|          9 |ooooo_oooooo@naver.com  | 홍길동  | 1234    | 19990303 | 1234567 |
-|         12 |ooooo_oooooo@naver.com  | 홍길동  | 1234    | 19960530 | 1234567 |
-+------------+------------------------+---------+---------+----------+---------+
+|          1 | webstoryboy@naver.com  | 황상연  | 1234    | 19990303 | 1234567 |
+|          2 | thdtjdgml415@naver.com | 송성희  | 1234    | 19970415 | 1234567 |
+|          3 | mo0647@naver.com       | 김민정  | 1234    | 19970530 | 1234567 |
+|          4 | tjrwnsrkdtj@naver.com  | 김석준  | 1234    | 19941009 | 1234567 |
+|          5 | jwor124@naver.com      | 정은비  | 1234    | 19990303 | 1234567 |
+|          6 | leesh3432@naver.com    | 이영환  | 1234    | 19970205 | 1234567 |
+|          7 | sshin4882@naver.com    | 박현신  | 1234    | 19990303 | 1234567 |
+|          8 | to_before@naver.com    | 김상준  | 1234    | 19970809 |       4 |
+|          9 | kkb7528@naver.com      | 권규비  | 1234    | 19990303 | 1234567 |
+|         12 | eodnjs9605@naver.com   | 김대원  | 1234    | 19960530 | 1234567 |
++------------+------------------------+---------+---------+----------+---------+ -->
+mysql> SELECT * FROM member WHERE youEmail LIKE '%naver%';
++------------+------------------------+------------+---------+----------+---------+
+| myMemberID | youEmail               | youName    | youPass | youBirth | regTime |
++------------+------------------------+------------+---------+----------+---------+
+|          1 | oooo_ooooooo@gmail.com | 홍길동       | 1234    | 19940404 |       4 |
+|          2 | oooo_ooooooo@gmail.com | 홍길동       | 1234    | 19940404 | 1234567 |
+|          3 | oooo_ooooooo@gmail.com | 홍길동       | 1234    | 19990303 | 1234567 |
+|          4 | oooo_ooooooo@gmail.com | 홍길동       | 1234    | 19970415 | 1234567 |
+|          5 | oooo_ooooooo@gmail.com | 홍길동       | 1234    | 19970530 | 1234567 |
+|          6 | oooo_ooooooo@gmail.com | 홍길동       | 1234    | 19941009 | 1234567 |
+|          7 | oooo_ooooooo@gmail.com | 홍길동       | 1234    | 19990303 | 1234567 |
+|          9 | oooo_ooooooo@gmail.com | 홍길동       | 1234    | 19970205 | 1234567 |
+|         10 | oooo_ooooooo@gmail.com | 홍길동       | 1234    | 19990303 | 1234567 |
+|         11 | oooo_ooooooo@gmail.com | 홍길동       | 1234    | 19990303 | 1234567 |
+|         20 | oooo_ooooooo@gmail.com | 홍길동       | 3950    | 20010415 | 1234567 |
++------------+------------------------+------------+---------+----------+---------+
 10 rows in set (0.00 sec)
 </code></pre>
                     <h3 id="intro6-3" class="page-header">데이터 수정하기</h3>
