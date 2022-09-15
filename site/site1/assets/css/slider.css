@@ -52,6 +52,7 @@
     margin: 0 auto;
     padding: 100px 20px;
     box-sizing: border-box;
+    z-index: 0;
 }
 .swiper-slide .desc span{
     font-size: 16px;

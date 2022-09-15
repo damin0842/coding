@@ -196,6 +196,30 @@
 :root {
   --swiper-navigation-size: 44px;
 }
+.swiper-button{
+  position: absolute;
+  left: 50%;
+  margin-left: 40px;
+  bottom: 24px;
+  z-index: 1000;
+  display: flex;
+}
+.swiper-button-stop{
+  background-image: url(../img/slider_icon.svg) !important;
+  background-position: -60px -70px;
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+}
+.swiper-button-play{
+  background-image: url(../img/slider_icon.svg) !important;
+  background-position: -40px -70px;
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+
+}
+
 .swiper-button-next,
 .swiper-button-prev {
   position: absolute;
