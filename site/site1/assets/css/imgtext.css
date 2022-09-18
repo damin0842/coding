@@ -59,6 +59,7 @@
 .imgText__img{
     border-radius: 10px;
     position: relative;
+    height: 500px;
 }
 
 .imgText__img a{
