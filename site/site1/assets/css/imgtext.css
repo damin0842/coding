@@ -77,10 +77,10 @@
     background-color: #2b387c;
 }
 .imgText__img.img1{
-    background: url(../img/imgText_bg01.jpg) no-repeat center;
+    background: url(../img/imgText_bg01.jpg) no-repeat center / cover;
 }
 .imgText__img.img2{
-    background: url(../img/imgText_bg02.jpg) no-repeat center;
+    background: url(../img/imgText_bg02.jpg) no-repeat center / cover;
 }
 
 @media (max-width: 960px){
