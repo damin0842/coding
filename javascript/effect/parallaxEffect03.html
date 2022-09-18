@@ -553,29 +553,17 @@
     <script src="../assets/js/common.js"></script>
 
     <script>
-        // window.addEventListener("scroll",()=>{
-        //     let scrollTop = window.pageYOffset || window.scrollY || document.documentElement.scrollTop;
+        window.addEventListener("scroll", () => {
+            let scrollTop = window.pageYOffset || window.scrollY || document.documentElement.scrollTop;
 
-        //     // if(scrollTop > 0){
-        //     //     document.querySelector("#parallax__nav").classList.add("show");
-        //     //     document.querySelector("#parallax__top").classList.remove("show");
-
-
-        //     // }if(scrollTop >7000){
-        //     //     document.querySelector("#parallax__top").classList.add("show");
-
-        //     // }
-
-
-        //     // else{
-        //     //     document.querySelector("#parallax__nav").classList.remove("show");
-        //     // }
-
-
-
-        //     document.querySelector("#parallax__info span").innerText = Math.ceil(scrollTop);
-        // })
-
+            document.querySelector("#parallax__info span").innerText = Math.ceil(scrollTop);
+        
+        if (scrollTop >= document.body.scrollHeight - (window.innerHeight - 10)) {
+            document.querySelector("#parallax__top").classList.add("show");
+        } else {
+            document.querySelector("#parallax__top").classList.remove("show");
+        }
+        });
 
         // top 버튼
         document.querySelector("#parallax__top").addEventListener("click", () => {
@@ -597,7 +585,7 @@
 
             }, 300)
         }
-        
+
         function hasScroll() {
             let scrollTop = window.pageYOffset || window.scrollY || document.documentElement.scrollTop;
             if (scrollTop < lastScroll) {
@@ -610,6 +598,34 @@
         }
 
         window.addEventListener("scroll", scrollProgress);
+
+        const scroll = document.querySelector("#parallax__info .scroll span");
+        window.addEventListener("scroll", () => {
+
+            let scrollTop = window.pageYOffset || window.scrollY || document.documentElement.scrollTop;
+
+
+            document.querySelectorAll(".content__item").forEach((element, index) => {
+                if (scrollTop >= element.offsetTop - window.innerHeight / 2) {
+                    document.querySelectorAll("#parallax__nav li").forEach((li) => {
+                        li.classList.remove("active");
+                    });
+                    document.querySelector(`#parallax__nav li:nth-child(${index + 1})`).classList.add("active");
+                }
+            });
+
+            document.querySelector(".scroll span").innerText = Math.round(scrollTop);
+        });
+
+        // 스크롤 이동
+        document.querySelectorAll("#parallax__nav li a").forEach((li) => {
+            li.addEventListener("click", (e) => {
+                e.preventDefault();
+                document.querySelector(li.getAttribute("href")).scrollIntoView({
+                    behavior: "smooth",
+                });
+            });
+        });
 
 
     </script>
