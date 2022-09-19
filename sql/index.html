@@ -579,22 +579,22 @@ mysql> SELECT * FROM member WHERE youEmail LIKE '%naver%';
 </code></pre>
 
             <h4 class="pt20">나이가 10 이상이면서 아이디가 2 또는 10인 멤버</h4>
-<pre><code class="language-js">SELECT * FROM member WHERE (myMemberID = 2 OR myMemberID = 10) AND youAge >= 10; 
+            <pre><code class="language-js">SELECT * FROM member WHERE (myMemberID = 2 OR myMemberID = 10) AND youAge >= 10; 
 
 </code></pre>
 
-<h4 class="pt20">회원 데이터 5개만 불러오기(1~5)</h4>
-<pre><code class="language-js">SELECT * FROM member LIMIT 5;
+            <h4 class="pt20">회원 데이터 5개만 불러오기(1~5)</h4>
+            <pre><code class="language-js">SELECT * FROM member LIMIT 5;
 
 </code></pre>
 
-<h4 class="pt20">회원 데이터 5개만 불러오기(6~10)</h4>
-<pre><code class="language-js">SELECT * FROM member LIMIT 5, 5;
+            <h4 class="pt20">회원 데이터 5개만 불러오기(6~10)</h4>
+            <pre><code class="language-js">SELECT * FROM member LIMIT 5, 5;
 
 </code></pre>
 
-<h4 class="pt20">회원 이메일을 기준으로 5개만 불러오기(1~5)</h4>
-<pre><code class="language-js">SELECT youEmail FROM member LIMIT 5;
+            <h4 class="pt20">회원 이메일을 기준으로 5개만 불러오기(1~5)</h4>
+            <pre><code class="language-js">SELECT youEmail FROM member LIMIT 5;
 
 </code></pre>
 
@@ -686,13 +686,14 @@ mysql> SELECT * FROM member WHERE youEmail LIKE '%naver%';
             <h2 id="intro8" class="page-header">테이블 합치기</h2>
             <h3 id="intro8-1" class="page-header">테이블 JOIN</h3>
             <div class="bs-callout bs-callout-info">
-              SELECT 필드명 FROM 테이블명 엘리어스 JOIN 테이블명 엘리어스 ON(조건문)
+              SELECT 필드명 FROM 테이블명 엘리어스 JOIN 테이블명 엘리어스
+              ON(조건문)
             </div>
 
             <h4 class="pt20">
               member 테이블 나이 뒤에 핸드폰 번호 필드를 추가
             </h4>
-<pre><code class="language-js">create table myMember (
+            <pre><code class="language-js">create table myMember (
   myMemberID int(10) unsigned auto_increment,
   youEmail varchar(40) NOT NULL,
   youName varchar(20) NOT NULL,
@@ -730,66 +731,66 @@ INSERT INTO myReview(myMemberID, youText, regTime) VALUES("4", "감사합니다.
 
 SELECT m.youName, m.youEmail, r.youText, r.regTime FROM myMember m JOIN myReview r ON (m.myMemberID = r.myMemberID) ORDER BY myReviewID DESC LIMIT 5; 
 </code></pre>
-        </div>
-        <!-- intro8 -->
-        <!-- col-md-9 -->
-        <div class="col-md-3">
-          <div class="bs-sidebar hidden-print affix-top" role="complementary">
-            <ul class="nav bs-sidenav">
-              <li class="active"><a href="#intro1">MySQL</a></li>
-              <li><a href="#intro2">MySQL 설치</a></li>
-              <li><a href="#intro3">MySQL 실행</a></li>
-              <li>
-                <a href="#intro4">데이터베이스</a>
-                <ul class="nav">
-                  <li><a href="#intro4-1">데이터베이스 만들기</a></li>
-                  <li><a href="#intro4-2">데이터베이스 보기</a></li>
-                  <li><a href="#intro4-3">데이터베이스 사용</a></li>
-                  <li><a href="#intro4-4">데이터베이스 삭제</a></li>
-                </ul>
-              </li>
-              <li>
-                <a href="#intro5">데이터베이스</a>
-                <ul class="nav">
-                  <li><a href="#intro5-1">테이블 만들기</a></li>
-                  <li><a href="#intro5-2">테이블 전체보기</a></li>
-                  <li><a href="#intro5-3">테이블 보기</a></li>
-                  <li><a href="#intro5-4">테이블 삭제</a></li>
-                  <li><a href="#intro5-5">테이블 복사</a></li>
-                </ul>
-              </li>
-              <li>
-                <a href="#intro6">테이블 데이터</a>
-                <ul class="nav">
-                  <li><a href="#intro6-1">데이터 입력하기</a></li>
-                  <li><a href="#intro6-2">데이터 불러오기</a></li>
-                  <li><a href="#intro6-3">데이터 수정하기</a></li>
-                  <li><a href="#intro6-4">데이터 삭제하기</a></li>
-                </ul>
-              </li>
-              <li>
-                <a href="#intro7">테이블 수정</a>
-                <ul class="nav">
-                  <li><a href="#intro7-1">필드 추가하기</a></li>
-                  <li><a href="#intro7-2">필드 수정하기</a></li>
-                  <li><a href="#intro7-3">필드 삭제하기</a></li>
-                </ul>
-              </li>
-              <li>
-                <a href="#intro8">테이블 합치기</a>
-                <ul class="nav">
-                  <li><a href="#intro8-1">테이블 만들기</a></li>
-                </ul>
-              </li>
-            </ul>
           </div>
+          <!-- intro8 -->
+          </div>
+          <!-- col-md-9 -->
+          <div class="col-md-3">
+            <div class="bs-sidebar hidden-print affix-top" role="complementary">
+              <ul class="nav bs-sidenav">
+                <li class="active"><a href="#intro1">MySQL</a></li>
+                <li><a href="#intro2">MySQL 설치</a></li>
+                <li><a href="#intro3">MySQL 실행</a></li>
+                <li>
+                  <a href="#intro4">데이터베이스</a>
+                  <ul class="nav">
+                    <li><a href="#intro4-1">데이터베이스 만들기</a></li>
+                    <li><a href="#intro4-2">데이터베이스 보기</a></li>
+                    <li><a href="#intro4-3">데이터베이스 사용</a></li>
+                    <li><a href="#intro4-4">데이터베이스 삭제</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#intro5">데이터베이스</a>
+                  <ul class="nav">
+                    <li><a href="#intro5-1">테이블 만들기</a></li>
+                    <li><a href="#intro5-2">테이블 전체보기</a></li>
+                    <li><a href="#intro5-3">테이블 보기</a></li>
+                    <li><a href="#intro5-4">테이블 삭제</a></li>
+                    <li><a href="#intro5-5">테이블 복사</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#intro6">테이블 데이터</a>
+                  <ul class="nav">
+                    <li><a href="#intro6-1">데이터 입력하기</a></li>
+                    <li><a href="#intro6-2">데이터 불러오기</a></li>
+                    <li><a href="#intro6-3">데이터 수정하기</a></li>
+                    <li><a href="#intro6-4">데이터 삭제하기</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#intro7">테이블 수정</a>
+                  <ul class="nav">
+                    <li><a href="#intro7-1">필드 추가하기</a></li>
+                    <li><a href="#intro7-2">필드 수정하기</a></li>
+                    <li><a href="#intro7-3">필드 삭제하기</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#intro8">테이블 합치기</a>
+                  <ul class="nav">
+                    <li><a href="#intro8-1">테이블 만들기</a></li>
+                  </ul>
+                </li>
+              </ul>
+          </div>
+          <!-- //col-md-3 -->
         </div>
-        <!-- //col-md-3 -->
+        <!-- row -->
       </div>
-      <!-- row -->
+      <!-- //container -->
     </div>
-    <!-- //container -->
-
     <!-- Footer -->
     <footer class="bs-footer" role="contentinfo">
       <div class="container">
@@ -823,50 +824,3 @@ SELECT m.youName, m.youEmail, r.youText, r.regTime FROM myMember m JOIN myReview
     <script src="../assets/js/prism.js"></script>
   </body>
 </html>
-
-INSERT INTO member(youEmail, youName, youPass, youBirth, youAge,youIntro,
-regTime)
-VALUES('webstoryboy@naver.com','황상연','1234','19990303','18','199','1234567');
-INSERT INTO member(youEmail, youName, youPass, youBirth, youAge,youIntro,
-regTime) VALUES('thdtjdgml415@naver.com', '송성희', '1234',
-'19970415','18','199', '1234567'); INSERT INTO member(youEmail, youName,
-youPass, youBirth, youAge,youIntro, regTime) VALUES('mo0647@naver.com',
-'김민정', '1234', '19970530','18','199', '1234567'); INSERT INTO
-member(youEmail, youName, youPass, youBirth, youAge,youIntro, regTime)
-VALUES('tjrwnsrkdtj@naver.com', '김석준', '1234', '19941009','18','199',
-'1234567'); INSERT INTO member(youEmail, youName, youPass, youBirth,
-youAge,youIntro, regTime) VALUES('jwor124@naver.com', '정은비', '1234',
-'19990303','18','199', '1234567'); INSERT INTO member(youEmail, youName,
-youPass, youBirth, youAge,youIntro, regTime)
-VALUES('leesh3432@naver.com','이영환','1234','19970205','18','199','1234567');
-INSERT INTO member(youEmail, youName, youPass, youBirth, youAge,youIntro,
-regTime)
-VALUES('sshin4882@naver.com','박현신','1234','19990303','18','199','1234567');
-INSERT INTO member(youEmail, youName, youPass, youBirth, youAge,youIntro,
-regTime) VALUES('to_before@naver.com', '김상준', '1234', '19970809','18','199',
-'04'); INSERT INTO member(youEmail, youName, youPass, youBirth, youAge,youIntro,
-regTime)
-VALUES('kkb7528@naver.com','권규비','1234','19990303','18','199','1234567');
-INSERT INTO member(youEmail, youName, youPass, youBirth, youAge,youIntro,
-regTime) VALUES('piowm123@gmail.com', '문병내', '1234', '19990303','18','199',
-'1234567'); INSERT INTO member(youEmail, youName, youPass, youBirth,
-youAge,youIntro, regTime) VALUES('ghkddbwls96@gmail.com', '황유진', '1234',
-'19990303','18','199', '1234567'); INSERT INTO member(youEmail, youName,
-youPass, youBirth, youAge,youIntro, regTime)
-VALUES('eodnjs9605@naver.com','김대원','1234','19960530','18','199','1234567');
-INSERT INTO member(youEmail, youName, youPass, youBirth, youAge,youIntro,
-regTime)
-VALUES('wjsqhdus971007@gmail.com','전보연','1234','19971007','18','199','1234567');
-INSERT INTO member(youEmail, youName, youPass, youBirth, youAge,youIntro,
-regTime)
-VALUES('noeyheyh@gmail.com','권혜현','1234','19960331','18','199','1234567');
-INSERT INTO member(youEmail, youName, youPass, youBirth, youAge,youIntro,
-regTime)
-VALUES('hjkang306@gmail.com','강현지','1234','19990303','18','199','1234567');
-INSERT INTO member(youEmail, youName, youPass, youBirth, youAge,youIntro,
-regTime) VALUES('sunhey9810@gmail.com', '박선혜', '1234', '19981010','18','199',
-'1234567'); INSERT INTO member(youEmail, youName, youPass, youBirth,
-youAge,youIntro, regTime) VALUES('kde66034@gmail.com', '김동언', '1234',
-'19700101','18','199', '1234567'); INSERT INTO member(youEmail, youName,
-youPass, youBirth, youAge,youIntro, regTime) VALUES('praise1109@gmail.com',
-'이하은', '1234', '19990303','18','199', '1234567');
