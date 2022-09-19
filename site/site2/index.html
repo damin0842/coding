@@ -1,28 +1,217 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>사이트 만들기2</title>
+    
     <link rel="stylesheet" href="css/header.min.css">
+    <link rel="stylesheet" href="css/reset.min.css">
+    <link rel="stylesheet" href="css/slide.min.css">
+    <link rel="stylesheet" href="css/swiper.min.css">
+    <link rel="stylesheet" href="css/text.min.css">
 </head>
-<body> 
+
+<body>
     <header id="headerType">
         <div class="header__inner">
-            <div class="header_logo">
-                <a href="">web <em>site</em></a>
+            <div class="header__logo">
+                <a href="">WEB <em>site</em></a>
             </div>
             <nav class="header__menu">
                 <ul>
-                    <li><a href="headerType">헤더 영역</a></li>
-                    <li><a href="slideType">슬라이드 영역</a></li>
-                    <li><a href="imgType">이미지 영역</a></li>
-                    <li><a href="textType">컨텐츠 영역</a></li>
-                    <li><a href="footerType">푸터 영역</a></li>
+                    <li><a href="#headerType">헤더 영역</a></li>
+                    <li><a href="#slideType">슬라이드 영역</a></li>
+                    <li><a href="#imgType">이미지 영역</a></li>
+                    <li><a href="#textType">컨텐츠 영역</a></li>
+                    <li><a href="#footerType">푸터 영역</a></li>
                 </ul>
             </nav>
         </div>
     </header>
+    <!-- header -->
+    <section id="sliderType" class="slider__wrap">
+        <h2 class="blind">슬라이드 영역</h2>
+        <div class="slider__inner">
+            <!-- Swiper -->
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        Slide 1
+                        <div class="desc">
+                            <h3>
+                                NEW <br />
+                                PORTFOLIO
+                            </h3>
+                            <p>
+                                너무 무리하지 말아요! <br>
+                                이미 당신은 해내고 있고 <br>
+                                앞으로도 잘 할 수 있을거예요!
+                            </p>
+                            <div class="btn">
+                                <a href="#">더 알아보기</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        Slide 1
+                        <div class="desc">
+                            <h3>
+                                NEW <br />
+                                PORTFOLIO
+                            </h3>
+                            <p>
+                                너무 무리하지 말아요! <br>
+                                이미 당신은 해내고 있고 <br>
+                                앞으로도 잘 할 수 있을거예요!
+                            </p>
+                            <div class="btn">
+                                <a href="#">더 알아보기</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        Slide 1
+                        <div class="desc">
+                            <h3>
+                                NEW <br />
+                                PORTFOLIO
+                            </h3>
+                            <p>
+                                너무 무리하지 말아요! <br>
+                                이미 당신은 해내고 있고 <br>
+                                앞으로도 잘 할 수 있을거예요!
+                            </p>
+                            <div class="btn">
+                                <a href="#">더 알아보기</a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="swiper-pagination"></div>
+                <div class="swiper-button">
+                    <div class="swiper-button-play"><span class="ir">play</span></div>
+                    <div class="swiper-button-stop"><span class="ir">stop</span></div>
+                </div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+            </div>
+        </div>
+    </section>
+    <!-- slide -->
+    <section id="textType02" class="section gmarket text__wrap">
+        <div class="container all__inner">
+            <aside>
+                <div class="logo">FRONTEND</div>
+                <h2>프론트앤드<br>전문과정</h2>
+                <p>프론트앤드 개발자로 취업하기 위한<br>
+                    전문 과정입니다.<br>
+                    여러분들도 도전해보세요!
+                </p>
+            </aside>
+            <div class="text__inner1">
+                <article class="text text1">
+                    <figure>
+                        <img src="img/text_bg01.png" alt="재생">
+                    </figure>
+                    <h3>웹 디자인</h3>
+                    <p>웹디자이너가 포함된 웹 및 멀티미디어 디자이너는 다른 직업과 비교하여 임금과 복리후생이 낮은 퍼블리싱은 웹 사이트를 제작할
+                    </p>
+                </article>
+                <article class="text text1">
+                    <figure>
+                        <img src="img/text_bg01.png" alt="재생">
+                    </figure>
+                    <h3>프론트앤드 개발자</h3>
+                    <p>사이트와 상호작용하는 모든 부분에 대한 개발, 관리, 유지 보수를 하는 것 솔루션의 프로세스를 개발합니다.
+                    </p>
+                </article>
+            </div>
+            <div class="text__inner2">
+                <article class="text text1">
+                    <figure>
+                        <img src="img/text_bg01.png" alt="재생">
+                    </figure>
+                    <h3>웹 퍼블리셔</h3>
+                    <p>퍼블리싱은 웹 사이트를 제작할 때, 웹 디자이너가 디자인한 것을 웹 표준성과 접근성에 부합하도록 재정하였다.
+                    </p>
+                </article>
+                <article class="text text1">
+                    <figure>
+                        <img src="img/text_bg01.png" alt="재생">
+                    </figure>
+                    <h3>백앤드 개발자</h3>
+                    <p>용어 자체에서 알 수 있듯이, 백엔드는 웹사이트나 웹 애플리케이션 또는 모바일 솔루션의 프로세스와 관련된입니다.
+                    </p>
+                </article>
+            </div>
+        </div>
+        </div>
+    </section>
+    <!-- text -->
+    <footer>
+
+    </footer>
+    <script src="js/swiper-bundle.min.js"></script>
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+            autoplay: {
+                delay: 1000,
+                disableOnInteraction: false,
+            },
+            pagination: {
+                el: ".swiper-pagination",
+                type: "bullets",
+                clickable: true,
+            },
+        });
+
+        const btnstop = document.querySelector(".swiper-button-stop");
+        const btnstart = document.querySelector(".swiper-button-play");
+        const btnham = document.querySelector(".header__ham");
+        const btnmenu = document.querySelector(".header__menu");
+        const btnmenulist = btnmenu.querySelectorAll("ul li a");
+
+        btnstart.style.display = "none";
+
+        btnstop.addEventListener("click", () => {
+            swiper.autoplay.stop();
+            btnstart.style.display = "block";
+            btnstop.style.display = "none";
+
+        });
+        btnstart.addEventListener("click", () => {
+            swiper.autoplay.start();
+            btnstart.style.display = "none";
+            btnstop.style.display = "block";
+
+        });
+        btnham.addEventListener("click", () => {
+            btnham.classList.toggle("active");
+        })
+
+        btnham.addEventListener("click", () => {
+            btnmenu.classList.toggle("overlay");
+            document.body.classList.toggle("fixed");
+        })
+
+        btnmenulist.forEach((list) => {
+            list.addEventListener("click", () => {
+                document.body.classList.remove("fixed");
+                btnmenu.classList.remove("overlay");
+                btnham.classList.remove("active");
+            })
+        });
+
+
+    </script>
 </body>
+
 </html>
