@@ -545,7 +545,8 @@ for (let i = 1; i < 21; i++) {
     <!-- container -->
     </main>
     <!-- //main -->
-
+    <div class="top__button">TOP</div>
+    <!-- //top__button -->
     <footer id="footer">
         <a href="mailto:jdm2@naver.com">jdm2@naver.com</a>
     </footer>
@@ -553,166 +554,19 @@ for (let i = 1; i < 21; i++) {
     <script src="assets/js/highlight.min.js"></script>
     <script>hljs.highlightAll();</script>
     <script>
-        //(제어문 : 조건문, 반복문, 중지, 건너뛰기)
-        // 01. if문
-        // {
-        //     //false, 0, undefined, null, ""
-        //     //true, 1, "0", "1", 0<10, [], {}
-        //     if ("") {
-        //         document.write("실행되었습니다.(true)");
-        //     } else {
-        //         document.write("실행되었습니다.(false)");
-        //     }
-        // }
-        // //02. if문 생략
-        // {
-        //     const num = 100;
-
-        //     if (num) document.write("실행되었습니다.(true)");
-        //     else document.write("실행되었습니다.(farse)");
-        // }
-        // //03. 다중 if문
-        // {
-        //     const num = 100;
-
-        //     if (num == 90) {
-        //         document.write("실행되었습니다.(num==90");
-        //     } else if (num == 100) {
-        //         document.write("실행되었습니다.(num==100");
-        //     } else if (num == 110) {
-        //         document.write("실행되었습니다.(num==110");
-        //     } else if (num == 120) {
-        //         document.write("실행되었습니다.(num==120");
-        //     } else {
-        //         document.write("실행되었습니다.(num==값이없음");
-        //     }
-        // }
-        // //04. 중첩 if문
-        // {
-        //     const num = 100;
-
-        //     if (num == 100) {
-        //         document.write("실행되었습니다.(1)");
-        //         if (num == 100) {
-        //             document.write("실행되었습니다.(2)");
-        //             if (num == 100) {
-        //                 document.write("실행되었습니다.(3)");
-        //             }
-        //         }
-        //     } else {
-        //         document.write("실행되었습니다.(4)");
-        //     }
-        // }
-        // //05. 조건부 연산자(삼항 연산자)
-        // {
-        //     const num = 100;
-        //     //num값이 100이면 true출력하고 아니면 false출력하세요
-
-        //     if (num == 100) {
-        //         document.write("true");
-        //     } else {
-        //         document.write("false");
-        //     }
-
-        //     //조건부 연산자는 소스가 크게 되면 효율적이다
-        //     (num == 100) ? document.write("true") : document.write("false");
-        // }
-        // //06. switch문
-        // //switch 문은 답이 정해져있다는 차이점이 있다.
-        // {
-        //     const num = 100;
-
-        //     switch (num) {
-        //         case 100:
-        //             document.write("실행되었습니다.(num==100)");
-        //             break;
-        //         case 110:
-        //             document.write("실행되었습니다.(num==110)");
-        //             break;
-        //         case 120:
-        //             document.write("실행되었습니다.(num==120)");
-        //             break;
-        //         case 130:
-        //             document.write("실행되었습니다.(num==130)");
-        //             break;
-        //         default:
-        //             document.write("실행되었습니다.(num==값이없음)");
-        //     }
-        // }
-        // //07. while문(반복문)
-        // {
-        //     let num = 1;
-
-        //     while (num <= 5) {
-        //         document.write("실행되었습니다.");
-        //         num++;
-        //     }
-        // }
-        // //08. do while문(반복문)
-        // {
-        //     let num = 1;
-        //     //무조건 한번은 실행한다.
-        //     do {
-        //         document.write("실행되었습니다2.");
-        //         num++;
-        //     } while (num <= 5);
-        // }
-        // //09. for문
-        // {
-        //     for (let i = 1; i < 100; i++) {
-        //         document.write(i + ". 실행되었습니다.");
-        //     }
-
-        //     let num = [1, 2, 3, 4, 5, 6, 7, 8, 9];
-
-        //     for (let i = 0; i < num.length; i++) {
-        //         document.write(i + ". 실행되었습니다.<br>");
-        //     }
-        // }
-
-        // //10. 중첩 for문
-        // {
-        //     for (let i = 1; i <= 5; i++) {
-        //         document.write(i + "바퀴---<br>");
-        //         for (let j = 1; j <= 5; j++) {
-        //             document.write(j + "실행<br>");
-        //         }
-        //     }
-        // }
-        // //11. break문
-
-
-
-        // {
-        //     //while 문을 이용해서 1~20까지 출력
-        //     let num = 1;
-        //     while (num < 21) {     //()안에 트루일 때 실행함
-        //         document.write(num);
-        //         num++;
-        //     }
-
-        //     document.write("<br>")
-        //     //for 문을 이용해서 1~20까지 출력    
-        //     for (let i = 1; i < 21; i++) {
-        //         document.write(i);
-        //         if (i == 10) {
-        //             break;          //10번에서 멈춘다
-        //         }
-        //     }
-        // }
-        // //12. continue문
-
-
-        // document.write("<br>")
-        // {
-        //     //for 문을 이용해서 1~20까지 출력    
-        //     for (let i = 1; i < 21; i++) {
-        //         if (i == 10) {      
-        //             continue;       //10번만 빼고 출력
-        //         }
-        //         document.write(i);
-        //     }
-        // }
+       window.addEventListener("scroll", () => {
+            let scrollTop = window.pageYOffset || window.scrollY || document.documentElement.scrollTop;
+            // scrollTop > ( 문서 전체높이 - 브라우저 높이 )
+            if (scrollTop >= document.body.scrollHeight - (window.innerHeight + window.innerHeight / 3)) {
+                document.querySelector(".top__button").classList.add("show");
+            } else {
+                document.querySelector(".top__button").classList.remove("show");
+            }
+        });
+        // top버튼누르면 맨위로
+        document.querySelector(".top__button").addEventListener("click", () => {
+            window.scrollTo({ left: 0, top: 0, behavior: "smooth" });
+        });
     </script>
 </body>
 

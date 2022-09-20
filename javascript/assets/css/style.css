@@ -392,49 +392,34 @@ body {
 }
 
 /* top버튼 */
-#parallax__info {
-    position: fixed;
-    left: 20px;
-    bottom: 20px;
-    z-index: 2000;
-    background: rgba(0, 0, 0, 0.6);
-    color: #fff;
-    padding: 20px;
-    border-radius: 10px;
-}
-
-#parallax__info li,
-.scrollTop {
-    line-height: 1.4;
-}
-
-#parallax__top {
+.top__button {
     position: fixed;
     left: 50%;
-    bottom: 0px;
-    z-index: 10000;
-    transform: translateX(-50%);
+    bottom: -50vh;
+    z-index: 10000px;
+    transform: translate(-50%);
     width: 40px;
     height: 40px;
-    background: rgba(0, 0, 0, 0.4);
     text-align: center;
     line-height: 40px;
-    color: #fff;
-    border-radius: 50%;
+    border: 3px solid #252510;
+    font-weight: bold;
+    border-radius: 10px;
     padding: 10px;
     cursor: pointer;
-    transition: all 0.3s;
+    background-color: #c2ba55;
+    transition: all 0.2s;
 }
-
-#parallax__top.show {
-    bottom: 200px;
+.top__button.show {
+    bottom: 10px;
 }
-
-#parallax__top:hover {
-    background: #fff;
-    color: #000;
+.top__button:hover {
+    border-radius: 50%;
+    background-color: #252510;
+    color: black;
+    border-color: rgba(0,0,0,0);
+    color:#fff;
 }
-
 
 @media (max-width: 800px){
     body {

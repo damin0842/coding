@@ -836,7 +836,8 @@ document.write("d" in obj);
     <!-- container -->
     </main>
     <!-- //main -->
-
+    <div class="top__button">TOP</div>
+    <!-- //top__button -->
     <footer id="footer">
         <a href="mailto:jdm2@naver.com">jdm2@naver.com</a>
     </footer>
@@ -844,13 +845,26 @@ document.write("d" in obj);
 
     <script src="assets/js/highlight.min.js"></script>
     <script>hljs.highlightAll();</script>
+    
     <script>
-        
+        window.addEventListener("scroll", () => {
+            let scrollTop = window.pageYOffset || window.scrollY || document.documentElement.scrollTop;
+            // scrollTop > ( 문서 전체높이 - 브라우저 높이 )
+            if (scrollTop >= document.body.scrollHeight - (window.innerHeight + window.innerHeight / 3)) {
+                document.querySelector(".top__button").classList.add("show");
+            } else {
+                document.querySelector(".top__button").classList.remove("show");
+            }
+        });
+        // top버튼누르면 맨위로
+        document.querySelector(".top__button").addEventListener("click", () => {
+            window.scrollTo({ left: 0, top: 0, behavior: "smooth" });
+        });
+    </script>    
 
        
 
 
-    </script>
 
 </body>
 
