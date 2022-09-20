@@ -10,11 +10,11 @@
 }
 
 .swiper-slide:nth-of-type(2) {
-  background: url(../img/slide_bg01.jpg) no-repeat center/cover;
+  background: url(../img/slide_bg02.jpg) no-repeat center/cover;
 }
 
 .swiper-slide:nth-of-type(3) {
-  background: url(../img/slide_bg01.jpg) no-repeat center/cover;
+  background: url(../img/slide_bg03.jpg) no-repeat center/cover;
 }
 
 .swiper-slide:nth-of-type(4) {

@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>자바스크립트 : 데이터 저장하기</title>    
+    <title>자바스크립트 : 데이터 저장하기</title>
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/dracula.css">
 </head>
@@ -42,7 +42,12 @@
         </nav>
     </header>
     <!-- //header -->
+    <div id="parallax__top">
+        <a href="#">Top</a>
+    </div>
+    <!-- parallax__top -->
     <main id="main">
+        <div class="container">
         <div class="main_menu">
             <ul>
                 <li><a href="#sample01">01. 변수 : 데이터 저장</a></li>
@@ -551,8 +556,15 @@ obj.g();
                 </div>
             </div>
         </div>
+    </div>
+    <!-- container -->
     </main>
     <!-- //main -->
+    
+    <aside id="parallax__info">
+        <div class="scroll">scrollTop : <span>0</span>px</div>
+
+    </aside>
 
     <footer id="footer">
         <a href="mailto:jdm2@naver.com">jdm2@naver.com</a>
@@ -829,6 +841,23 @@ obj.g();
             
         }
     </script>
+    <script>
+        window.addEventListener("scroll", () => {
+            let scrollTop = window.pageYOffset || window.scrollY || document.documentElement.scrollTop;
 
+            document.querySelector("#parallax__info span").innerText = Math.ceil(scrollTop);
+        
+        if (scrollTop >= document.body.scrollHeight - (window.innerHeight - 10)) {
+            document.querySelector("#parallax__top").classList.add("show");
+        } else {
+            document.querySelector("#parallax__top").classList.remove("show");
+        }
+        });
+
+        // top 버튼
+        document.querySelector("#parallax__top").addEventListener("click", () => {
+            window.scrollTo({ left: 0, top: 0, behavior: "smooth" });
+        });
+    </script>
 </body>
 </html>

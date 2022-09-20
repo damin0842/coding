@@ -45,6 +45,7 @@
     </header>
     <!-- //header -->
     <main id="main">
+        <div class="container">
         <div class="main_menu">
             <ul>
                 <li><a href="#sample01">01. 변수 : 데이터 불러오기</a></li>
@@ -603,6 +604,7 @@ obj.map((el) => {
                     </details>
                 </div>
             </div>
+            <!-- sample17 -->
             <div id="sample18" class="sample">
                 <h3>18. 객체 : 데이터 불러오기 : hasOwnProperty()</h3>
                 <p>
@@ -655,7 +657,183 @@ document.write("d" in obj);
                     </details>
                 </div>
             </div>
+            <!-- sample18 -->
+            <div id="sample19" class="sample">
+                <h3>19. 객체 : 데이터 불러오기 : 펼침연산자 - 복사</h3>
+                <p>
+
+                </p>
+                <div class="script">
+<pre><code>
+{
+    //복사
+    const obj = {
+        a: 100,
+        b: 200,
+        c: "javascript"
+    }
+    const spread = {...obj}
+
+    document.write(spread.a);
+    document.write(spread.b);
+    document.write(spread.c);
+}
+</code></pre>
+                </div>
+                <div class="result">
+                    <details>
+                        <summary>결과 보기</summary>
+                        <div class="sample19_result">
+                            
+                              100200javascript
+                            
+                        </div>
+                    </details>
+                </div>
+            </div>
+            <!-- sample19 -->
+            <div id="sample20" class="sample">
+                <h3>20. 객체 : 데이터 불러오기 : 펼침연산자 - 추가</h3>
+                <p>
+
+                </p>
+                <div class="script">
+<pre><code>
+//추가
+{
+    const obj = {
+        a: 100,
+        b: 200,
+        c: "javascript"
+    }
+    const spread = {...obj, d: "jqeury"}
+    document.write(spread.a);
+    document.write(spread.b);
+    document.write(spread.c);
+    document.write(spread.d);
+}
+</code></pre>
+                </div>
+                <div class="result">
+                    <details>
+                        <summary>결과 보기</summary>
+                        <div class="sample20_result">
+                            
+                            100200javascriptjqeury
+                            
+                        </div>
+                    </details>
+                </div>
+            </div>
+            <!-- sample20 -->
+
+            <div id="sample21" class="sample">
+                <h3>21. 객체 : 데이터 불러오기 : 펼침연산자 - 결합</h3>
+                <p>
+
+                </p>
+                <div class="script">
+<pre><code>{
+    const objA = {
+        a: 100,
+        b: 200,
+      
+    }
+    const objB = {
+        c:"javascript",
+        d:"jquery"
+    }
+    const spread = {...objA, ...objB};
+    document.write(spread.a);
+    document.write(spread.b);
+    document.write(spread.c);
+    document.write(spread.d);
+}
+</code></pre>
+                </div>
+                <div class="result">
+                    <details>
+                        <summary>결과 보기</summary>
+                        <div class="sample21_result">
+                            
+                            100200javascriptjqeury
+                            
+                        </div>
+                    </details>
+                </div>
+            </div>
+            <!-- sample21 -->
+
+            <div id="sample22" class="sample">
+                <h3>22. 객체 : 데이터 불러오기 : 비구조화 할당</h3>
+                <p>
+
+                </p>
+                <div class="script">
+<pre><code>//비구조화할당
+{
+    const obj = {
+        a: 100,
+        b: 200,
+        c: "javascript"
+    }
+
+    const { a, b, c } = obj;
+    document.write(a);
+    document.write(b);
+    document.write(c);
+}
+</code></pre>
+                </div>
+                <div class="result">
+                    <details>
+                        <summary>결과 보기</summary>
+                        <div class="sample22_result">
+                            
+                            100200javascript
+                            
+                        </div>
+                    </details>
+                </div>
+            </div>
+            <!-- sample22 -->
+
+            <div id="sample23" class="sample">
+                <h3>23. 객체 : 데이터 불러오기 : 객체구조분해할당</h3>
+                <p>
+
+                </p>
+                <div class="script">
+<pre><code>{
+    const obj = {
+        a: 100,
+        b: 200,
+        c: "javascript"
+    }
+
+    const { a:name1, b:name2, c:name3 } = obj;
+    document.write(name1);
+    document.write(name2);
+    document.write(name3);
+}
+</code></pre>
+                </div>
+                <div class="result">
+                    <details>
+                        <summary>결과 보기</summary>
+                        <div class="sample23_result">
+                            
+                            100200javascript
+                            
+                        </div>
+                    </details>
+                </div>
+            </div>
+            <!-- sample23 -->
         </div>
+        <!-- main_sample -->
+    </div>
+    <!-- container -->
     </main>
     <!-- //main -->
 
@@ -667,6 +845,11 @@ document.write("d" in obj);
     <script src="assets/js/highlight.min.js"></script>
     <script>hljs.highlightAll();</script>
     <script>
+        
+
+       
+
+
     </script>
 
 </body>
