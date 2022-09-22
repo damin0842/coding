@@ -326,14 +326,13 @@
       // const circle2 = cursor.clientWidth; //190 보더값 제외
 
       const circle = cursor.getBoundingClientRect();
-      console.log(circle);
       // const DOMRect = {
-      //   bottom: 199.9921875,
-      //   height: 199.9921875,
+      //   bottom: 200,
+      //   height: 200,
       //   left: 0,
-      //   right: 199.9921875,
+      //   right: 200,
       //   top: 0,
-      //   width: 199.9921875,
+      //   width: 200,
       //   x: 0,
       //   y: 0
       // }
@@ -343,6 +342,7 @@
           left: e.pageX - circle.width/2,
           top: e.pageY - circle.height/2,
           ease: "bounce.out"
+          
         });
       });
     </script>
