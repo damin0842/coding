@@ -67,3 +67,35 @@
 
 
 }
+
+
+@media (max-width: 960px) {
+    .text__inner {
+        flex-wrap: wrap;
+    }
+
+    .text {
+        width: 50%;
+    }
+
+    .text:nth-child(3) {
+        display: none;
+    }
+
+
+
+}
+
+@media (max-width: 600px) {
+    .text__inner {
+        flex-wrap: wrap;
+    }
+
+    .text {
+        width: 100%;
+    }
+
+    .text:nth-child(2) {
+        display: none;
+    }
+}

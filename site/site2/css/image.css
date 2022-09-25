@@ -90,3 +90,26 @@
 .image__desc .more:hover {
   text-decoration: underline;
 }
+
+@media (max-width: 960px) {
+  .image__inner {
+    flex-wrap: wrap;
+  }
+  .image {
+    width: 50%;
+  }
+  .image:nth-child(3) {
+    display: none;
+  }
+}
+@media (max-width: 600px) {
+  .image__inner {
+    flex-wrap: wrap;
+  }
+  .image {
+    width: 100%;
+  }
+  .image:nth-child(2) {
+    display: none;
+  }
+}

@@ -22,3 +22,22 @@
 .footer__right {
   text-align: center;
 }
+
+@media (max-width: 960px) {
+  .footer__menu {
+    display: none;
+  }
+  .footer__right {
+    padding-top: 0;
+    border-top: 0;
+  }
+  .footer__left {
+    width: 100%;
+    padding: 0;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  .footer__wrap {
+    padding: 40px 0;
+  }
+}

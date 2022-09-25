@@ -62,3 +62,29 @@
   overflow: hidden;
   display: inline-block;
 }
+
+@media (max-width: 960px) {
+  .review__inner {
+    flex-wrap: wrap;
+  }
+  .review {
+    width: 49%;
+  }
+  .review:last-child {
+    display: none;
+  }
+}
+@media (max-width: 600px) {
+  .review {
+    width: 100%;
+  }
+  .review:first-child {
+    margin-bottom: 20px;
+  }
+  .review__body {
+    padding: 20px;
+  }
+  .review__body .desc {
+    font-size: 16px;
+  }
+}
