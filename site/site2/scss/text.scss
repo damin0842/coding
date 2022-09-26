@@ -78,8 +78,13 @@
         width: 50%;
     }
 
-    .text:nth-child(3) {
+    .text__inner{
         display: none;
+    }
+    .aside{
+        text-align: center;
+        margin: 0 auto;
+        width: 100%;
     }
 
 
