@@ -1984,24 +1984,67 @@ document.querySelector(".sample03_A2").innerHTML = arrNum2;  //100,200,300,400
         }
 
         {
-            const number1 = [100,200,300,400,500,600,700,800,900];
-            const result1 = number1.splice(3,2);
+            // const number1 = [100,200,300,400,500,600,700,800,900];
+            // const result1 = number1.splice(3,2);
 
-            const number2 = [100,200,300,400,500,600,700,800,900];
-            const result2 = number2.slice(3,5);
+            // const number2 = [100,200,300,400,500,600,700,800,900];
+            // const result2 = number2.splice(-6,2);
 
-            const number3 = [100,200,300,400,500,600,700,800,900];
-            const result3 = number3.shift();
+            // const number3 = [100,200,300,400,500,600,700,800,900];
+            // const result3 = number3.slice(3,5);
 
-            const number4 = [100,200,300,400,500,600,700,800,900];
-            const result4 = number4.filter(e => e >= 400 && e <= 500);
+            // const number4 = [100,200,300,400,500,600,700,800,900];
+            // const result4 = number4.slice(-6,5);
+
+            // const number5 = [100,200,300,400,500,600,700,800,900];
+            // const result5 = number5.filter(e => e >= 400 && e <= 500);
+
+            // //400,500
+            // console.log(result1);
+            // console.log(result2);
+            // console.log(result3);
+            // console.log(result4);
+            // console.log(result5);
+
+            const num1 = ['a','b','c','d','e','f','g','h','i','j'];
+            let result1 = '';
+            for (i=1; i<num1.length; i+=2){
+                result1 += num1[i]
+            }
+            console.log(result1.split(''));
 
 
-            //400,500
-            console.log(result1);
-            console.log(result2);
+            const num2 = ['a','b','c','d','e','f','g','h','i','j'];
+            let result2 = '';
+            num2.forEach((el,j)=>{
+                if(j % 2 == 1){
+                    result2 += num2[j];
+                }
+            })
+            console.log(result2.split(''));
+
+            
+            
+            
+            const num3 = ['a','b','c','d','e','f','g','h','i','j'];
+            let result3 = num3.join('').replace('abcdefghij','bdfhj').split('');
             console.log(result3);
-            console.log(result4);
+
+            
+            
+            
+            const num4 = ['a','b','c','d','e','f','g','h','i','j'];
+            let res = num4.join('');
+            result4 = res.charAt(1) + res.charAt(3) + res.charAt(5) + res.charAt(7) + res.charAt(9);
+            console.log(result4.split(''));
+           
+            
+
+            //b d f h k (4가지)
+            
+
+
+
         }
    </script>
 
