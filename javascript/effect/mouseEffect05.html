@@ -382,8 +382,8 @@
         // 부드럽게 설정
         let softPageX = 0; 
         let softPageY = 0;
-        softPageX += (anglePageX - maxPageX) * 0.4;
-        softPageY += (anglePageY - maxPageY) * 0.4;
+        softPageX += (anglePageX - softPageX) * 0.4;
+        softPageY += (anglePageY - softPageY) * 0.4;
         //이미지 움직이기
         const imgMove = document.querySelector(".mouse__img");
         imgMove.style.transform = "perspective(600px) rotatex("+softPageY+"deg) rotatey("+-softPageX+"deg)";

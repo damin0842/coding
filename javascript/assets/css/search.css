@@ -88,7 +88,7 @@ li {
 .search__wrap > h1 {
   font-family: "Tmon";
   color: var(--htmlColor);
-  font-size: 5vw;
+  font-size: 6vw;
   margin-bottom: 10px;
 }
 .search__box {
