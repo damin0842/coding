@@ -1,22 +1,32 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>사이트 만들기2</title>
-    <!-- SEO -->
-    <meta name="author" content="webstoryboy">
-    <meta name="description" content="사이트 만들기 튜토리얼2입니다.">
+    <title>Document</title>
+
+    <!-- seo 포폴때 참고 -->
+    <meta name="author" content="codi">
+    <meta name="description" content="사이트 만들기 연습해보기!">
     <meta name="keyword" content="사이트, 만들기, 튜토리얼, 웹스토리보이">
     <meta name="robots" content="all">
+
+
     <!-- ICON -->
     <link rel="icon" href="assets/img/icon.png" />
     <link rel="shortcut icon" href="assets/img/icon.png" />
+
+
+
     <!-- CSS -->
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/style.css"> <!-- 공통 -->
 </head>
+
 <body>
+
+    <!-- 웹표준 준수시 필요 -->
     <div id="skip">
         <a href="#headerType">헤더 유형 바로가기</a>
         <a href="#sliderType">슬라이드 유형 바로가기</a>
@@ -27,27 +37,39 @@
         <a href="#textType2">텍스트 영역 바로가기</a>
         <a href="#footerType">푸터 영역 바로가기</a>
     </div>
-    <!-- //skip -->
+    <!-- skip -->
+
+
     <header id="headerType" class="skyBlue">
         <div class="header__inner">
             <div class="header__logo">
-                <h1><a href="#">web <em>site</em></a></h1>
+                <h1 href="#">WEB site</h1>
             </div>
-            <nav class="header__menu">
+            <div class="header__menu">
                 <ul>
-                    <li><a href="#">헤더 영역</a></li>
-                    <li><a href="#">슬라이드 영역</a></li>
-                    <li><a href="#">배너 영역</a></li>
-                    <li><a href="#">컨텐츠 영역</a></li>
-                    <li><a href="#">푸터 영역</a></li>
+                    <!-- <li><a href="#headerType">헤더 영역</a></li> -->
+                    <li><a href="#sliderType">헤더 영역</a></li>
+                    <li><a href="#imageType01">슬라이드 영역</a></li>
+                    <li><a href="#bannerType">배너 영역</a></li>
+                    <li><a href="#contentsType">컨텐츠 영역</a></li>
+                    <li><a href="#footerType">푸터 영역</a></li>
                 </ul>
-            </nav>
+            </div>
+            <!-- <div class="header__member">
+                <a href="#" class="loading">로그인</a>
+            </div> -->
+            <div class="header__ham">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
         </div>
     </header>
     <!-- //headerType -->
+
+
     <main id="mainType">
-        <section id="sliderType" class="slider__wrap">
-            <h2 class="blind">슬라이드 영역</h2>
+        <section id="sliderType">
             <div class="slider__inner">
                 <div class="swiper mySwiper">
                     <div class="swiper-wrapper">
@@ -63,19 +85,19 @@
                                     <a href="#">더 알아보기</a>
                                 </div>
                             </div>
-                            <div class="imgs" aria-label="hidden">
+                            <div class="imgs" aria-lable="hidden">
                                 <div class="i1"></div>
                                 <div class="i2">
-                                    <img src="assets/img/slider_bg01@2x.png" alt="이미지1">
+                                    <img src="assets/img/slider_bg01.png" alt="이미지1">
                                 </div>
                                 <div class="i3">
-                                    <img src="assets/img/slider_bg02@2x.png" alt="이미지2">
+                                    <img src="assets/img/slider_bg02.png" alt="이미지1">
                                 </div>
                                 <div class="i4">
-                                    <img src="assets/img/slider_bg03@2x.png" alt="이미지3">
+                                    <img src="assets/img/slider_bg03.png" alt="이미지1">
                                 </div>
                             </div>
-                            <div class="dots" aria-label="hidden">
+                            <div class="dots" aria-lable="hidden">
                                 <span class="d1"></span>
                                 <span class="d2"></span>
                                 <span class="d3"></span>
@@ -95,19 +117,19 @@
                                     <a href="#">더 알아보기</a>
                                 </div>
                             </div>
-                            <div class="imgs" aria-label="hidden">
+                            <div class="imgs" aria-lable="hidden">
                                 <div class="i1"></div>
                                 <div class="i2">
-                                    <img src="assets/img/slider_bg01@2x.png" alt="이미지1">
+                                    <img src="assets/img/slider_bg01.png" alt="이미지1">
                                 </div>
                                 <div class="i3">
-                                    <img src="assets/img/slider_bg02@2x.png" alt="이미지2">
+                                    <img src="assets/img/slider_bg02.png" alt="이미지1">
                                 </div>
                                 <div class="i4">
-                                    <img src="assets/img/slider_bg03@2x.png" alt="이미지3">
+                                    <img src="assets/img/slider_bg03.png" alt="이미지1">
                                 </div>
                             </div>
-                            <div class="dots" aria-label="hidden">
+                            <div class="dots" aria-lable="hidden">
                                 <span class="d1"></span>
                                 <span class="d2"></span>
                                 <span class="d3"></span>
@@ -127,19 +149,19 @@
                                     <a href="#">더 알아보기</a>
                                 </div>
                             </div>
-                            <div class="imgs" aria-label="hidden">
+                            <div class="imgs" aria-lable="hidden">
                                 <div class="i1"></div>
                                 <div class="i2">
-                                    <img src="assets/img/slider_bg01@2x.png" alt="이미지1">
+                                    <img src="assets/img/slider_bg01.png" alt="이미지1">
                                 </div>
                                 <div class="i3">
-                                    <img src="assets/img/slider_bg02@2x.png" alt="이미지2">
+                                    <img src="assets/img/slider_bg02.png" alt="이미지1">
                                 </div>
                                 <div class="i4">
-                                    <img src="assets/img/slider_bg03@2x.png" alt="이미지3">
+                                    <img src="assets/img/slider_bg03.png" alt="이미지1">
                                 </div>
                             </div>
-                            <div class="dots" aria-label="hidden">
+                            <div class="dots" aria-lable="hidden">
                                 <span class="d1"></span>
                                 <span class="d2"></span>
                                 <span class="d3"></span>
@@ -149,41 +171,53 @@
                         </div>
                     </div>
                     <div class="swiper-pagination"></div>
-                    <div class="swiper-button">
-                        <div class="swiper-button-play"><span class="ir">play</span></div>
-                        <div class="swiper-button-stop"><span class="ir">stop</span></div>
-                    </div>
+                        <div class="swiper-button">
+                            <div class="swiper-button-play"><span class="ir">play</span></div>
+                            <div class="swiper-button-stop"><span class="ir">stop</span></div>
+                        </div>
                     <div class="swiper-button-next"></div>
                     <div class="swiper-button-prev"></div>
                 </div>
             </div>
         </section>
-        <!-- //sliderType -->
-        <section id="textType" class="skyBlue" style="height: 500px">
+        <!--//sliderType-->
+        <section id="textType">
             <div class="container">
                 ddd
             </div>
-        </section><!-- //textType -->
-        <section id="imageType"></section><!-- //imageType -->
-        <section id="cardType"></section><!-- //cardType -->
-        <section id="bannerType"></section><!-- //bannerType -->
-        <section id="textType2"></section><!-- //textType2 -->
+        </section>
+        <!--//textType-->
+        <section id="imageType"></section>
+        <!--//imageType-->
+        <section id="cardType"></section>
+        <!--//cardType-->
+        <section id="bannerType"></section>
+        <!--//bannerType-->
+        <section id="textType2"></section>
+        <!--//textType2-->
     </main>
     <!-- //mainType -->
+
+
     <footer id="footerType">
         <h2 class="blind">푸터 영역</h2>
     </footer>
     <!-- //footerType -->
-    <!-- script -->
-    <script src="assets/js/swiper.min.js"></script>
+
+
+    <!-- 5. Swiper JS 가져오기 -->
+    <script src="assets/js/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+
     <script>
+        //6. swiper 코드 (이미지 슬라이더를 위한 구현 코드)
         var swiper = new Swiper(".mySwiper", {
             navigation: {
                 nextEl: ".swiper-button-next",
                 prevEl: ".swiper-button-prev",
             },
             autoplay: {
-                delay: 3000,
+                delay: 5000,
                 disableOnInteraction: false,
             },
             pagination: {
@@ -194,4 +228,5 @@
         });
     </script>
 </body>
+
 </html>
