@@ -25,6 +25,7 @@
         transform: translate(-50%,-50%);
         z-index: -1;
       }
+
       .mouse__text{
         position: absolute;
         left: 50%;
@@ -64,13 +65,44 @@
         position: absolute;
         left: 0;
         top: 0;
-        width: 20px;
-        height: 20px;
+        width: 200px;
+        height: 200px;
         z-index: 9999;
         border-radius: 50%;
         background-color: rgba(255,255,255,0.9);
         user-select: none;
         pointer-events: none;
+        mix-blend-mode: difference;
+      }
+      .mouse__cursor.style1{
+        background-color: rgba(255, 165, 0, 0.4);
+        border-color: rgb(135, 236, 228);
+        transform: scale(2) rotateY(720deg);
+      }
+      .mouse__cursor.style2{
+        background-color: rgba(46, 235, 112, 0.4);
+        border-color: rgb(239, 202, 91);
+        transform: scale(2) rotateY(720deg);
+      }
+      .mouse__cursor.style3{
+        background-color: rgba(69, 246, 231, 0.779);
+        border-color: orange;
+        transform: scale(2) rotateY(720deg);
+      }
+      .mouse__cursor.style4{
+        background-color: rgba(213, 233, 215, 0.4);
+        border-color: rgb(5, 185, 197);
+        transform: scale(2) rotateY(720deg);
+      }
+      .mouse__cursor.style5{
+        background-color: rgba(190, 86, 194, 0.4);
+        border-color: rgb(241, 157, 254);
+        transform: scale(2) rotateY(720deg);
+      }
+      .mouse__cursor.style6{
+        background-color: rgba(252, 140, 203, 0.4);
+        border-color: rgb(68, 158, 69);
+        transform: scale(2) rotateY(720deg);
       }
     </style>
   </head>
@@ -103,7 +135,7 @@
             <div class="line">
               <div class="left">
                 <div class="spanWrap">
-                  <span class="spanSlow">Pain Past</span>
+                  <span class="spanSlow style1">Pain Past</span>
                 </div>
               </div>
               <div class="right">
@@ -399,9 +431,25 @@
       //마우스 커서가 글씨 위에 올라가면 원의 크기는 5배 정도 크게 
       
       
-      //글씨 번진 효과 추가
+      //글씨 반전 효과 추가
 
+      const cursor = document.querySelector(".mouse__cursor");
+      let count = document.querySelectorAll(".mouse__wrap span");
+      
+      count.forEach((el) => {
+        let attr = el.getAttribute("class").split(" ");
+        let attrr = [];
+        attr.map((e) => {
+          if (e.includes("style")) return attrr.push(e);
+        });
 
+        document.querySelector(`.${attrr}`).addEventListener("mouseover", () => {
+          cursor.classList.add(`${attrr}`);
+        });
+        document.querySelector(`.${attrr}`).addEventListener("mouseout", () => {
+          cursor.classList.remove(`${attrr}`);
+        });
+      });
     </script>
   </body>
 </html>
