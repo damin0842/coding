@@ -54,6 +54,7 @@
       .mouse__cursor.style1{
         background-color: rgba(255, 165, 0, 0.4);
         border-color: rgb(135, 236, 228);
+        transform: scale(2) rotateY(720deg);
       }
       .mouse__cursor.style2{
         background-color: rgba(46, 235, 112, 0.4);
@@ -63,18 +64,22 @@
       .mouse__cursor.style3{
         background-color: rgba(69, 246, 231, 0.779);
         border-color: orange;
+        transform: scale(2) rotateY(720deg);
       }
       .mouse__cursor.style4{
         background-color: rgba(213, 233, 215, 0.4);
         border-color: rgb(5, 185, 197);
+        transform: scale(2) rotateY(720deg);
       }
       .mouse__cursor.style5{
         background-color: rgba(190, 86, 194, 0.4);
         border-color: rgb(241, 157, 254);
+        transform: scale(2) rotateY(720deg);
       }
       .mouse__cursor.style6{
         background-color: rgba(252, 140, 203, 0.4);
         border-color: rgb(68, 158, 69);
+        transform: scale(2) rotateY(720deg);
       }
       .mouse__info {
         position: absolute;
@@ -530,6 +535,7 @@
         cursor.style.left = event.clientX - 25 + "px";
         cursor.style.top = event.clientY - 25 + "px";
       });
+    
 
       count.forEach((el) => {
         let attr = el.getAttribute("class").split(" ");
