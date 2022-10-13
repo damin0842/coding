@@ -50,7 +50,7 @@
 }
 .music__view .title p {
     margin-top: 10px;
-    color: #e14068;
+    color: #4055e1;
     text-transform: uppercase;
     font-weight: 600;
 }
@@ -152,6 +152,13 @@
 .music__footer{
     background: #c4c4c4;
 }
+.music__footer.hide{
+    display: none;
+}
+.music__footer.show{
+    display: block;
+}
+
 .music__list{
     padding: 20px;
     
@@ -160,6 +167,12 @@
 .music__list ul {
     max-height: 400px;
     overflow-y: scroll;
+}
+.music__list ul.hide{
+    display: none;
+}
+.music__list ul.show{
+    display: block;
 }
 .music__list h3{
     font-size: 24px;
@@ -178,11 +191,15 @@
     
 
 }
+
 .music__list li {
     position: relative;
     padding: 20px 0;
     border-bottom: 1px solid #000;
     list-style: none;
+}
+.music__list li.playing{
+    color: #e14058;
 }
 .music__list li strong{
     display: block;

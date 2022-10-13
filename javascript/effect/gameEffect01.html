@@ -5,7 +5,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>마우스 이펙트01</title>
+    <title>게임 이펙트01</title>
     <!-- <link rel="stylesheet" href="../assets/css/dracula.css" /> -->
     <link rel="stylesheet" href="../assets/css/game.css">
     <link rel="stylesheet" href="../assets/css/bg.css">
@@ -46,23 +46,18 @@
             </div>
             <div class="icon2 icon">
                 <img src="../assets/img/folder.comp.png" alt="">
-                <span>리딩</span>
             </div>
             <div class="icon3 icon">
                 <img src="../assets/img/folder.figma.png" alt="">
-                <span>피그마</span>
             </div>
             <div class="icon4 icon">
                 <img src="../assets/img/foldermovies.png" alt="">
-                <span>무비</span>
             </div>
             <div class="icon5 icon">
                 <img src="../assets/img/foldermy.png" alt="">
-                <span>#</span>
             </div>
             <div class="icon6 icon">
                 <img src="../assets/img/musicforder.png" alt="">
-                <span>뮤직</span>
             </div>
         </div>
     </main>
@@ -115,9 +110,9 @@
                     </div>
                 </div>
             </div>
-            <div class="music__footer">
+            <div class="music__footer hide">
                 <div class="music__list">
-                    <h3><span class="list"></span>뮤직 리스트</h3>
+                    <h3><span class="list"></span>뮤직 리스트<a href="" class="close"></a></h3>
                     <ul>
                         <!-- <li>
                             <strong>제목</strong>
@@ -156,6 +151,7 @@
         $(".icon4").draggable();
         $(".icon5").draggable();
         $(".icon6").draggable();
+        $(".music__wrap").draggable();
 
 
 
@@ -166,7 +162,9 @@
         function printTime() {
             const clock = document.querySelector(".time");
             const now = new Date();
+            
             let nowgethours = now.getHours();
+            nowgethours = nowgethours % 12 || 12;
             if (nowgethours < 10) nowgethours = "0" + nowgethours;
 
             let nowgetmin = now.getMinutes();
@@ -174,7 +172,8 @@
 
             let nowgetsecond = now.getSeconds();
             if (nowgetsecond < 10) nowgetsecond = "0" + nowgetsecond;
-
+            
+            
 
             const nowTime = "오늘은" + now.getFullYear() + "년" + (now.getMonth() + 1) + "월" + now.getDate() + "일" + nowgethours + "시" + nowgetmin + "분" + nowgetsecond + "초 입니다.";
             clock.innerText = nowTime;
