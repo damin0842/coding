@@ -21,7 +21,6 @@
         <li><a href="searchEffect04.html">4</a></li>
         <li><a href="searchEffect05.html">5</a></li>
         <li class="active"><a href="searchEffect06.html">6</a></li>
-        <li><a href="searchEffect07.html">7</a></li>
       </ul>
     </nav>
   </header>
@@ -38,6 +37,7 @@
           <li class="btn2"><a href="#">내림차순 정렬하기</a></li>
           <li class="btn4"><a href="#">알파벳순 (a~z)</a></li>
           <li class="btn5"><a href="#">알파벳순 (z~a)</a></li>
+          <li class="btn6"><a href="#">랜덤 정렬하기</a></li>
       </div>
 
       <div class="search__info">
@@ -622,6 +622,11 @@
     //z-a 정렬 클릭
     document.querySelector(".btn5").addEventListener("click",()=>{
       sortAlphabetZ();
+    });
+
+    //랜덤 정렬
+    document.querySelector(".btn6").addEventListener("click",()=>{
+      sortAlphabet();
     });
 
   </script>
